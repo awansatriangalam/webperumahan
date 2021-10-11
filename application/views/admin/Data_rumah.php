@@ -1,7 +1,7 @@
 <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1>Data Rumah</h1>
+            <h1>Data Rumah Baru</h1>
           </div>
 
             <a href="<?php echo base_url('admin/data_rumah/tambah_rumah') ?>" class="btn btn-primary mb-3">
