@@ -1,7 +1,7 @@
 <div class="main-content">
     <div class="section">
         <div class="section-header">
-            <h1>Data Type Rumah</h1>
+            <h1>Data Type Rumah Baru</h1>
         </div>
 
         <a class="btn btn-primary mb-3" href="<?php echo base_url('admin/data_type/tambah_type')?>">
