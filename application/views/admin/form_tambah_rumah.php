@@ -8,9 +8,15 @@
              <div class="card-body">
 
                 <form method="POST" action="<?php echo base_url('admin/data_rumah/
-                    tambah_aksi') ?>" enctype="multipart/form-data">
+                    tambah_rumah_aksi') ?>" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-6">
+                        <div class="form-group">
+                                <label> Nama Rumah</label>
+                                <input type="text" name="nama_rumah" class="form-control">
+                                <?php echo form_error('nama_rumah','<div class="text-small text-danger">
+                                ','</div>') ?>
+                            </div>
                             <div class="form-grup">
                                 <label for="Type Rumah"></label>
                                 <select name="kode_type" class="form-control">
@@ -42,14 +48,32 @@
                                 <?php echo form_error('interior','<div class="text-small text-danger">
                                 ','</div>') ?>
                             </div>
+                            <div class="form-group">
+                                <label> Deskripsi</label>
+                                <input type="text" name="deskripsi" class="form-control">
+                                <?php echo form_error('deskripsi','<div class="text-small text-danger">
+                                ','</div>') ?>
+                            </div>
                         </div>
                         <div class="col-md-6">
+                        <div class="form-group">
+                                <label> Jumlah Kamar Tidur</label>
+                                <input type="text" name="kamar_tidur" class="form-control">
+                                <?php echo form_error('kamar_tidur','<div class="text-small text-danger">
+                                ','</div>') ?>
+                            </div>
+                            <div class="form-group">
+                                <label> Jumlah Kamar Mandi</label>
+                                <input type="text" name="kamar_mandi" class="form-control">
+                                <?php echo form_error('kamar_mandi','<div class="text-small text-danger">
+                                ','</div>') ?>
+                            </div>
                             <div class="form-group">
                                 <label> Status</label>
                                 <select name="status" class="form-control">
                                     <option value="--Pilih Status--"></option>
-                                    <option value="1">Dijual</option>
-                                    <option value="0">Tidak Tersedia</option>
+                                    <option value="1">Tersedia</option>
+                                    <option value="0">Telah Diisi</option>
                                 </select>
                                 <?php echo form_error('status','<div class="text-small text-danger">
                                 ','</div>') ?>

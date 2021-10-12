@@ -22,7 +22,7 @@ class Data_rumah extends CI_Controller{
 
     }
 
-    public function tambah_aksi()
+    public function tambah_rumah_aksi()
     {
         $this->_rules();
 
