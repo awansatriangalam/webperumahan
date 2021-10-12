@@ -22,7 +22,7 @@
                         </span>
                         <h4 class="my-3">Nyaman</h4>
                         <p class="text-muted">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+                            Kami akan melayani anda dengan sepenuh hati sampai anda benar-benar puas.
                         </p>
                     </div>
                     <div class="col-md-4">
@@ -32,7 +32,7 @@
                         </span>
                         <h4 class="my-3">Cepat</h4>
                         <p class="text-muted">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+                            Kami akan melayani anda dengan cepat dan tanggap selama 24 Jam.
                         </p>
                     </div>
                     <div class="col-md-4">
@@ -42,7 +42,7 @@
                         </span>
                         <h4 class="my-3">Aman dan Terpercaya</h4>
                         <p class="text-muted">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+                            Kami akan sebisa mungkin atau semaksimal mungkin untuk tetap menjaga kerahasiaan anda atau privasi
                         </p>
                     </div>
                 </div>
