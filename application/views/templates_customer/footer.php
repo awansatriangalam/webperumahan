@@ -9,8 +9,8 @@
                         <a class="btn btn-light btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-end">
-                        <a class="link-light text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a class="link-light text-decoration-none" href="#!">Terms of Use</a>
+                        <a class="link-light text-decoration-none me-3" href="#!">Kebijakan Privasi</a>
+                        <a class="link-light text-decoration-none" href="#!">Syarat dan Ketentuan</a>
                     </div>
                 </div>
             </div>
