@@ -1,6 +1,6 @@
 <?php 
 
-class Dashboard extends CI_Controller{
+class Tentang extends CI_Controller{
     public function index() 
     {
         $data['rumah'] = $this->rental_model->get_data('rumah')->result();

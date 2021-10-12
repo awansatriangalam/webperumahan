@@ -17,3 +17,23 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="<?php echo base_url() ?>assets/assets_hp/css/styles.css" rel="stylesheet" />
     </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="<?php echo base_url('customer/dashboard')?>"><img src="<?php echo base_url('assets/assets_hp/assets/img/Logo Perumahan.png')?>"/></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('customer/dashboard')?>">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('customer/layanan')?>">Layanan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('customer/rumah')?>">Rumah</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('customer/tentang')?>">Tentang</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('customer/kontak')?>">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
