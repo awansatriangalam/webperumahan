@@ -22,7 +22,7 @@
             <tbody>
                 <?php
                 $no = 1;
-                foreach($type as $tp) :?>
+                foreach($tipe as $tp) :?>
                     <tr>
                         <td><?php echo $no++ ?></td>
                         <td><?php echo $tp->kode_type ?></td>

@@ -5,7 +5,7 @@
         </div>
     </div>
 
-    <?php foreach ($type as $tp) : ?>
+    <?php foreach ($tipe as $tp) : ?>
         <form method="POST" action="<?php echo base_url('admin/data_type/update_type_aksi')?>">
             <div class="form-group">
                 <label>Kode Type</label>

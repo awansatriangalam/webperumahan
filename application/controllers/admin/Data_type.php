@@ -4,7 +4,7 @@
 
         public function index()
         {
-            $data['type']= $this->rental_model->get_data('type')->result();
+            $data['tipe']= $this->rental_model->get_data('tipe')->result();
             $this->load->view('templates_admin/header');
             $this->load->view('templates_admin/sidebar');
             $this->load->view('admin/data_type',$data);
@@ -34,7 +34,7 @@
                     'nama_type'     => $nama_type,
                 );
 
-                $this->rental_model->insert_data($data,'type');
+                $this->rental_model->insert_data($data,'tipe');
                 $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible
                     fade show" role="alert"> Data Berhasil Ditambahkan !.
                 <button type="button" class="close" data-dismiss="alert"
@@ -48,7 +48,7 @@
 
         public function update_type($id){
             $where = array('id_type' => $id);
-            $data['type'] = $this->db->query("SELECT * FROM type WHERe id_type='$id'")->result();
+            $data['tipe'] = $this->db->query("SELECT * FROM tipe WHERE id_type='$id'")->result();
 
             $this->load->view('templates_admin/header');
             $this->load->view('templates_admin/sidebar');
@@ -77,7 +77,7 @@
                     'id_type'   => $id
                 );
 
-                $this->rental_model->update_data('type', $data, $where);
+                $this->rental_model->update_data('tipe', $data, $where);
                 $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible
                     fade show" role="alert"> Data Berhasil Diupdate !.
                     <button type="button" class="close" data-dismiss="alert"
@@ -98,7 +98,7 @@
         public function delete_type($id)
         {
             $where = array ('id_type' => $id);
-            $this->rental_model->delete_data($where, 'type');
+            $this->rental_model->delete_data($where, 'tipe');
             $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible
                     fade show" role="alert"> Data Berhasil Dihapus ! .
                     <button type="button" class="close" data-dismiss="alert"
