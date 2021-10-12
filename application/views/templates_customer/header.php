@@ -9,7 +9,7 @@
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="<?php echo base_url()?>assets/assets_homepage/assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
-        <script src="<?php echo base_url()?>assets/assets_homepage/https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="<?php echo base_url()?>assets/assets_homepage/https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url()?>assets/assets_homepage/https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />

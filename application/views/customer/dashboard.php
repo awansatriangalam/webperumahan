@@ -3,7 +3,7 @@
         <header class="masthead">
             <div class="container">
                 <div class="masthead-subheading">Selamat Datang di Website Kami!</div>
-                <div class="masthead-subheading text-uppercase">Temukan Rumah Impian Anda Bersama Kami</div>
+                <div class="masthead-subheading"><h2>Temukan Rumah Impian Anda Bersama Kami</h2></div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">Baca Lebih Lanjut</a>
             </div>
         </header>
@@ -17,7 +17,7 @@
                 <div class="row text-center">
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-circle fa-stack-2x text-dark"></i>
                             <i class="fas fa-user fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Nyaman</h4>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-circle fa-stack-2x text-dark"></i>
                             <i class="fas fa-paper-plane fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Cepat</h4>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-circle fa-stack-2x text-dark"></i>
                             <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Aman dan Terpercaya</h4>

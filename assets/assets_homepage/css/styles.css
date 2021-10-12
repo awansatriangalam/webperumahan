@@ -674,6 +674,7 @@ progress {
   margin-top: calc(var(--bs-gutter-y) * -1);
   margin-right: calc(var(--bs-gutter-x) * -0.5);
   margin-left: calc(var(--bs-gutter-x) * -0.5);
+  
 }
 .row > * {
   flex-shrink: 0;
@@ -682,7 +683,9 @@ progress {
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
+  
 }
+
 
 .col {
   flex: 1 0 0%;
@@ -3026,32 +3029,32 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #ffc800;
-  border-color: #ffc800;
+  background-color: #6495ED;
+  border-color: #6495ED;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #d9aa00;
-  border-color: #cca000;
+  background-color: #6495ED;
+  border-color: #6495ED;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
-  background-color: #d9aa00;
-  border-color: #cca000;
-  box-shadow: 0 0 0 0.25rem rgba(255, 208, 38, 0.5);
+  background-color: #6495ED;
+  border-color: #6495ED;
+  box-shadow: 0 0 0 0.25rem rgba(38, 222, 255, 0.5);
 }
 .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #cca000;
-  border-color: #bf9600;
+  background-color: #6495ED;
+  border-color: #6495ED;
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(255, 208, 38, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(30, 255, 0, 0.644);
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
-  background-color: #ffc800;
-  border-color: #ffc800;
+  background-color: #6495ED;
+  border-color: #6495ED;
 }
 
 .btn-secondary {
@@ -11289,6 +11292,7 @@ p {
 }
 
 .page-section {
+  background: rgba(0, 0, 0, 0.137);
   padding: 6rem 0;
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
@@ -11398,7 +11402,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/21-4.jpg");
+  background-image: url("../assets/img/Untitled-1.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11578,9 +11582,9 @@ header.masthead .masthead-heading {
   margin-left: 0;
   text-align: center;
   color: white;
-  border: 7px solid #e9ecef;
+  border: 7px solid #6495ED;
   border-radius: 100%;
-  background-color: #ffc800;
+  background-color: #6495ED;
 }
 .timeline > li .timeline-image h4, .timeline > li .timeline-image .h4 {
   font-size: 10px;
