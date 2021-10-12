@@ -24,7 +24,7 @@
                     <th>Kamar Mandi</th>
                     <th>Status</th>
                     <th>Harga</th>
-                    <th width="150px">Aksi</th>
+                    <th>Aksi</th>
                   </tr>
               </thead>
                 <tbody> 
@@ -55,11 +55,11 @@
                                 ?></td>
                                 <td><?php echo $rm->harga ?></td>
                                 <td>
-                                    <a href="" class="btn btn-sm btn-succes"><i class="
+                                    <a href="<?php echo base_url('admin/data_rumah/detail_rumah/') .$rm->id_rumah ?>" class="btn btn-sm btn-success"><i class="
                                     fas fa-eye"></i></a>
-                                    <a href="" class="btn btn-sm btn-danger"><i class="
+                                    <a href="<?php echo base_url('admin/data_rumah/hapus_rumah/') .$rm->id_rumah ?>" class="btn btn-sm btn-danger"><i class="
                                     fas fa-trash"></i></a>
-                                    <a href="" class="btn btn-sm btn-primary"><i class="
+                                    <a href="<?php echo base_url('admin/data_rumah/update_rumah/') .$rm->id_rumah ?>" class="btn btn-sm btn-primary"><i class="
                                     fas fa-edit"></i></a>
                                 </td>
                             </tr>
