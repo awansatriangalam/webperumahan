@@ -60,4 +60,3 @@
                 </ul>
             </div>
         </section>
-        <!-- Team-->
