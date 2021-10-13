@@ -23,7 +23,7 @@
                         </span>
                         <h4 class="my-3">Nyaman</h4>
                         <p class="text-muted">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+                            Kami akan melayani anda dengan sepenuh hati sampai anda benar-benar puas.
                         </p>
                     </div>
                     <div class="col-md-4">
@@ -33,7 +33,7 @@
                         </span>
                         <h4 class="my-3">Cepat</h4>
                         <p class="text-muted">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+                            Kami akan melayani anda dengan cepat dan tanggap selama 24 Jam.
                         </p>
                     </div>
                     <div class="col-md-4">
@@ -43,7 +43,7 @@
                         </span>
                         <h4 class="my-3">Aman dan Terpercaya</h4>
                         <p class="text-muted">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+                            Kami akan sebisa mungkin atau semaksimal mungkin untuk tetap menjaga kerahasiaan anda atau privasi
                         </p>
                     </div>
                 </div>
@@ -102,49 +102,49 @@
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>2009-2011</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
+                                <h4 class="subheading">Awal Mula Terbentuk</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Kami memulai karir ini berawal pada tahun 2009 banyak brosur bertebaran yang berisi promosi-promosi sebuah rumah. Nah, bermula pada si Paijo yang membawa brosur tentang perumahan, dari itu si Adi berpikir dan mengemukakan pendapatnya tentang membuat suatu website untuk lebih memudahkan orang dalam memasarkan perumahannya. </p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>March 2011</h4>
-                                <h4 class="subheading">An Agency is Born</h4>
+                                <h4>Maret 2011</h4>
+                                <h4 class="subheading">Lahirlah Sebuah Website Ini</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Maret tanggal 25 2011, awal mula kami meng-online kan website ini.Website yang dibuat oleh tim yang terdiri dari 3 orang yaitu Adia,Paijo, dan Basit.Mulanya website ini tidak sebegitu ramai karena orang-orang masih memakai cara lama, akan tetapi lama kemudian orang-orang sadar akan teknologi.</p></div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>December 2015</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
+                                <h4>Desember 2015</h4>
+                                <h4 class="subheading">Pelayanan Dengan Transaksi Yang Sudah Up To Date</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Desember 2015 merupakan bulan yang indah untuk website ini, dikarenakan pada bulan ini website Adhirekayasha City untuk pertama kalinya bisa melayanai transaksi dengan bergaya modern yang sudah update seperti khalayak-khalayak website luar negeri pada umumnya.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>July 2020</h4>
-                                <h4 class="subheading">Phase Two Expansion</h4>
+                                <h4>Juli2020</h4>
+                                <h4 class="subheading">Melakukan Ekspansi Karena Banyak Sponsor Ingin Mengajak Kerja Sama</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Pada Juli 2020 tanggal 12 lebih tepatnya merupakan sebuah pergerakan besar yang dilakukan oleh Adhirekayasha City ini.Mengapa tidak, karena pada tanggal itu banyak perusahaan-perusahaan besar yang ingin mengajak kerja sama dengan kami hingga kami harus bisa melakukan banyak perubahan terhadap Perusahaan kami ini.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h4>
-                                Be Part
+                                Mari Menjadi
                                 <br />
-                                Of Our
+                                Bagian dari
                                 <br />
-                                Story!
+                                Cerita Kami!
                             </h4>
                         </div>
                     </li>
