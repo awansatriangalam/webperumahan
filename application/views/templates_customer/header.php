@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="<?php echo base_url('customer/dashboard') ?>"><img src="<?php echo base_url('assets/assets_homepage/') ?>assets/img/navbar-logo.svg" alt="..." /></a>
+                <a class="navbar-brand" href="<?php echo base_url('customer/dashboard') ?>">Web Perumahan</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -31,6 +31,17 @@
                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url('customer/rumah') ?>">Rumah</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url('customer/tentang') ?>">Tentang</a></li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo base_url('customer/kontak') ?>">Kontak</a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('register') ?>">Daftar</a></li>
+                        <li class="nav-item">
+
+                            <?php if ($this->session->userdata('nama')) { ?>
+                                <a class="nav-link" href="<?php echo base_url('auth/logout')?> "> Welcome <?php echo $this->session->
+                                    userdata('nama') ?> <span class="btn btn-sm btn-danger">Keluar</span></a>
+                            <?php } else { ?>
+                                <a class="nav-link" href="<?php echo base_url('auth/login')?> "><span class="btn btn-sm btn-success">Masuk</span></a>
+                            <?php } ?>
+
+                        </li>
                     </ul>
                 </div>
             </div>
