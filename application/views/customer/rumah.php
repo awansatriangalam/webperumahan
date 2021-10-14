@@ -17,7 +17,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading"><?php echo $rm->nama_rumah ?></div>
-                                <div class="portfolio-hover-content">Harga <?php echo $rm->harga ?></div>
+                                <div class="portfolio-hover-content btn btn-primary">Harga <?php echo $rm->harga ?></div>
                                 <div class="portfolio-caption-subheading text-muted"><?php echo $rm->deskripsi ?></div>
                             </div>
                             <div class="portofolio-footer">

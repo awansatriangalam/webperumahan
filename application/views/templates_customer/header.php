@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Website Perumahan</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="<?php echo base_url()?>assets/assets_homepage/assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="<?php echo base_url()?>assets/assets_homepage/https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
+                <a class="navbar-brand" href="<?php echo base_url('customer/dashboard') ?>"><img src="<?php echo base_url('assets/assets_homepage/') ?>assets/img/navbar-logo.svg" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>

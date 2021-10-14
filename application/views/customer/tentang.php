@@ -7,7 +7,7 @@
                 </div>
                 <ul class="timeline">
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url()?>assets/assets_homepage/assets/img/about/1.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>2009-2011</h4>
@@ -17,7 +17,7 @@
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url()?>assets/assets_homepage/assets/img/about/2.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>Maret 2011</h4>
@@ -27,7 +27,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url()?>assets/assets_homepage/assets/img/about/3.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>Desember 2015</h4>
@@ -37,7 +37,7 @@
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url()?>assets/assets_homepage/assets/img/about/4.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>Juli 2020</h4>
