@@ -293,31 +293,41 @@
                             <div class="properties properties-list">
                                 <!-- .col-md-12 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <?php foreach ($rumah as $rm) :  ?>
                                     <!-- .property-item #1 -->
                                     <div class="property-item">
                                         <div class="property--img">
                                             <a href="property-single-gallery.html">
-                                <img src="<?php echo base_url()?>assets/assets_homepage/images/properties/1.jpg" alt="property image" class="img-responsive">
-								</a>
-                                            <span class="property--status">For Sale</span>
+                                                <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
+								            </a>
+                                            <span class="property--status"><?php 
+                                                if ($rm->status == "0"){
+                                                    echo "<span> Telah Diisi
+                                                    </span>";
+                                                }else{
+                                                    echo "<span> Tersedia
+                                                    </span>";
+                                                }
+                                                ?></span>
                                         </div>
                                         <div class="property--content">
                                             <div class="property--info">
-                                                <h5 class="property--title"><a href="property-single-gallery.html">House in Kent Street</a></h5>
-                                                <p class="property--location">127 Kent Street, Sydney, NSW 2000</p>
-                                                <p class="property--price">$130,000</p>
+                                                <h5 class="property--title"><a href="property-single-gallery.html"><?php echo $rm->nama_rumah ?></a></h5>
+                                                <p class="property--location"><?php echo $rm->deskripsi ?></p>
+                                                <p class="property--price"><?php echo $rm->harga ?></p>
                                             </div>
                                             <!-- .property-info end -->
                                             <div class="property--features">
                                                 <ul class="list-unstyled mb-0">
-                                                    <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
-                                                    <li><span class="feature">Baths:</span><span class="feature-num">2</span></li>
-                                                    <li><span class="feature">Area:</span><span class="feature-num">587 sq ft</span></li>
+                                                    <li><span class="feature">Kamar Tidur:</span><span class="feature-num"><?php echo $rm->kamar_tidur ?></span></li>
+                                                    <li><span class="feature">Kamar Mandi:</span><span class="feature-num"><?php echo $rm->kamar_mandi ?></span></li>
+                                                    <li><span class="feature">Luas Bangunan:</span><span class="feature-num"><?php echo $rm->luas_bangunan ?></span></li>
                                                 </ul>
                                             </div>
                                             <!-- .property-features end -->
                                         </div>
                                     </div>
+                                    <?php endforeach; ?>
                                 </div>
                                 <!-- .property item end -->
 
