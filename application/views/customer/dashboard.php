@@ -9,7 +9,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="slider--content">
                             <div class="text-center">
-                                <h1>Find Your Favorite Property</h1>
+                                <h1>Temukan Unit Rumah Impian Anda</h1>
                             </div>
                             <form class="mb-0">
                                 <div class="form-box search-properties">
@@ -19,9 +19,11 @@
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="select-location" id="select-location">
-                                        <option>Semua Lokasi</option>
+                                         <option>Semua Lokasi</option>
                                         <option>Malang</option>
                                         <option>Surabaya</option>
+                                        <option>Jember</option>
+                                        <option>Madura</option>
                                     </select>
                                                 </div>
                                             </div>
@@ -32,9 +34,10 @@
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="select-type" id="select-type">
-                                        <option>Semua Tipe</option>
-                                        <option>Apartemen</option>
-                                        <option>Rumah</option>
+                                       <option>Rumah Tipe</option>
+                                        <option>Ixora Valley</option>
+                                        <option>Elishaa Valley</option>
+                                        <option>Jishaa Valley</option>
                                     </select>
                                                 </div>
                                             </div>
@@ -54,7 +57,7 @@
                                         </div>
                                         <!-- .col-md-3 end -->
                                         <div class="col-xs-12 col-sm-6 col-md-3">
-                                            <input type="submit" value="Search" name="submit" class="btn btn--primary btn--block">
+                                            <input type="submit" value="Cari" name="submit" class="btn btn--primary btn--block">
                                         </div>
                                         <!-- .col-md-3 end -->
                                         <div class="col-xs-12 col-sm-6 col-md-3 option-hide">
@@ -63,6 +66,7 @@
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="select-beds" id="select-beds">
                                         <option>Kamar Tidur</option>
+                                        <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
@@ -78,6 +82,7 @@
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="select-baths" id="select-baths">
                                         <option>Kamar Mandi</option>
+                                        <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
@@ -91,7 +96,7 @@
                                             <div class="filter mb-30">
                                                 <p>
                                                     <label for="amount">Kisaran Harga: </label>
-                                                    <input id="amount" type="text" class="amount" readonly>
+                                                    <input id="amount" type="text" class="amount" readonly="">
                                                 </p>
                                                 <div class="slider-range"></div>
                                             </div>
@@ -115,21 +120,21 @@
                 <!-- Slide #1 -->
                 <div class="slide--item bg-overlay bg-overlay-dark3">
                     <div class="bg-section">
-                        <img src="assets/images/slider/slide-bg/3.jpg" alt="background">
+                        <img src="<?php echo base_url()?>assets/assets_homepage/images/slider/slide-bg/3.jpg" alt="background">
                     </div>
                 </div>
                 <!-- .slide-item end -->
                 <!-- Slide #2 -->
                 <div class="slide--item bg-overlay bg-overlay-dark3">
                     <div class="bg-section">
-                        <img src="assets/images/slider/slide-bg/1.jpg" alt="background">
+                        <img src="<?php echo base_url()?>assets/assets_homepage/images/slider/slide-bg/1.jpg" alt="background">
                     </div>
                 </div>
                 <!-- .slide-item end -->
                 <!-- Slide #3 -->
                 <div class="slide--item bg-overlay bg-overlay-dark3">
                     <div class="bg-section">
-                        <img src="assets/images/slider/slide-bg/3.jpg" alt="background">
+                        <img src="<?php echo base_url()?>assets/assets_homepage/images/slider/slide-bg/3.jpg" alt="background">
                     </div>
                 </div>
                 <!-- .slide-item end -->
@@ -144,8 +149,8 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="heading heading-2 text-center mb-70">
-                            <h2 class="heading--title">Rumah Terbaru</h2>
-                            <p class="heading--desc">Berikut Rumah Terbaru dari Kami</p>
+                            <h2 class="heading--title">List Rumah Favorit</h2>
+                            <p class="heading--desc">Berikut merupakan list rumah favorit dari kami</p>
                         </div>
                         <!-- .heading-title end -->
                     </div>
@@ -199,8 +204,8 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="heading heading-2 text-center mb-70">
-                            <h2 class="heading--title">Simple Steps</h2>
-                            <p class="heading--desc">Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
+                            <h2 class="heading--title">Cara Mudah Mendapatkan Rumah</h2>
+                            <p class="heading--desc">Dapatkan rumah impian anda dengan mudah menggunakan langkah berikut...</p>
                         </div>
                         <!-- .heading-title end -->
                     </div>
@@ -212,11 +217,11 @@
                     <div class="col-xs-12 col-sm-4 col-md-4">
                         <div class="feature-panel">
                             <div class="feature--icon">
-                                <img src="assets/images/features/icons/5.png" alt="icon img">
+                                <img src="<?php echo base_url()?>assets/assets_homepage/images/features/icons/5.png" alt="icon img">
                             </div>
                             <div class="feature--content">
-                                <h3>Search For Real Estates</h3>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eule pariate.</p>
+                                <h3>Cari Model Rumah</h3>
+                                <p>Cari model rumah yang anda inginkan melalui pencarian diatas.</p>
                             </div>
                         </div>
                         <!-- .feature-panel end -->
@@ -226,11 +231,11 @@
                     <div class="col-xs-12 col-sm-4 col-md-4">
                         <div class="feature-panel">
                             <div class="feature--icon">
-                                <img src="assets/images/features/icons/6.png" alt="icon img">
+                                <img src="<?php echo base_url()?>assets/assets_homepage/images/features/icons/6.png" alt="icon img">
                             </div>
                             <div class="feature--content">
-                                <h3>Select Your Favorite</h3>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eule pariate.</p>
+                                <h3>Pilih Rumah Favorit</h3>
+                                <p>Pilih rumah favorit yang diinginkan.</p>
                             </div>
                         </div>
                         <!-- .feature-panel end -->
@@ -240,11 +245,11 @@
                     <div class="col-xs-12 col-sm-4 col-md-4">
                         <div class="feature-panel">
                             <div class="feature--icon">
-                                <img src="assets/images/features/icons/7.png" alt="icon img">
+                                <img src="<?php echo base_url()?>assets/assets_homepage/images/features/icons/7.png" alt="icon img">
                             </div>
                             <div class="feature--content">
-                                <h3>Take Your Key</h3>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eule pariate.</p>
+                                <h3>Dapatkan Kunci</h3>
+                                <p>Setelah mencapai kesepakatan dengan pihak perumahan, dapatkan kunci rumah anda.</p>
                             </div>
                         </div>
                         <!-- .feature-panel end -->
@@ -258,116 +263,14 @@
         <!-- .feature end -->
         <!-- city-property
 ============================================= -->
-        <section id="city-property" class="city-property text-center pb-70">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="heading heading-2 text-center mb-70">
-                            <h2 class="heading--title">Property By City</h2>
-                            <p class="heading--desc">Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
-                        </div>
-                        <!-- .heading-title end -->
-                    </div>
-                    <!-- .col-md-12 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <!-- City #1 -->
-                    <div class="col-xs-12 col-sm-8 col-md-8">
-                        <div class="property-city-item">
-                            <div class="property--city-img">
-                                <a href="#">
-                        <img src="assets/images/properties/city/1.jpg" alt="city" class="img-responsive">
-                        <div class="property--city-overlay">
-                            <div class="property--item-content">
-                                <h5 class="property--title">New York</h5>
-                                <p class="property--numbers">16 Properties</p>
-                            </div>
-                        </div>
-						</a>
-                            </div>
-                            <!-- .property-city-img end -->
-                        </div>
-                        <!-- . property-city-item end -->
-                    </div>
-                    <!-- .col-md-8 end -->
-                    <!-- City #2 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="property-city-item">
-                            <div class="property--city-img">
-                                <a href="#">
-                        <img src="assets/images/properties/city/2.jpg" alt="city" class="img-responsive">
-                        <div class="property--city-overlay">
-                            <div class="property--item-content">
-                                <h5 class="property--title">Chicago</h5>
-                                <p class="property--numbers">14 Properties</p>
-                            </div>
-                        </div>
-						</a>
-                            </div>
-                            <!-- .property-city-img end -->
-                        </div>
-                        <!-- . property-city-item end -->
-                    </div>
-                    <!-- .col-md-8 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-
-                    <!-- City #3 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="property-city-item">
-                            <div class="property--city-img">
-                                <a href="#">
-                        <img src="assets/images/properties/city/3.jpg" alt="city" class="img-responsive">
-                        <div class="property--city-overlay">
-                            <div class="property--item-content">
-                                <h5 class="property--title">Manhatten</h5>
-                                <p class="property--numbers">18 Properties</p>
-                            </div>
-                        </div>
-						</a>
-                            </div>
-                            <!-- .property-city-img end -->
-                        </div>
-                        <!-- . property-city-item end -->
-                    </div>
-                    <!-- .col-md-8 end -->
-                    <!-- City #4 -->
-                    <div class="col-xs-12 col-sm-8 col-md-8">
-                        <div class="property-city-item">
-                            <div class="property--city-img">
-                                <a href="#">
-                        <img src="assets/images/properties/city/4.jpg" alt="city" class="img-responsive">
-                        <div class="property--city-overlay">
-                            <div class="property--item-content">
-                                <h5 class="property--title">Los Angeles</h5>
-                                <p class="property--numbers">10 Properties</p>
-                            </div>
-                        </div>
-						</a>
-                            </div>
-                            <!-- .property-city-img end -->
-                        </div>
-                        <!-- . property-city-item end -->
-                    </div>
-                    <!-- .col-md-8 end -->
-                </div>
-                <!-- .row end -->
-            </div>
-            <!-- .container end -->
-        </section>
-        <!-- .city-property end -->
-
-        <!-- agents
-============================================= -->
+                    
         <section id="agents" class="agents bg-white">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="heading heading-2 text-center mb-70">
-                            <h2 class="heading--title">Trusted Agents</h2>
-                            <p class="heading--desc">Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
+                            <h2 class="heading--title">Agen Terpercaya</h2>
+                            <p class="heading--desc">Berikut merupakan agen yang bekerja pada kami...</p>
                         </div>
                         <!-- .heading end -->
                     </div>
@@ -392,8 +295,8 @@
                             </div>
                             <!-- .agent-img end -->
                             <div class="agent--info">
-                                <h5 class="agent--title">Steve Martin</h5>
-                                <h6 class="agent--position">Buying Agent</h6>
+                                <h5 class="agent--title">Yusop Martin</h5>
+                                <h6 class="agent--position">Agen Pemasaran</h6>
                             </div>
                             <!-- .agent-info end -->
                         </div>
@@ -417,8 +320,8 @@
                             </div>
                             <!-- .agent-img end -->
                             <div class="agent--info">
-                                <h5 class="agent--title">Mark Smith</h5>
-                                <h6 class="agent--position">Selling Agent</h6>
+                                <h5 class="agent--title">Mansoer Smith</h5>
+                                <h6 class="agent--position">Agen Pembelian</h6>
                             </div>
                             <!-- .agent-info end -->
                         </div>
@@ -442,8 +345,8 @@
                             </div>
                             <!-- .agent-img end -->
                             <div class="agent--info">
-                                <h5 class="agent--title">Ryan Printz</h5>
-                                <h6 class="agent--position">Real Estate Broker</h6>
+                                <h5 class="agent--title">Ryan Thekop</h5>
+                                <h6 class="agent--position">Agensi Perumahan</h6>
                             </div>
                             <!-- .agent-info end -->
                         </div>
@@ -463,8 +366,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                        <h3>Join our professional team & agents to start selling your house</h3>
-                        <a href="#" class="btn btn--primary">Contact</a>
+                        <h3>Join Bersama Kami & Dapatkan Kenyamanan Anda Sebagai Customer</h3>
+                        <a href="#" class="btn btn--primary">Kontak</a>
                     </div>
                     <!-- .col-md-6 -->
                 </div>

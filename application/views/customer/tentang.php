@@ -10,11 +10,11 @@
                         <div class="title title-1 text-center">
                             <div class="title--content">
                                 <div class="title--heading">
-                                    <h1>About</h1>
+                                    <h1>Tentang</h1>
                                 </div>
                                 <ol class="breadcrumb">
-                                    <li><a href="#">Home</a></li>
-                                    <li class="active">About</li>
+                                    <li><a href="#">Beranda</a></li>
+                                    <li class="active">Tentang</li>
                                 </ol>
                             </div>
                             <div class="clearfix"></div>
@@ -40,17 +40,17 @@
                     <!-- .col-md-5 -->
                     <div class="col-xs-12 col-sm-7 col-md-6 col-md-offset-1">
                         <div class="heading heading-3">
-                            <h2 class="heading--title">We Provide Lovable Experiment in the Real Estate Field</h2>
+                            <h2 class="heading--title"></h2>
                         </div>
                         <!-- .heading-title end -->
                         <div class="about--panel">
-                            <h3>Our Vision</h3>
-                            <p>Propin ipsum dolor sit amet, consectetur adipisicing elited eiusmod tempore incidid ut labor et dolore magna aliquaut enim ad minim veniam.</p>
+                            <h3>Visi Kami</h3>
+                            <p>Kami menyediakan jasa promosi dalam bentuk web yang bisa diakses untuk semua orang dan yang pastinya ramah biaya.</p>
                         </div>
                         <!-- .about-panel end -->
                         <div class="about--panel">
-                            <h3>Our Goal</h3>
-                            <p>Duis aute viele irure dolor in reprer volupta velite esse cilume dolore eu fugiat nulla pariatur. Excepteur sint occae cupidat non proident.</p>
+                            <h3>Tujuan Kami</h3>
+                            <p>Membantu menyediakan promosi dalam bentuk web yang bisa diakses internet untuk semua orang agar bisa menyelamatkan bumi dari limbah kertas.</p>
                         </div>
                         <!-- .about-panel end -->
                     </div>

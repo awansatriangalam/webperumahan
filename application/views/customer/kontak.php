@@ -10,11 +10,11 @@
                         <div class="title title-1 text-center">
                             <div class="title--content">
                                 <div class="title--heading">
-                                    <h1>Contact</h1>
+                                    <h1>Kontak</h1>
                                 </div>
                                 <ol class="breadcrumb">
-                                    <li><a href="#">Home</a></li>
-                                    <li class="active">Contact</li>
+                                    <li><a href="#">Beranda</a></li>
+                                    <li class="active">Kontak</li>
                                 </ol>
                             </div>
                             <div class="clearfix"></div>
@@ -36,22 +36,22 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-3">
                         <div class="heading heading-2 mb-55">
-                            <h2 class="heading--title">Get In Touch</h2>
+                            <h2 class="heading--title">Temukan Kami</h2>
                         </div>
                         <div class="contact-panel">
-                            <h3>Address</h3>
-                            <p>86 Petersham town, Wardll street Australia PA 6550.</p>
+                            <h3>Alamat</h3>
+                            <p>Jl.Sukamulia no.23, Malang, Jawa Timur, 65163</p>
                         </div>
                         <!-- .contact-panel -->
                         <div class="contact-panel">
-                            <h3>Phone:</h3>
-                            <p>(04) 491 570 110</p>
-                            <p>+61 525 240 310</p>
+                            <h3>No.Telepon :</h3>
+                            <p>(0341) 491 570 110</p>
+                            <p>+62 525 240 310</p>
                         </div>
                         <!-- .contact-panel -->
                         <div class="contact-panel">
                             <h3>Email:</h3>
-                            <p>contact@land.com</p>
+                            <p>webperumahan@gmail.com</p>
                         </div>
                         <!-- .contact-panel -->
                     </div>
@@ -74,7 +74,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="heading heading-2 mb-50">
-                            <h2 class="heading--title">Contact Us</h2>
+                            <h2 class="heading--title">Kontak Kami</h2>
                         </div>
                     </div>
                     <!-- .col-md-12 end -->
@@ -86,28 +86,28 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label for="contact-name">Your Name*</label>
+                                        <label for="contact-name">Nama*</label>
                                         <input type="text" class="form-control" name="contact-name" id="contact-name" required>
                                     </div>
                                 </div>
                                 <!-- .col-md-4 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label for="contact-email">Email Address*</label>
+                                        <label for="contact-email">Alamat Email*</label>
                                         <input type="email" class="form-control" name="contact-email" id="contact-email" required>
                                     </div>
                                 </div>
                                 <!-- .col-md-4 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label for="phone-number">Phone Number</label>
+                                        <label for="phone-number">Nomor Telepon</label>
                                         <input type="text" class="form-control" name="phone-number" id="phone-number" placeholder="(optional)">
                                     </div>
                                 </div>
                                 <!-- .col-md-4 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <label for="message">Message*</label>
+                                        <label for="message">Pesan*</label>
                                         <textarea class="form-control" name="contact-message" id="message" rows="2" required></textarea>
                                     </div>
                                 </div>
