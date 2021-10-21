@@ -115,21 +115,21 @@
                 <!-- Slide #1 -->
                 <div class="slide--item bg-overlay bg-overlay-dark3">
                     <div class="bg-section">
-                        <img src="<?php echo base_url()?>assets/assets_homepage/images/slider/slide-bg/3.jpg" alt="background">
+                        <img src="assets/images/slider/slide-bg/3.jpg" alt="background">
                     </div>
                 </div>
                 <!-- .slide-item end -->
                 <!-- Slide #2 -->
                 <div class="slide--item bg-overlay bg-overlay-dark3">
                     <div class="bg-section">
-                        <img src="<?php echo base_url()?>assets/assets_homepage/images/slider/slide-bg/1.jpg" alt="background">
+                        <img src="assets/images/slider/slide-bg/1.jpg" alt="background">
                     </div>
                 </div>
                 <!-- .slide-item end -->
                 <!-- Slide #3 -->
                 <div class="slide--item bg-overlay bg-overlay-dark3">
                     <div class="bg-section">
-                        <img src="<?php echo base_url()?>assets/assets_homepage/images/slider/slide-bg/3.jpg" alt="background">
+                        <img src="assets/images/slider/slide-bg/3.jpg" alt="background">
                     </div>
                 </div>
                 <!-- .slide-item end -->
@@ -153,41 +153,34 @@
                 </div>
                 <!-- .row end -->
                 <div class="row">
+                    <?php foreach( $rumah as $rm): ?>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="carousel carousel-dots" data-slide="3" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="true" data-space="25" data-loop="true" data-speed="800">
-                            <?php foreach( $rumah as $rm): ?>
-                                <div class="property-item">
-                                    <div class="property--img">
-                                        <a href="#">
-                                            <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
-                                            <span class="property--status"><?php 
-                                if ($rm->status == "0"){
-                                    echo "<span> Telah Diisi
-                                    </span>";
-                                }else{
-                                    echo "<span> Tersedia
-                                    </span>";
-                                }
-                                ?></span>
-                                        </a>
+                            <!-- .property-item #1 -->
+                            <div class="property-item">
+                                <div class="property--img">
+                                    <a href="#">
+                                        <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="property--content">
+                                    <div class="property--info">
+                                        <h5 class="property--title"><a href="#"><?php echo $rm->nama_rumah ?></a></h5>
+                                        <p class="property--location"><?php echo $rm->deskripsi ?></p>
+                                        <p class="property--price"> <?php echo $rm->harga ?></p>
                                     </div>
-                                    <div class="property--content">
-                                        <div class="property--info">
-                                            <h5 class="property--title"><a href="#"><?php echo $rm->nama_rumah ?></a></h5>
-                                            <p class="property--location"><?php echo $rm->deskripsi ?></p>
-                                            <p class="property--price"> <?php echo $rm->harga ?></p>
-                                        </div>
-                                        <!-- .property-info end -->
-                                        <div class="property--features">
-                                            <ul class="list-unstyled mb-0">
-                                                <li><span class="feature">Kamar Tidur:</span><span class="feature-num"><?php echo $rm->kamar_tidur ?></span></li>
-                                                <li><span class="feature">Kamar Mandi:</span><span class="feature-num"><?php echo $rm->kamar_mandi ?></span></li>
-                                                <li><span class="feature">Luas Bangunan:</span><span class="feature-num"><?php echo $rm->luas_bangunan ?></span></li>
-                                            </ul>
-                                        </div>
+                                    <!-- .property-info end -->
+                                    <div class="property--features">
+                                        <ul class="list-unstyled mb-0">
+                                            <li><span class="feature">Kamar Tidur:</span><span class="feature-num"><?php echo $rm->kamar_tidur ?></span></li>
+                                            <li><span class="feature">Kamar Mandi:</span><span class="feature-num"><?php echo $rm->kamar_mandi ?></span></li>
+                                            <li><span class="feature">Luas Bangunan:</span><span class="feature-num"><?php echo $rm->luas_bangunan ?></span></li>
+                                        </ul>
                                     </div>
-                                </div>  
-                            <?php endforeach; ?>                             
+                                    <!-- .property-features end -->
+                                </div>
+                            </div>
+                    <?php endforeach; ?>   
                         </div>
                         <!-- .carousel end -->
                     </div>
