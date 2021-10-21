@@ -9,13 +9,12 @@
                         <div class="col-xs-12 col-sm-6 col-md-3 widget--about">
                             <div class="widget--content">
                                 <div class="footer--logo">
-                                    <img src="<?php echo base_url()?>assets/assets_homepage/images/logo/logo-dark2.png" alt="logo">
+                                    <h4>Web Perumahan</h4>
                                 </div>
-                                <p>86 Petersham town, New South Wales Wardll Street, Australia PA 6550</p>
                                 <div class="footer--contact">
                                     <ul class="list-unstyled mb-0">
-                                        <li>+61 525 240 310</li>
-                                        <li><a href="mailto:contact@land.com">contact@land.com</a></li>
+                                        <li>+62 896 8876 1453</li>
+                                        <li><a href="#">webperumahan@gmail.com</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -23,47 +22,41 @@
                         <!-- .col-md-2 end -->
                         <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1 widget--links">
                             <div class="widget--title">
-                                <h5>Company</h5>
+                                <h5>Perusahaan</h5>
                             </div>
                             <div class="widget--content">
                                 <ul class="list-unstyled mb-0">
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Career</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Properties</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="<?php echo base_url('customer/tentang')?>">Tentang Kami</a></li>
+                                    <li><a href="<?php echo base_url('customer/layanan')?>">Layanan</a></li>
+                                    <li><a href="<?php echo base_url('customer/rumah')?>">Rumah</a></li>
+                                    <li><a href="<?php echo base_url('customer/kontak')?>">Kontak</a></li>
                                 </ul>
                             </div>
                         </div>
                         <!-- .col-md-2 end -->
                         <div class="col-xs-12 col-sm-3 col-md-2 widget--links">
                             <div class="widget--title">
-                                <h5>Learn More</h5>
+                                <h5>Lebih Lanjut</h5>
                             </div>
                             <div class="widget--content">
                                 <ul class="list-unstyled mb-0">
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Account</a></li>
-                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="<?php echo base_url('customer/privasi')?>">Privasi</a></li>
+                                    <li><a href="<?php echo base_url('customer/syarat')?>">Syarat & Ketentuan</a></li>
+                                    <li><a href="<?php echo base_url('customer/faq')?>">FAQ</a></li>
                                 </ul>
                             </div>
                         </div>
                         <!-- .col-md-2 end -->
                         <div class="col-xs-12 col-sm-12 col-md-4 widget--newsletter">
                             <div class="widget--title">
-                                <h5>newsletter</h5>
                             </div>
                             <div class="widget--content">
-                                <form class="newsletter--form mb-40">
-                                    <input type="email" class="form-control" id="newsletter-email" placeholder="Email Address">
-                                    <button type="submit"><i class="fa fa-arrow-right"></i></button>
-                                </form>
-                                <h6>Get In Touch</h6>
+                                <h6>Ikuti kami di</h6>
                                 <div class="social-icons">
                                     <a href="#"><i class="fa fa-twitter"></i></a>
                                     <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-vimeo"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-youtube"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +74,7 @@
                 <div class="container">
                     <div class="row footer--bar">
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <span>© 2018 <a href="http://themeforest.net/user/zytheme">Zytheme</a>, All Rights Reserved.</span>
+                            <span>© 2021 <a href="http://themeforest.net/user/zytheme">Webperumahan</a>.</span>
                         </div>
 
                     </div>
