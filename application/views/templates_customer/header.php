@@ -1,48 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Website Perumahan</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="<?php echo base_url()?>assets/assets_homepage/assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="<?php echo base_url()?>assets/assets_homepage/https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url()?>assets/assets_homepage/https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="<?php echo base_url()?>assets/assets_homepage/css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="<?php echo base_url('customer/dashboard') ?>">Web Perumahan</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('customer/dashboard') ?>">Beranda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('customer/rumah') ?>">Rumah</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('customer/tentang') ?>">Tentang</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('customer/kontak') ?>">Kontak</a></li>
-                        <li class="nav-item"><a class="nav-link" href="<?php echo base_url('register') ?>">Daftar</a></li>
-                        <li class="nav-item">
 
+
+        <!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+    <!-- Document Meta
+    ============================================= -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--IE Compatibility Meta-->
+    <meta name="author" content="zytheme" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Real Estate html5 template">
+    <link href="<?php echo base_url()?>assets/assets_homepage/images/favicon/favicon.png" rel="icon">
+
+    <!-- Fonts
+    ============================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPoppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="<?php echo base_url()?>assets/assets_homepage/css/external.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>assets/assets_homepage/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>assets/assets_homepage/css/style.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Document Title
+    ============================================= -->
+    <title>Web | Perumahan</title>
+</head>
+
+<body>
+    <!-- Document Wrapper
+	============================================= -->
+    <div id="wrapper" class="wrapper clearfix">
+        <header id="navbar-spy" class="header header-1 header-transparent header-fixed">
+            <nav id="primary-menu" class="navbar navbar-fixed-top">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+                        <a class="logo" href="index.html">Web Perumahan</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav nav-pos-center navbar-left">
+                            <!-- Home Menu -->
+                            <li><a href="<?php echo base_url('customer/dashboard')?>" >Beranda</a></li>
+                            <li><a href="<?php echo base_url('customer/rumah')?>" >Rumah</a></li>
+                            <li><a href="<?php echo base_url('customer/tentang')?>" >Tentang</a></li>
+                            <li><a href="<?php echo base_url('customer/kontak')?>" >Kontak</a> </li>                              
+                        </ul>
+                        <!-- Module Signup  -->
+                        <div class="module module-login pull-left">
+                            <a class="btn-popup" href="<?php echo base_url('register') ?>">Daftar</a>
+                        </div>
+                        <!-- Module Consultation  -->
+                        <div class="module module-property pull-left">
                             <?php if ($this->session->userdata('nama')) { ?>
-                                <a class="nav-link" href="<?php echo base_url('auth/logout')?> "> Welcome <?php echo $this->session->
-                                    userdata('nama') ?> <span class="btn btn-sm btn-danger">Keluar</span></a>
+                                <a class="pull-left" href="<?php echo base_url('auth/logout')?> "><span class="btn btn-sm btn-danger">Keluar</span></a>
                             <?php } else { ?>
                                 <a class="nav-link" href="<?php echo base_url('auth/login')?> "><span class="btn btn-sm btn-success">Masuk</span></a>
                             <?php } ?>
-
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    <!-- /.navbar-collapse -->
                 </div>
-            </div>
-        </nav>
+                <!-- /.container-fluid -->
+            </nav>

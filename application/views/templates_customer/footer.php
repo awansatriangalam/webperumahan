@@ -1,28 +1,104 @@
-<!-- Footer-->
-<footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Web Perumahan 2021</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-light btn-social mx-2" href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-light btn-social mx-2" href="https://id-id.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-light btn-social mx-2" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-light text-decoration-none me-3" href="#!">Kebijakan Privasi</a>
-                        <a class="link-light text-decoration-none" href="#!">Syarat dan Ketentuan</a>
+        <!-- Footer #1
+============================================= -->
+<footer id="footer" class="footer footer-1 bg-white">
+            <!-- Widget Section
+	============================================= -->
+            <div class="footer-widget">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 widget--about">
+                            <div class="widget--content">
+                                <div class="footer--logo">
+                                    <img src="<?php echo base_url()?>assets/assets_homepage/images/logo/logo-dark2.png" alt="logo">
+                                </div>
+                                <p>86 Petersham town, New South Wales Wardll Street, Australia PA 6550</p>
+                                <div class="footer--contact">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>+61 525 240 310</li>
+                                        <li><a href="mailto:contact@land.com">contact@land.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .col-md-2 end -->
+                        <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1 widget--links">
+                            <div class="widget--title">
+                                <h5>Company</h5>
+                            </div>
+                            <div class="widget--content">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Properties</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- .col-md-2 end -->
+                        <div class="col-xs-12 col-sm-3 col-md-2 widget--links">
+                            <div class="widget--title">
+                                <h5>Learn More</h5>
+                            </div>
+                            <div class="widget--content">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Account</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- .col-md-2 end -->
+                        <div class="col-xs-12 col-sm-12 col-md-4 widget--newsletter">
+                            <div class="widget--title">
+                                <h5>newsletter</h5>
+                            </div>
+                            <div class="widget--content">
+                                <form class="newsletter--form mb-40">
+                                    <input type="email" class="form-control" id="newsletter-email" placeholder="Email Address">
+                                    <button type="submit"><i class="fa fa-arrow-right"></i></button>
+                                </form>
+                                <h6>Get In Touch</h6>
+                                <div class="social-icons">
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-vimeo"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .col-md-4 end -->
+
                     </div>
                 </div>
+                <!-- .container end -->
             </div>
+            <!-- .footer-widget end -->
+
+            <!-- Copyrights
+	============================================= -->
+            <div class="footer--copyright text-center">
+                <div class="container">
+                    <div class="row footer--bar">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <span>© 2018 <a href="http://themeforest.net/user/zytheme">Zytheme</a>, All Rights Reserved.</span>
+                        </div>
+
+                    </div>
+                    <!-- .row end -->
+                </div>
+                <!-- .container end -->
+            </div>
+            <!-- .footer-copyright end -->
         </footer>
-        <!-- Bootstrap core JS-->
-        <script src="<?php echo base_url('')?>assets/assets_homepage/https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="<?php echo base_url('')?>assets/assets_homepage/js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="<?php echo base_url('')?>assets/assets_homepage/https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    </div>
+    <!-- #wrapper end -->
+
+    <!-- Footer Scripts
+============================================= -->
+    <script src="<?php echo base_url()?>assets/assets_homepage/js/jquery-2.2.4.min.js"></script>
+    <script src="<?php echo base_url()?>assets/assets_homepage/js/plugins.js"></script>
+    <script src="<?php echo base_url()?>assets/assets_homepage/js/functions.js"></script>
+</body>
+
 </html>

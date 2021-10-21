@@ -1,62 +1,142 @@
-<!-- About-->
-<section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Tentang Kami</h2><hr>
-                    <h3 class="section-subheading text-muted">Informasi Mengenai Perusahaan Kami</h3>
-                </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url()?>assets/assets_homepage/assets/img/about/1.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">Awal Mula Terbentuk</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Kami memulai karir ini berawal pada tahun 2009 banyak brosur bertebaran yang berisi promosi-promosi sebuah rumah. Nah, bermula pada si Paijo yang membawa brosur tentang perumahan, dari itu si Adi berpikir dan mengemukakan pendapatnya tentang membuat suatu website untuk lebih memudahkan orang dalam memasarkan perumahannya.</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url()?>assets/assets_homepage/assets/img/about/2.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Maret 2011</h4>
-                                <h4 class="subheading">Lahirlah Sebuah Website Ini</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Maret tanggal 25 2011, awal mula kami meng-online kan website ini.Website yang dibuat oleh tim yang terdiri dari 3 orang yaitu Adia,Paijo, dan Basit.Mulanya website ini tidak sebegitu ramai karena orang-orang masih memakai cara lama, akan tetapi lama kemudian orang-orang sadar akan teknologi.</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url()?>assets/assets_homepage/assets/img/about/3.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Desember 2015</h4>
-                                <h4 class="subheading">Pelayanan Dengan Transaksi Yang Sudah Up To Date</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Desember 2015 merupakan bulan yang indah untuk website ini, dikarenakan pada bulan ini website Adhirekayasha City untuk pertama kalinya bisa melayanai transaksi dengan bergaya modern yang sudah update seperti khalayak-khalayak website luar negeri pada umumnya.</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo base_url()?>assets/assets_homepage/assets/img/about/4.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>Juli 2020</h4>
-                                <h4 class="subheading">Awal Mula Ekspansi Besar-Besaran</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Pada Juli 2020 tanggal 12 lebih tepatnya merupakan sebuah pergerakan besar yang dilakukan oleh Adhirekayasha City ini.Mengapa tidak, karena pada tanggal itu banyak perusahaan-perusahaan besar yang ingin mengajak kerja sama dengan kami hingga kami harus bisa melakukan banyak perubahan terhadap Perusahaan kami ini.</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                Mari Menjadi
-                                <br />
-                                Bagian Dari
-                                <br />
-                                Cerita Kami !
-                            </h4>
-                        </div>
-                    </li>
-                </ul>
+<!-- Page Title #1
+============================================ -->
+<section id="page-title" class="page-title bg-overlay bg-overlay-dark2">
+            <div class="bg-section">
+                <img src="<?php echo base_url()?>assets/assets_homepage/images/page-titles/1.jpg" alt="Background" />
             </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+                        <div class="title title-1 text-center">
+                            <div class="title--content">
+                                <div class="title--heading">
+                                    <h1>About</h1>
+                                </div>
+                                <ol class="breadcrumb">
+                                    <li><a href="#">Home</a></li>
+                                    <li class="active">About</li>
+                                </ol>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- .title end -->
+                    </div>
+                    <!-- .col-md-12 end -->
+                </div>
+                <!-- .row end -->
+            </div>
+            <!-- .container end -->
         </section>
+        <!-- #page-title end -->
+
+        <!-- about #1
+============================================= -->
+        <section id="about" class="about bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-md-5">
+                        <div class="about--img"><img class="img-responsive" src="<?php echo base_url()?>assets/assets_homepage/images/about/1.jpg" alt="about img"></div>
+                    </div>
+                    <!-- .col-md-5 -->
+                    <div class="col-xs-12 col-sm-7 col-md-6 col-md-offset-1">
+                        <div class="heading heading-3">
+                            <h2 class="heading--title">We Provide Lovable Experiment in the Real Estate Field</h2>
+                        </div>
+                        <!-- .heading-title end -->
+                        <div class="about--panel">
+                            <h3>Our Vision</h3>
+                            <p>Propin ipsum dolor sit amet, consectetur adipisicing elited eiusmod tempore incidid ut labor et dolore magna aliquaut enim ad minim veniam.</p>
+                        </div>
+                        <!-- .about-panel end -->
+                        <div class="about--panel">
+                            <h3>Our Goal</h3>
+                            <p>Duis aute viele irure dolor in reprer volupta velite esse cilume dolore eu fugiat nulla pariatur. Excepteur sint occae cupidat non proident.</p>
+                        </div>
+                        <!-- .about-panel end -->
+                    </div>
+                    <!-- .col-md-6 -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- .container -->
+        </section>
+        <!-- #about end -->
+
+        <!-- Feature
+============================================= -->
+        <section id="feature" class="feature feature-left pt-90 pb-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="heading heading-2 text-center mb-70">
+                            <h2 class="heading--title">What We Provide?</h2>
+                            <p class="heading--desc">Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
+                        </div>
+                        <!-- .heading-title end -->
+                    </div>
+                    <!-- .col-md-12 end -->
+                </div>
+                <!-- .row end -->
+                <div class="row">
+                    <!-- feature Panel #1 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="feature-panel">
+                            <div class="feature--icon">
+                                <img src="<?php echo base_url()?>assets/assets_homepage/images/features/icons/1.png" alt="icon img">
+                            </div>
+                            <div class="feature--content">
+                                <h3>Presenting Your Property</h3>
+                                <p>Duis sed odio sit amet nibh vtate cursusa sit amet mauris morbi accum ipsum velit nam nec tellus viele a odio tincidet auctor ornare odio. Sede non mauris vitae erat conquat.</p>
+                            </div>
+                        </div>
+                        <!-- .feature-panel end -->
+                    </div>
+                    <!-- .col-md-6 end -->
+                    <!-- feature Panel #2 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="feature-panel">
+                            <div class="feature--icon">
+                                <img src="<?php echo base_url()?>assets/assets_homepage/images/features/icons/2.png" alt="icon img">
+                            </div>
+                            <div class="feature--content">
+                                <h3>Renting or Selling</h3>
+                                <p>Duis sed odio sit amet nibh vtate cursusa sit amet mauris morbi accum ipsum velit nam nec tellus viele a odio tincidet auctor ornare odio. Sede non mauris vitae erat conquat.</p>
+                            </div>
+                        </div>
+                        <!-- .feature-panel end -->
+                    </div>
+                    <!-- .col-md-6 end -->
+                    <!-- feature Panel #3 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="feature-panel">
+                            <div class="feature--icon">
+                                <img src="<?php echo base_url()?>assets/assets_homepage/images/features/icons/3.png" alt="icon img">
+                            </div>
+                            <div class="feature--content">
+                                <h3>Property Exchange</h3>
+                                <p>Duis sed odio sit amet nibh vtate cursusa sit amet mauris morbi accum ipsum velit nam nec tellus viele a odio tincidet auctor ornare odio. Sede non mauris vitae erat conquat.</p>
+                            </div>
+                        </div>
+                        <!-- .feature-panel end -->
+                    </div>
+                    <!-- .col-md-6 end -->
+                    <!-- feature Panel #4 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="feature-panel">
+                            <div class="feature--icon">
+                                <img src="<?php echo base_url()?>assets/assets_homepage/images/features/icons/4.png" alt="icon img">
+                            </div>
+                            <div class="feature--content">
+                                <h3>Buying a Property</h3>
+                                <p>Duis sed odio sit amet nibh vtate cursusa sit amet mauris morbi accum ipsum velit nam nec tellus viele a odio tincidet auctor ornare odio. Sede non mauris vitae erat conquat.</p>
+                            </div>
+                        </div>
+                        <!-- .feature-panel end -->
+                    </div>
+                    <!-- .col-md-6 end -->
+                </div>
+                <!-- .row end -->
+            </div>
+            <!-- .container end -->
+        </section>
+        <!-- .feature end -->
