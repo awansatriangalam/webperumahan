@@ -1,6 +1,4 @@
-
-
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 
 <head>
@@ -48,7 +46,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-                        <a class="logo" href="index.html">Web Perumahan</a>
+                        <a class="logo" href="<?php echo base_url('customer/dashboard') ?>">Web Perumahan</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->

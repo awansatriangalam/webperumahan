@@ -45,12 +45,12 @@
                         <!-- .heading-title end -->
                         <div class="about--panel">
                             <h3>Visi Kami</h3>
-                            <p>Kami menyediakan jasa promosi dalam bentuk web yang bisa diakses untuk semua orang dan yang pastinya ramah biaya.</p>
+                            <p>Kami menyediakan jasa promosi dalam bentuk web yang bisa diakses untuk semua orang dan yang pastinya hemat biaya.</p>
                         </div>
                         <!-- .about-panel end -->
                         <div class="about--panel">
                             <h3>Tujuan Kami</h3>
-                            <p>Membantu menyediakan promosi dalam bentuk web yang bisa diakses internet untuk semua orang agar bisa menyelamatkan bumi dari limbah kertas.</p>
+                            <p>Membantu customer yang sedang mencari tempat tinggal yang nyaman dengan promosi yang kami sediakan di website kami ini </p>
                         </div>
                         <!-- .about-panel end -->
                     </div>
@@ -64,79 +64,5 @@
 
         <!-- Feature
 ============================================= -->
-        <section id="feature" class="feature feature-left pt-90 pb-30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="heading heading-2 text-center mb-70">
-                            <h2 class="heading--title">What We Provide?</h2>
-                            <p class="heading--desc">Duis aute irure dolor in reprehed in volupted velit esse dolore</p>
-                        </div>
-                        <!-- .heading-title end -->
-                    </div>
-                    <!-- .col-md-12 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <!-- feature Panel #1 -->
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="feature-panel">
-                            <div class="feature--icon">
-                                <img src="<?php echo base_url()?>assets/assets_homepage/images/features/icons/1.png" alt="icon img">
-                            </div>
-                            <div class="feature--content">
-                                <h3>Presenting Your Property</h3>
-                                <p>Duis sed odio sit amet nibh vtate cursusa sit amet mauris morbi accum ipsum velit nam nec tellus viele a odio tincidet auctor ornare odio. Sede non mauris vitae erat conquat.</p>
-                            </div>
-                        </div>
-                        <!-- .feature-panel end -->
-                    </div>
-                    <!-- .col-md-6 end -->
-                    <!-- feature Panel #2 -->
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="feature-panel">
-                            <div class="feature--icon">
-                                <img src="<?php echo base_url()?>assets/assets_homepage/images/features/icons/2.png" alt="icon img">
-                            </div>
-                            <div class="feature--content">
-                                <h3>Renting or Selling</h3>
-                                <p>Duis sed odio sit amet nibh vtate cursusa sit amet mauris morbi accum ipsum velit nam nec tellus viele a odio tincidet auctor ornare odio. Sede non mauris vitae erat conquat.</p>
-                            </div>
-                        </div>
-                        <!-- .feature-panel end -->
-                    </div>
-                    <!-- .col-md-6 end -->
-                    <!-- feature Panel #3 -->
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="feature-panel">
-                            <div class="feature--icon">
-                                <img src="<?php echo base_url()?>assets/assets_homepage/images/features/icons/3.png" alt="icon img">
-                            </div>
-                            <div class="feature--content">
-                                <h3>Property Exchange</h3>
-                                <p>Duis sed odio sit amet nibh vtate cursusa sit amet mauris morbi accum ipsum velit nam nec tellus viele a odio tincidet auctor ornare odio. Sede non mauris vitae erat conquat.</p>
-                            </div>
-                        </div>
-                        <!-- .feature-panel end -->
-                    </div>
-                    <!-- .col-md-6 end -->
-                    <!-- feature Panel #4 -->
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="feature-panel">
-                            <div class="feature--icon">
-                                <img src="<?php echo base_url()?>assets/assets_homepage/images/features/icons/4.png" alt="icon img">
-                            </div>
-                            <div class="feature--content">
-                                <h3>Buying a Property</h3>
-                                <p>Duis sed odio sit amet nibh vtate cursusa sit amet mauris morbi accum ipsum velit nam nec tellus viele a odio tincidet auctor ornare odio. Sede non mauris vitae erat conquat.</p>
-                            </div>
-                        </div>
-                        <!-- .feature-panel end -->
-                    </div>
-                    <!-- .col-md-6 end -->
-                </div>
-                <!-- .row end -->
-            </div>
-            <!-- .container end -->
-        </section>
+        
         <!-- .feature end -->

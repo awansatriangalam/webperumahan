@@ -2,7 +2,7 @@
             <div class="container-fluid pr-0 pl-0">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div id="googleMap"></div>
+                    <img src="<?php echo base_url()?>assets/assets_homepage/images/slider/slide-bg/3.jpg" alt="background">
                     </div>
                     <!-- .col-md-12 end -->
                 </div>
@@ -13,22 +13,18 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <form class="mb-0 ">
+                            <form method="get" action="<?php echo base_url('customer/pencarian')?>" class="mb-0 " >
                                 <div class="form-box ">
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-6 col-md-3">
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
-                                                    <select name="select-location" id="select-location">
-                                            <option>Any Location</option>
-                                            <option>Alabama</option>
-											<option>Alaska</option>
-											<option>California</option>
-											<option>Florida</option>
-											<option>Mississippi</option>
-											<option>Oregon</option>
-                                        </select>
+                                                    <select name="lokasi">
+                                                        <option>Semua Lokasi</option>
+                                                        <option value="perumahan 1">Perumahan 1</option>
+                                                        <option value="perumahan 2">Perumahan 2</option>                                                      
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -37,13 +33,12 @@
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
-                                                    <select name="select-type" id="select-type">
-                                            <option>Any Type</option>
-                                            <option>Apartment</option>
-											<option>House</option>
-											<option>Office</option>
-											<option>Villa</option>
-                                        </select>
+                                                    <select name="kode_type">
+                                                        <option>Rumah Tipe</option>
+                                                        <option value="36">Middle</option>
+                                                        <option value="45">Middle Low</option>
+                                                        <option value="60">Middle Up</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -52,11 +47,11 @@
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
-                                                    <select name="select-status" id="select-status">
-                                           <option>Any Status</option>
-                                            <option>For Rent</option>
-                                        	<option>For Sale</option>
-                                        </select>
+                                                    <select name="status">
+                                                        <option>Semua Status</option>
+                                                        <option value="0">Diisi</option>
+                                                        <option value="1">Dijual</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -69,13 +64,13 @@
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
-                                                    <select name="select-beds" id="select-beds">
-                                            <option>Beds</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
+                                                    <select name="kamar_tidur">
+                                                    <option>Kamar Tidur</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -84,29 +79,18 @@
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
-                                                    <select name="select-baths" id="select-baths">
-                                            <option>Baths</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
+                                                    <select name="kamar_mandi" >
+                                                        <option>Kamar Mandi</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- .col-md-3 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-6 option-hide">
-                                            <div class="filter mb-30">
-                                                <p>
-                                                    <label for="amount">Price Range: </label>
-                                                    <input id="amount" type="text" class="amount" readonly>
-                                                </p>
-                                                <div class="slider-range"></div>
-                                            </div>
-                                        </div>
-                                        <!-- .col-md-3 end -->
                                         <div class="col-xs-12 col-sm-12 col-md-12">
-                                            <a href="#" class="less--options">Less options</a>
+                                            <a href="#" class="less--options">Pilihan Lanjut</a>
                                         </div>
                                     </div>
                                     <!-- .row end -->
@@ -133,24 +117,18 @@
 =============================-->
                         <div class="widget widget-property">
                             <div class="widget--title">
-                                <h5>Property Type</h5>
+                                <h5>Tipe Rumah</h5>
                             </div>
                             <div class="widget--content">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="#">Apartments <span>(13)</span></a>
+                                        <a href="#">Middle <span></span></a>
                                     </li>
                                     <li>
-                                        <a href="#">Houses <span>(8)</span></a>
+                                        <a href="#">Middle Low <span></span></a>
                                     </li>
                                     <li>
-                                        <a href="#">Offices <span>(3)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Villas <span>(4)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Land <span>(2)</span></a>
+                                        <a href="#">Middle Up <span></span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -161,47 +139,20 @@
 =============================-->
                         <div class="widget widget-property">
                             <div class="widget--title">
-                                <h5>Property Status</h5>
+                                <h5>Status Rumah</h5>
                             </div>
                             <div class="widget--content">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="#">For Rent <span>(25)</span></a>
+                                        <a href="#">Telah Terisi <span></span></a>
                                     </li>
                                     <li>
-                                        <a href="#">For Sale <span>(32)</span></a>
+                                        <a href="#">Belum Terisi <span></span></a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <!-- . widget property status end -->
-
-
-                        <!-- widget property city
-=============================-->
-                        <div class="widget widget-property">
-                            <div class="widget--title">
-                                <h5>Property By City</h5>
-                            </div>
-                            <div class="widget--content">
-                                <ul class="list-unstyled mb-0">
-                                    <li>
-                                        <a href="#">London <span>(5)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Sydney <span>(10)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">New York <span>(4)</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Paris <span>(7)</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- . widget property city end -->
-
 
                         <!-- widget featured property
 =============================-->
@@ -212,52 +163,41 @@
                             <div class="widget--content">
                                 <div class="carousel carousel-dots" data-slide="1" data-slide-rs="1" data-autoplay="false" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="800">
                                     <!-- .property-item #1 -->
+                                    <?php foreach ($rumah as $rm) :  ?>
+                                    <!-- .property-item #1 -->
                                     <div class="property-item">
                                         <div class="property--img">
-                                            <img src="<?php echo base_url()?>assets/assets_homepage/images/properties/13.jpg" alt="property image" class="img-responsive">
-                                            <span class="property--status">For Rent</span>
+                                            <a href="property-single-gallery.html">
+                                                <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
+								            </a>
+                                            <span class="property--status"><?php 
+                                                if ($rm->status == "0"){
+                                                    echo "<span> Telah Terisi
+                                                    </span>";
+                                                }else{
+                                                    echo "<span> Tersedia
+                                                    </span>";
+                                                }
+                                                ?></span>
                                         </div>
                                         <div class="property--content">
                                             <div class="property--info">
-                                                <h5 class="property--title"><a href="property-single-gallery.html">House in Chicago</a></h5>
-                                                <p class="property--location">1445 N State Pkwy, Chicago, IL 60610</p>
-                                                <p class="property--price">$1200<span class="time">month</span></p>
+                                                <h5 class="property--title"><a href="property-single-gallery.html"><?php echo $rm->nama_rumah ?></a></h5>
+                                                <p class="property--location"><?php echo $rm->lokasi ?></p>
+                                                <p class="property--price"><?php echo $rm->harga ?></p>
                                             </div>
                                             <!-- .property-info end -->
-                                        </div>
-                                    </div>
-                                    <!-- .property item end -->
-                                    <!-- .property-item #2 -->
-                                    <div class="property-item">
-                                        <div class="property--img">
-                                            <img src="<?php echo base_url()?>assets/assets_homepage/images/properties/2.jpg" alt="property image" class="img-responsive">
-                                            <span class="property--status">For Rent</span>
-                                        </div>
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title"><a href="property-single-gallery.html">Villa in Oglesby Ave</a></h5>
-                                                <p class="property--location">1035 Oglesby Ave, Chicago, IL 60617</p>
-                                                <p class="property--price">$130,000<span class="time">month</span></p>
+                                            <div class="property--features">
+                                                <ul class="list-unstyled mb-0">
+                                                    <li><span class="feature">Kamar Tidur:</span><span class="feature-num"><?php echo $rm->kamar_tidur ?></span></li>
+                                                    <li><span class="feature">Kamar Mandi:</span><span class="feature-num"><?php echo $rm->kamar_mandi ?></span></li>
+                                                    <li><span class="feature">Luas Bangunan:</span><span class="feature-num"><?php echo $rm->luas_bangunan ?></span></li>
+                                                </ul>
                                             </div>
-                                            <!-- .property-info end -->
+                                            <!-- .property-features end -->
                                         </div>
                                     </div>
-                                    <!-- .property item end -->
-                                    <!-- .property-item #3 -->
-                                    <div class="property-item">
-                                        <div class="property--img">
-                                            <img src="<?php echo base_url()?>assets/assets_homepage/images/properties/3.jpg" alt="property image" class="img-responsive">
-                                            <span class="property--status">For Sale</span>
-                                        </div>
-                                        <div class="property--content">
-                                            <div class="property--info">
-                                                <h5 class="property--title"><a href="property-single-gallery.html">Apartment in Long St.</a></h5>
-                                                <p class="property--location">34 Long St, Jersey City, NJ 07305</p>
-                                                <p class="property--price">$70,000</p>
-                                            </div>
-                                            <!-- .property-info end -->
-                                        </div>
-                                    </div>
+                                    <?php endforeach; ?>
                                     <!-- .property item end -->
                                 </div>
                                 <!-- .carousel end -->
@@ -268,28 +208,6 @@
                     <!-- .col-md-4 end -->
                     <div class="col-xs-12 col-sm-12 col-md-8">
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="properties-filter clearfix">
-                                    <div class="select--box pull-left">
-                                        <label>Sort by:</label>
-                                        <i class="fa fa-angle-up"></i>
-                                        <i class="fa fa-angle-down"></i>
-                                        <select>
-								<option selected="" value="Default">Default Sorting</option>
-								<option value="Larger">Newest Items</option>
-								<option value="Larger">oldest Items</option>
-								<option value="Larger">Hot Items</option>
-								<option value="Small">Highest Price</option>
-								<option value="Medium">Lowest Price</option>
-							</select>
-                                    </div>
-                                    <!-- .select-box -->
-                                    <div class="view--type pull-right">
-                                        <a id="switch-list" href="#" class="active"><i class="fa fa-th-list"></i></a>
-                                        <a id="switch-grid" href="#" class=""><i class="fa fa-th-large"></i></a>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="properties properties-list">
                                 <!-- .col-md-12 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -313,7 +231,7 @@
                                         <div class="property--content">
                                             <div class="property--info">
                                                 <h5 class="property--title"><a href="property-single-gallery.html"><?php echo $rm->nama_rumah ?></a></h5>
-                                                <p class="property--location"><?php echo $rm->deskripsi ?></p>
+                                                <p class="property--location"><?php echo $rm->lokasi ?></p>
                                                 <p class="property--price"><?php echo $rm->harga ?></p>
                                             </div>
                                             <!-- .property-info end -->
@@ -357,20 +275,4 @@
         </section>
         <!-- #properties-list  end  -->
 
-        <!-- cta #1
-============================================= -->
-        <section id="cta" class="cta cta-1 text-center bg-overlay bg-overlay-dark pt-90">
-            <div class="bg-section"><img src="<?php echo base_url()?>assets/assets_homepage/images/cta/bg-1.jpg" alt="Background"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                        <h3>Join our professional team & agents to start selling your house</h3>
-                        <a href="#" class="btn btn--primary">Contact</a>
-                    </div>
-                    <!-- .col-md-6 -->
-                </div>
-                <!-- .row -->
-            </div>
-            <!-- .container -->
-        </section>
-        <!-- #cta1 end -->
+       

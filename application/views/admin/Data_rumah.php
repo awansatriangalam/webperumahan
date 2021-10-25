@@ -19,7 +19,7 @@
                     <th>Luas Bangunan</th>
                     <th>Luas Tanah</th>
                     <th>Interior</th>
-                    <th>Deskripsi</th>
+                    <th>Lokasi</th>
                     <th>Kamar Tidur</th>
                     <th>Kamar Mandi</th>
                     <th>Status</th>
@@ -41,7 +41,7 @@
                                 <td><?php echo $rm->luas_bangunan ?></td>
                                 <td><?php echo $rm->luas_tanah ?></td>
                                 <td><?php echo $rm->interior ?></td>
-                                <td><?php echo $rm->deskripsi ?></td>
+                                <td><?php echo $rm->lokasi ?></td>
                                 <td><?php echo $rm->kamar_tidur ?></td>
                                 <td><?php echo $rm->kamar_mandi ?></td>
                                 <td><?php 

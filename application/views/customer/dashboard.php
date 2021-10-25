@@ -9,7 +9,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="slider--content">
                             <div class="text-center">
-                                <h1>Temukan Unit Rumah Impian Anda</h1>
+                                <h1>Temukan Rumah Impian Anda</h1>
                             </div>
                             <form class="mb-0">
                                 <div class="form-box search-properties">
@@ -19,12 +19,12 @@
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="select-location" id="select-location">
-                                         <option>Semua Lokasi</option>
-                                        <option>Malang</option>
-                                        <option>Surabaya</option>
-                                        <option>Jember</option>
-                                        <option>Madura</option>
-                                    </select>
+                                                        <option>Semua Lokasi</option>
+                                                        <option>Malang</option>
+                                                        <option>Surabaya</option>
+                                                        <option>Jember</option>
+                                                        <option>Madura</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -34,11 +34,11 @@
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="select-type" id="select-type">
-                                       <option>Rumah Tipe</option>
-                                        <option>Ixora Valley</option>
-                                        <option>Elishaa Valley</option>
-                                        <option>Jishaa Valley</option>
-                                    </select>
+                                                        <option>Rumah Tipe</option>
+                                                        <option>Ixora Valley</option>
+                                                        <option>Elishaa Valley</option>
+                                                        <option>Jishaa Valley</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -48,10 +48,10 @@
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="select-status" id="select-status">
-                                        <option>Semua Status</option>
-                                        <option>Sewa</option>
-                                        <option>Dijual</option>
-                                    </select>
+                                                        <option>Semua Status</option>
+                                                        <option>Sewa</option>
+                                                        <option>Dijual</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -65,13 +65,13 @@
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="select-beds" id="select-beds">
-                                        <option>Kamar Tidur</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
+                                                        <option>Kamar Tidur</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -81,27 +81,16 @@
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="select-baths" id="select-baths">
-                                        <option>Kamar Mandi</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
+                                                        <option>Kamar Mandi</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- .col-md-3 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-6 option-hide">
-                                            <div class="filter mb-30">
-                                                <p>
-                                                    <label for="amount">Kisaran Harga: </label>
-                                                    <input id="amount" type="text" class="amount" readonly="">
-                                                </p>
-                                                <div class="slider-range"></div>
-                                            </div>
-                                        </div>
-                                        <!-- .col-md-3 end -->
                                         <div class="col-xs-12 col-sm-12 col-md-12">
                                             <a href="#" class="less--options">Pilihan Lanjut</a>
                                         </div>
@@ -166,12 +155,21 @@
                                     <div class="property--img">
                                         <a href="#">
                                             <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
+                                            <span class="property--status"><?php 
+                                                if ($rm->status == "0"){
+                                                    echo "<span> Telah Terisi
+                                                    </span>";
+                                                }else{
+                                                    echo "<span> Tersedia
+                                                    </span>";
+                                                }
+                                                ?></span>   
                                         </a>
                                     </div>
                                     <div class="property--content">
                                         <div class="property--info">
                                             <h5 class="property--title"><a href="#"><?php echo $rm->nama_rumah ?></a></h5>
-                                            <p class="property--location"><?php echo $rm->deskripsi ?></p>
+                                            <p class="property--location"><?php echo $rm->lokasi ?></p>
                                             <p class="property--price"> <?php echo $rm->harga ?></p>
                                         </div>
                                         <!-- .property-info end -->
@@ -263,111 +261,15 @@
         <!-- .feature end -->
         <!-- city-property
 ============================================= -->
-                    
-        <section id="agents" class="agents bg-white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="heading heading-2 text-center mb-70">
-                            <h2 class="heading--title">Agen Terpercaya</h2>
-                            <p class="heading--desc">Berikut merupakan agen yang bekerja pada kami...</p>
-                        </div>
-                        <!-- .heading end -->
-                    </div>
-                    <!-- .col-md-12 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <!-- agent #1 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="agent">
-                            <div class="agent--img">
-                                <img src="assets/images/agents/grid/1.png" alt="agent" />
-                                <div class="agent--details">
-                                    <p>Lorem ipsum dolor sit amet, consece adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore.</p>
-                                    <div class="agent--social-links">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .agent-img end -->
-                            <div class="agent--info">
-                                <h5 class="agent--title">Yusop Martin</h5>
-                                <h6 class="agent--position">Agen Pemasaran</h6>
-                            </div>
-                            <!-- .agent-info end -->
-                        </div>
-                        <!-- .agent end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                    <!-- agent #2 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="agent">
-                            <div class="agent--img">
-                                <img src="assets/images/agents/grid/2.png" alt="agent" />
-                                <div class="agent--details">
-                                    <p>Lorem ipsum dolor sit amet, consece adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore.</p>
-                                    <div class="agent--social-links">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .agent-img end -->
-                            <div class="agent--info">
-                                <h5 class="agent--title">Mansoer Smith</h5>
-                                <h6 class="agent--position">Agen Pembelian</h6>
-                            </div>
-                            <!-- .agent-info end -->
-                        </div>
-                        <!-- .agent end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                    <!-- agent #3 -->
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="agent">
-                            <div class="agent--img">
-                                <img src="assets/images/agents/grid/3.png" alt="agent" />
-                                <div class="agent--details">
-                                    <p>Lorem ipsum dolor sit amet, consece adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore.</p>
-                                    <div class="agent--social-links">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .agent-img end -->
-                            <div class="agent--info">
-                                <h5 class="agent--title">Ryan Thekop</h5>
-                                <h6 class="agent--position">Agensi Perumahan</h6>
-                            </div>
-                            <!-- .agent-info end -->
-                        </div>
-                        <!-- .agent end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-
-                </div>
-            </div>
-        </section>
-        <!-- #agents end  -->
-
         <!-- cta #1
 ============================================= -->
-        <section id="cta" class="cta cta-1 text-center bg-overlay bg-overlay-dark pt-90">
-            <div class="bg-section"><img src="assets/images/cta/bg-1.jpg" alt="Background"></div>
+<section id="cta" class="cta cta-1 text-center bg-overlay bg-overlay-dark pt-90">
+            <div class="bg-section"><img src="<?php echo base_url()?>assets/assets_homepage/images/cta/bg-1.jpg" alt="Background"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                         <h3>Join Bersama Kami & Dapatkan Kenyamanan Anda Sebagai Customer</h3>
-                        <a href="#" class="btn btn--primary">Kontak</a>
+                        <a href="<?php echo base_url('customer/kontak')?>" class="btn btn--primary">Kontak</a>
                     </div>
                     <!-- .col-md-6 -->
                 </div>

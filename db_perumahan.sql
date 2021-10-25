@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2021 at 05:20 AM
+-- Generation Time: Oct 25, 2021 at 04:45 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -81,7 +81,7 @@ CREATE TABLE `rumah` (
   `luas_bangunan` varchar(256) NOT NULL,
   `status` varchar(256) NOT NULL,
   `interior` varchar(256) NOT NULL,
-  `deskripsi` varchar(256) NOT NULL,
+  `lokasi` varchar(256) NOT NULL,
   `kamar_tidur` varchar(256) NOT NULL,
   `kamar_mandi` varchar(256) NOT NULL,
   `harga` varchar(256) NOT NULL,
@@ -92,10 +92,10 @@ CREATE TABLE `rumah` (
 -- Dumping data for table `rumah`
 --
 
-INSERT INTO `rumah` (`id_rumah`, `nama_rumah`, `kode_type`, `luas_tanah`, `luas_bangunan`, `status`, `interior`, `deskripsi`, `kamar_tidur`, `kamar_mandi`, `harga`, `gambar`) VALUES
-(1, 'Rumah Tipe 36', '36', '72 Meter Persegi', '6 x 6 meter ', '1', 'Tidak Berperabot', 'Ukuran tipe rumah 36 tidak terlampau mungil dan harganya pun masih cukup terjangkau. Bagi pengembang yang memasang target segmen middle – middle low', '2', '1', '700 Juta', 'rumah6.jpg'),
-(5, 'Rumah Tipe 60', '60', '150 meter persegi', '5x12 meter', '1', 'Tidak Berperabot', 'Kalau hanya untuk menampung dua kamar tidur, tipe 60 terhitung luas, tentu saja dengan ragam dimensi seperti 6x10 meter atau 5x12 meter. Meski begitu, ini model rumah sedang. ', '3', '2', '1 Milyar', 'post-1617863126072389501.jpeg'),
-(6, 'Rumah 45', '45', '90 meter persegi', '6x7,5 meter', '0', 'Tidak Berperabot', 'Model ini menjadi jalan keluar bagi yang merasa tipe rumah 36 sedang tapi belum cukup. Harganya yang di atas setengah miliar rupiah membuatnya masuk segmen middle-low. Ini juga tipe yang tertangkap radar para end user dan investor properti', '3', '2', '900 Juta', 'rumah-tipe-4512.jpg');
+INSERT INTO `rumah` (`id_rumah`, `nama_rumah`, `kode_type`, `luas_tanah`, `luas_bangunan`, `status`, `interior`, `lokasi`, `kamar_tidur`, `kamar_mandi`, `harga`, `gambar`) VALUES
+(1, 'Rumah Tipe 36', '36', '72 Meter Persegi', '6 x 6 meter ', '1', 'Tidak Berperabot', 'Perumahan 1', '2', '1', '700 Juta', 'rumah6.jpg'),
+(5, 'Rumah Tipe 60', '60', '150 meter persegi', '5x12 meter', '1', 'Tidak Berperabot', 'Perumahan 1', '3', '2', '1 Milyar', 'post-1617863126072389501.jpeg'),
+(6, 'Rumah Tipe 45', '45', '90 meter persegi', '6x7,5 meter', '0', 'Tidak Berperabot', 'Perumahan 2', '3', '2', '900 Juta', 'rumah-tipe-4512.jpg');
 
 -- --------------------------------------------------------
 

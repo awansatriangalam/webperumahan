@@ -1,4 +1,5 @@
-        <!-- Footer #1
+
+<!-- Footer #1
 ============================================= -->
 <footer id="footer" class="footer footer-1 bg-white">
             <!-- Widget Section
