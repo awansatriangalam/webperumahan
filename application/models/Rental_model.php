@@ -19,13 +19,14 @@ class Rental_model extends CI_model
         $this->db->delete($table);
     }
 
-    public function pencarian($lokasi,$kode_type,$status,$kamar_tidur,$kamar_mandi){
-        $this->db->where("lokasi",$lokasi);
-        $this->db->where("kode_type",$kode_type);
-        $this->db->where("status",$status);
-        $this->db->where("kamar_tidur",$kamar_tidur);
-        $this->db->where("kamar_mandi",$kamar_mandi);
-        return $this->db->get("rumah");
+    public function ambil_id_rumah($id)
+    {
+        $hasil = $this->db->where('id_rumah', $id)->get('rumah');
+            if($hasil->num_rows() > 0){
+                return $hasil->result();
+            }else{
+                return false;
+            }
     }
 
     public function cek_login()
