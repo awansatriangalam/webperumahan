@@ -82,38 +82,38 @@
                 <!-- .row end -->
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <form class="mb-0">
+                        <form class="mb-0" method="POST" action="<?php echo base_url('customer/kontak/pesan') ?>">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label for="contact-name">Nama*</label>
-                                        <input type="text" class="form-control" name="contact-name" id="contact-name" required>
+                                        <label>Nama*</label>
+                                        <input type="text" class="form-control" name="nama" >
                                     </div>
                                 </div>
                                 <!-- .col-md-4 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label for="contact-email">Alamat Email*</label>
-                                        <input type="email" class="form-control" name="contact-email" id="contact-email" required>
+                                        <label>Alamat Email*</label>
+                                        <input type="email" class="form-control" name="email" >
                                     </div>
                                 </div>
                                 <!-- .col-md-4 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-4">
                                     <div class="form-group">
-                                        <label for="phone-number">Nomor Telepon</label>
-                                        <input type="text" class="form-control" name="phone-number" id="phone-number" placeholder="(optional)">
+                                        <label>Nomor Telepon</label>
+                                        <input type="text" class="form-control" name="no_tlp" >
                                     </div>
                                 </div>
                                 <!-- .col-md-4 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <label for="message">Pesan*</label>
-                                        <textarea class="form-control" name="contact-message" id="message" rows="2" required></textarea>
+                                        <label>Pesan*</label>
+                                        <textarea class="form-control" name="pesan"  rows="2"></textarea>
                                     </div>
                                 </div>
                                 <!-- .col-md-12 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <input type="submit" value="Send Message" name="submit" class="btn btn--primary">
+                                    <input type="submit" value="Kirim Pesan" name="submit" class="btn btn--primary">
                                 </div>
                                 <!-- .col-md-12 -->
                             </div>

@@ -144,10 +144,10 @@
                             <div class="widget--content">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="#">Telah Terisi <span></span></a>
+                                        <a href="#">Diisi <span></span></a>
                                     </li>
                                     <li>
-                                        <a href="#">Belum Terisi <span></span></a>
+                                        <a href="#">Tersedia <span></span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -158,7 +158,7 @@
 =============================-->
                         <div class="widget widget-featured-property">
                             <div class="widget--title">
-                                <h5>Featured Properties</h5>
+                                <h5>Terbaru</h5>
                             </div>
                             <div class="widget--content">
                                 <div class="carousel carousel-dots" data-slide="1" data-slide-rs="1" data-autoplay="false" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="800">

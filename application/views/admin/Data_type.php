@@ -1,5 +1,5 @@
 <div class="main-content">
-    <div class="section">
+    <section class="section">
         <div class="section-header">
             <h1>Data Type Rumah Baru</h1>
         </div>
@@ -40,5 +40,5 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-    </div>
+    </section>
 </div>

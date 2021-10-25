@@ -43,16 +43,17 @@
                                     <p class="property--location"><?php echo $dt->lokasi?></p>
                                 </div>
                                 <div class="pull-right">
-                                    <span class="property--status"><?php 
+                                    <span class="property--status">
+                                            <?php 
                                                 if ($dt->status == "0"){
-                                                    echo "<span> Telah Terisi
+                                                    echo "<span class='btn btn-sm btn-danger' disable> Diisi
                                                     </span>";
                                                 }else{
-                                                    echo "<span> Tersedia
-                                                    </span>";
+                                                    echo anchor('customer/pesan/tambah_pesan' .$dt->id_rumah, '<button class="btn btn-sm btn-success">Pesan</button>');
                                                 }
-                                                ?></span>
-                                    <p class="property--price"><?php echo $dt->harga?></p>
+                                            ?>
+                                    </span>
+                                    <p class="property--price">Rp.<?php echo $dt->harga?></p>
                                 </div>
                             </div>
                             <!-- .property-info end -->
@@ -61,6 +62,17 @@
                                     <ul class="list-unstyled list-inline mb-0">
                                         <li>
                                             ID Rumah:<span class="value"><?php echo $dt->id_rumah?></span>
+                                        </li>
+                                        <li>
+                                            Status:<span class="value"><?php 
+                                                if ($dt->status == "0"){
+                                                    echo "<span style='color:red;font-weight:bold'> Telah Terisi
+                                                    </span>";
+                                                }else{
+                                                    echo "<span style='color:blue;font-weight:bold'> Tersedia
+                                                    </span>";
+                                                }
+                                                ?></span>
                                         </li>
                                     </ul>
                                 </div>
@@ -92,7 +104,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="property-single-carousel-content">
                                         <div class="carousel carousel-thumbs ">
-                                            <img src="<?php echo base_url('assets/upload/' .$dt->gambar) ?>" alt="Property Image">
+                                            <img src="<?php echo base_url('assets/upload/' .$dt->gambar) ?>" alt="Property Image" style="width:800px ; height:400px">
                                         </div>
                                         <!-- .carousel end -->
                                     </div>
@@ -156,7 +168,7 @@
                                         </div>
                                         <div class="feature--content">
                                             <h5>Ruangan:</h5>
-                                            <p>Ruangan</p>
+                                            <p><?php echo $dt->ruangan?> Ruangan</p>
                                         </div>
                                     </div>
                                 </div>
@@ -169,7 +181,7 @@
                                         </div>
                                         <div class="feature--content">
                                             <h5>Lantai:</h5>
-                                            <p>Lantai</p>
+                                            <p><?php echo $dt->lantai?> Lantai</p>
                                         </div>
                                     </div>
                                 </div>
@@ -182,15 +194,14 @@
                                         </div>
                                         <div class="feature--content">
                                             <h5>Garasi:</h5>
-                                            <p>Garasi</p>
+                                            <p><?php echo $dt->garasi?> Garasi</p>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- feature-panel end -->
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="property--details">
-                                        <p>*Deskripsi*</p>
-                                        <p>*Deskripsi*</p>
+                                        <p><?php echo $dt->deskripsi?></p>
                                     </div>
                                     <!-- .property-details end -->
                                 </div>
@@ -210,9 +221,9 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <ul class="list-unstyled mb-20">
                                         <li><span>Perumahan:</span><?php echo $dt->lokasi?></li>
-                                        <li><span>Alamat:</span>Sydney</li>
-                                        <li><span>Kota:</span>Australia</li>
-                                        <li><span>Kode Pos:</span>Newcastle</li>
+                                        <li><span>Kota:</span><?php echo $dt->kota?></li>
+                                        <li><span>Kode Pos:</span><?php echo $dt->kode_pos?></li>
+                                        <li><span>Alamat:</span><?php echo $dt->alamat?></li>
                                     </ul>
                                 </div>
                                 <!-- .col-md-12 end -->
@@ -224,118 +235,7 @@
                             </div>
                             <!-- .row end -->
                         </div>
-
-                        <div class="property-single-reviews inner-box">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="heading">
-                                        <h2 class="heading--title">3 Reviews</h2>
-                                    </div>
-                                </div>
-                                <!-- .col-md-12 end -->
-                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <ul class="property-review">
-                                        <li class="review-comment">
-                                            <div class="avatar">R</div>
-                                            <div class="comment">
-                                                <h6>Ryan Printz</h6>
-                                                <div class="date">Feb 12, 2018</div>
-                                                <div class="property-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectet adipisicing elit, sed eiusmod tempor incididun ut labore dolor magna aliqua enim minim veniam, quis nostrud.</p>
-                                            </div>
-                                        </li>
-                                        <!-- comment end -->
-                                        <li class="review-comment">
-                                            <div class="avatar">S</div>
-                                            <div class="comment">
-                                                <h6>Steve Martin</h6>
-                                                <div class="date">Jan 16, 2018</div>
-                                                <div class="property-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectet adipisicing elit, sed eiusmod tempor incididun ut labore dolor magna aliqua enim minim veniam, quis nostrud.</p>
-                                            </div>
-                                        </li>
-                                        <!-- comment end -->
-                                        <li class="review-comment">
-                                            <div class="avatar">N</div>
-                                            <div class="comment">
-                                                <h6>Nicole Smith</h6>
-                                                <div class="date">Nov 25, 2017</div>
-                                                <div class="property-rating">
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                    <i class="fa fa-star-o"></i>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectet adipisicing elit, sed eiusmod tempor incididun ut labore dolor magna aliqua enim minim veniam, quis nostrud.</p>
-                                            </div>
-                                        </li>
-                                        <!-- comment end -->
-                                    </ul>
-                                    <!-- .comments-list end -->
-                                </div>
-                                <!-- .col-md-12 end -->
-                            </div>
-                            <!-- .row end -->
-                        </div>
-                        <!-- .property-single-reviews end -->
-
-                        <div class="property-single-leave-review inner-box">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <div class="heading">
-                                        <h2 class="heading--title">Tinggalkan Ulasan</h2>
-                                    </div>
-                                </div>
-                                <!-- .col-md-12 end -->
-                                <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <form id="post-comment" class="mb-0">
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                                <div class="form-group">
-                                                    <label for="review-name">Nama*</label>
-                                                    <input type="text" class="form-control" name="review-name" id="review-name" required>
-                                                </div>
-                                            </div>
-                                            <!-- .col-md-4 end -->
-                                            <div class="col-xs-12 col-sm-4 col-md-4">
-                                                <div class="form-group">
-                                                    <label for="review-email">Email*</label>
-                                                    <input type="email" class="form-control" name="review-email" id="review-email" required>
-                                                </div>
-                                            </div>
-                                            <!-- .col-md-4 end -->
-                                            <!-- .col-md-4 end -->
-
-                                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                                <div class="form-group">
-                                                    <label for="review-comment">Ulas*</label>
-                                                    <textarea class="form-control" id="review-comment" rows="2" required></textarea>
-                                                </div>
-                                            </div>
-                                            <!-- .col-md-12 -->
-                                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                                <button type="submit" class="btn btn--primary">Kirim</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- .col-md-12 end -->
-                            </div>
-                            <!-- .row end -->
-                        </div>
+                        
                         <!-- .property-single-leave-review end -->
                     </div>
                     <!-- .col-md-8 -->
@@ -353,7 +253,15 @@
                                         <div class="property-item">
                                             <div class="property--img">
                                                 <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
-                                                <span class="property--status">For Rent</span>
+                                                <span class="property--status"><?php 
+                                                if ($rm->status == "0"){
+                                                    echo "<span> Telah Terisi
+                                                    </span>";
+                                                }else{
+                                                    echo "<span> Tersedia
+                                                    </span>";
+                                                }
+                                                ?></span>
                                             </div>
                                             <div class="property--content">
                                                 <div class="property--info">
@@ -374,34 +282,52 @@
 
                         <!-- widget mortgage calculator
 =============================-->
+                        <?php foreach ($ulas as $ul):?>
                         <div class="widget widget-mortgage-calculator">
                             <div class="widget--title">
-                                <h5>Kalkulator Hipotek</h5>
+                                <h5>Komentar</h5>
                             </div>
                             <div class="widget--content">
-                                <form class="mb-0">
-                                    <div class="form-group">
-                                        <label for="sale-price">Harga Jual</label>
-                                        <input type="text" class="form-control" name="sale-price" id="sale-price" placeholder="$">
-                                    </div>
-                                    <!-- .form-group end -->
-                                    <div class="form-group">
-                                        <label for="down-payment">Uang Muka</label>
-                                        <input type="text" class="form-control" name="down-payment" id="down-payment" placeholder="$">
-                                    </div>
-                                    <!-- .form-group end -->
-                                    <div class="form-group">
-                                        <label for="term">Ketentuan</label>
-                                        <input type="text" class="form-control" name="term" id="term" placeholder="years">
-                                    </div>
-                                    <!-- .form-group end -->
-                                    <div class="form-group">
-                                        <label for="interest-rate">Suku Bunga</label>
-                                        <input type="text" class="form-control" name="interest-rate" id="interest-rate" placeholder="%">
-                                    </div>
-                                    <!-- .form-group end -->
-                                    <input type="submit" value="Hitung" name="submit" class="btn btn--primary btn--block">
-                                </form>
+                                    <ul class="property-review">
+                                        <li class="review-comment">
+                                            <div class="avatar"><i class="fa fa-user"></i></div>
+                                            <div class="comment">
+                                                <h6 class="hidden"> <?php echo $dt->id_rumah?> </h6>
+                                                <h6><?php echo $ul->nama ?></h6>
+                                                <p><?php echo $ul->ulasan ?></p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <?php endforeach;?>
+                        <div class="widget widget-mortgage-calculator">
+                            <div class="widget--title">
+                                <h5>Tinggalkan Komentar</h5>
+                            </div>
+                            <div class="widget--content">
+                                    <form  class="mb-0" method="POST" action="<?php echo base_url('customer/dashboard/kirim_ulasan/').$dt->id_rumah ?>">
+                                        <div class="row">
+                                            <div>
+                                                <div class="form-group">
+                                                    <label>Nama*</label>
+                                                    <input type="text" class="form-control" name="nama" required>
+                                                </div>                                       
+                                                <div class="form-group">
+                                                    <label>Nama Pengguna*</label>
+                                                    <input type="text" class="form-control" name="nama_pengguna"  required>
+                                                </div>                                           
+                                                <div class="form-group">
+                                                    <label>Komentar*</label>
+                                                    <textarea class="form-control" type="text" name="ulasan" required></textarea>
+                                                </div>
+                                            
+                                            <!-- .col-md-12 -->
+                                            
+                                                <button type="submit" class="btn btn--primary">Kirim</button>
+                                            </div>
+                                        </div>
+                                    </form>
                             </div>
                         </div>
                         <!-- . widget mortgage calculator end -->

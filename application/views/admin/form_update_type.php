@@ -22,7 +22,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary mt-4">Simpan</button>
-            <button type="reser" class="btn btn-danger mt-4">Reset</button>
+            <button type="reset" class="btn btn-danger mt-4">Reset</button>
         </form>
     <?php endforeach; ?>
 </div>

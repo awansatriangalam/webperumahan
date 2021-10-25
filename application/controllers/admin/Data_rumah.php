@@ -31,12 +31,17 @@ class Data_rumah extends CI_Controller{
             $nama_rumah                         = $this->input->post('nama_rumah');
             $kode_type                          = $this->input->post('kode_type');
             $luas_bangunan                      = $this->input->post('luas_bangunan');
-            $luas_tanah                         = $this->input->post('luas_tanah');
-            $interior                           = $this->input->post('interior');
-            $deskripsi                          = $this->input->post('deskripsi');
+            $status                             = $this->input->post('status');
+            $lokasi                             = $this->input->post('lokasi');
             $kamar_tidur                        = $this->input->post('kamar_tidur');
             $kamar_mandi                        = $this->input->post('kamar_mandi');
-            $status                             = $this->input->post('status');
+            $ruangan                            = $this->input->post('ruangan');
+            $lantai                             = $this->input->post('lantai');
+            $garasi                             = $this->input->post('garasi');
+            $deskripsi                          = $this->input->post('deskripsi');
+            $alamat                             = $this->input->post('ruangan');
+            $kota                               = $this->input->post('kota');
+            $kode_pos                           = $this->input->post('kode_pos');
             $harga                              = $this->input->post('harga');
             $gambar                             = $_FILES['gambar']['name'];
             if($gambar=''){}else{
@@ -55,12 +60,17 @@ class Data_rumah extends CI_Controller{
                 'nama_rumah'                => $nama_rumah,
                 'kode_type'                 => $kode_type,
                 'luas_bangunan'             => $luas_bangunan,
-                'luas_tanah'                => $luas_tanah,
-                'interior'                  => $interior,
-                'deskripsi'                 => $deskripsi,
+                'status'                    => $status,
+                'lokasi'                    => $lokasi,
                 'kamar_tidur'               => $kamar_tidur,
                 'kamar_mandi'               => $kamar_mandi,
-                'status'                    => $status,
+                'ruangan'                   => $ruangan,
+                'lantai'                    => $lantai,
+                'garasi'                    => $garasi,
+                'deskripsi'                 => $deskripsi,
+                'alamat'                    => $alamat,
+                'kota'                      => $kota,
+                'kode_pos'                  => $kode_pos,
                 'harga'                     => $harga,
                 'gambar'                    => $gambar,
             );
@@ -77,11 +87,11 @@ class Data_rumah extends CI_Controller{
             }
     }
 
-    public function update_rumah($id){
-        $where = array ('id_rumah' => $id);
-        $data ['rumah'] = $this->db->query("SELECT * FROM rumah rm, tipe tp WHERE rm.kode_type=
-            tp.kode_type AND rm.id_rumah='$id'")->result();
-        $data ['tipe'] = $this->rental_model->get_data('tipe')->result();
+    public function update_rumah($id)
+    {
+        $where = array('id_rumah' => $id);
+        $data['rumah']  = $this->db->query("SELECT * FROM rumah, tipe WHERE rumah.kode_type=tipe.kode_type AND rumah.id_rumah='$id'")->result();
+        $data['tipe']   = $this->rental_model->get_data('tipe')->result();
 
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar');
@@ -101,12 +111,17 @@ class Data_rumah extends CI_Controller{
             $nama_rumah                         = $this->input->post('nama_rumah');
             $kode_type                          = $this->input->post('kode_type');
             $luas_bangunan                      = $this->input->post('luas_bangunan');
-            $luas_tanah                         = $this->input->post('luas_tanah');
-            $interior                           = $this->input->post('interior');
-            $deskripsi                          = $this->input->post('deskripsi');
+            $status                             = $this->input->post('status');
+            $lokasi                             = $this->input->post('lokasi');
             $kamar_tidur                        = $this->input->post('kamar_tidur');
             $kamar_mandi                        = $this->input->post('kamar_mandi');
-            $status                             = $this->input->post('status');
+            $ruangan                            = $this->input->post('ruangan');
+            $lantai                             = $this->input->post('lantai');
+            $garasi                             = $this->input->post('garasi');
+            $deskripsi                          = $this->input->post('deskripsi');
+            $alamat                             = $this->input->post('alamat');
+            $kota                               = $this->input->post('kota');
+            $kode_pos                           = $this->input->post('kode_pos');
             $harga                              = $this->input->post('harga');
             $gambar                             = $_FILES['gambar']['name'];
             if($gambar)
@@ -128,12 +143,17 @@ class Data_rumah extends CI_Controller{
                 'nama_rumah'                => $nama_rumah,
                 'kode_type'                 => $kode_type,
                 'luas_bangunan'             => $luas_bangunan,
-                'luas_tanah'                => $luas_tanah,
-                'interior'                  => $interior,
-                'deskripsi'                 => $deskripsi,
+                'status'                    => $status,
+                'lokasi'                    => $lokasi,
                 'kamar_tidur'               => $kamar_tidur,
                 'kamar_mandi'               => $kamar_mandi,
-                'status'                    => $status,
+                'ruangan'                   => $ruangan,
+                'lantai'                    => $lantai,
+                'garasi'                    => $garasi,
+                'deskripsi'                 => $deskripsi,
+                'alamat'                    => $alamat,
+                'kota'                      => $kota,
+                'kode_pos'                  => $kode_pos,
                 'harga'                     => $harga,
             );
 
@@ -158,13 +178,32 @@ class Data_rumah extends CI_Controller{
             $this->form_validation->set_rules('nama_rumah','Nama Rumah','required');
             $this->form_validation->set_rules('kode_type','Kode Type','required');
             $this->form_validation->set_rules('luas_bangunan','Luas Bangunan','required');
-            $this->form_validation->set_rules('luas_tanah','Luas Tanah','required');
-            $this->form_validation->set_rules('interior','Interior','required');
-            $this->form_validation->set_rules('deskripsi','Deskripsi','required');
+            $this->form_validation->set_rules('status','Status','required');
+            $this->form_validation->set_rules('lokasi','Lokasi','required');
             $this->form_validation->set_rules('kamar_tidur','Kamar Tidur','required');
             $this->form_validation->set_rules('kamar_mandi','Kamar Mandi','required');
-            $this->form_validation->set_rules('status','Status','required');
+            $this->form_validation->set_rules('ruangan','Ruangan','required');
+            $this->form_validation->set_rules('lantai','Lantai','required');
+            $this->form_validation->set_rules('garasi','Garasi','required');
+            $this->form_validation->set_rules('deskripsi','Deskripsi','required');
+            $this->form_validation->set_rules('alamat','Alamat','required');
+            $this->form_validation->set_rules('kota','Kota','required');
+            $this->form_validation->set_rules('kode_pos','Kode Pos','required');
             $this->form_validation->set_rules('harga','Harga','required');
+        }
+
+        public function delete_rumah($id)
+        {
+            $where = array ('id_rumah' => $id);
+            $this->rental_model->delete_data($where, 'rumah');
+            $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible
+                    fade show" role="alert"> Data Berhasil Dihapus ! .
+                    <button type="button" class="close" data-dismiss="alert"
+                        aria-label="Close"
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>');
+                redirect('admin/data_rumah');
         }
     
 }

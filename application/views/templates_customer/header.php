@@ -41,12 +41,12 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				</button>
-                        <a class="logo" href="<?php echo base_url('customer/dashboard') ?>">Web Perumahan</a>
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="logo" href="<?php echo base_url('customer/dashboard') ?>"><i class="fa fa-home"></i> Web Perumahan</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,14 +60,18 @@
                         </ul>
                         <!-- Module Signup  -->
                         <div class="module module-login pull-left">
-                            <a class="btn-popup" href="<?php echo base_url('register') ?>">Daftar</a>
+                            <?php if ($this->session->userdata('nama')) { ?>
+                                <a class="pull-left" href="<?php echo base_url('customer/dashboard/profil/')?> "><span class="btn-popup"><i class="fa fa-user"></i> <?php echo $this->session->userdata('nama') ?></span></a>
+                            <?php } else { ?>
+                                <a class="pull-left" href="<?php echo base_url()?> "><span class="btn-popup"></span></a>
+                            <?php } ?>
                         </div>
                         <!-- Module Consultation  -->
                         <div class="module module-property pull-left">
                             <?php if ($this->session->userdata('nama')) { ?>
-                                <a class="pull-left" href="<?php echo base_url('auth/logout')?> "><span class="btn btn-sm btn-danger">Keluar</span></a>
+                                <a class="pull-left" href="<?php echo base_url('auth/logout')?> "><span class="btn"><i class="fa fa-sign-out"></i>Keluar</span></a>
                             <?php } else { ?>
-                                <a class="nav-link" href="<?php echo base_url('auth/login')?> "><span class="btn btn-sm btn-success">Masuk</span></a>
+                                <a class="pull-left" href="<?php echo base_url('auth/login')?> "><span class="btn"><i class="fa fa-sign-in"></i> Masuk</span></a>
                             <?php } ?>
                         </div>
                     </div>

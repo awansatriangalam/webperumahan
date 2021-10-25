@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2021 at 04:45 AM
--- Server version: 10.1.13-MariaDB
+-- Generation Time: 30 Okt 2021 pada 01.05
+-- Versi Server: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
 INSERT INTO `admin` (`id_admin`, `nama_admin`, `username`, `pass`, `role_id`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`id_admin`, `nama_admin`, `username`, `pass`, `role_id`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer`
+-- Struktur dari tabel `customer`
 --
 
 CREATE TABLE `customer` (
@@ -59,48 +59,52 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `customer`
+-- Dumping data untuk tabel `customer`
 --
 
 INSERT INTO `customer` (`id_customer`, `nama`, `username`, `alamat`, `no_tlp`, `no_ktp`, `pass`, `role_id`) VALUES
-(2, 'Sholeh', 'sholehhh', 'Malang', '089767554321', '1235467865890876', '9a9c9b4322eec704b91097ecc627c9f1', 2),
-(3, 'Iman', 'admin', 'Malang', '098898765654', '1234567890987654', 'admin', 1),
-(5, 'Imam', 'imam', 'Jakarta', '089767554322', '1235467865890098', 'beeccdb438355c029a66dbec333fa1c8', 2);
+(10, 'Ahmad', 'ahmad11', 'Surabaya', '087898654321', '123456654678766542', '61ccbdceae8009992481563eae909a9a', 2),
+(11, 'User', 'user', 'Malang', '087898654321', '123456654678766542', '6ad14ba9986e3615423dfca256d04e3f', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rumah`
+-- Struktur dari tabel `rumah`
 --
 
 CREATE TABLE `rumah` (
   `id_rumah` int(12) NOT NULL,
   `nama_rumah` varchar(256) NOT NULL,
   `kode_type` varchar(256) NOT NULL,
-  `luas_tanah` varchar(256) NOT NULL,
   `luas_bangunan` varchar(256) NOT NULL,
   `status` varchar(256) NOT NULL,
-  `interior` varchar(256) NOT NULL,
   `lokasi` varchar(256) NOT NULL,
   `kamar_tidur` varchar(256) NOT NULL,
   `kamar_mandi` varchar(256) NOT NULL,
+  `ruangan` varchar(256) NOT NULL,
+  `lantai` varchar(256) NOT NULL,
+  `garasi` varchar(256) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `alamat` varchar(256) NOT NULL,
+  `kota` varchar(256) NOT NULL,
+  `kode_pos` varchar(256) NOT NULL,
   `harga` varchar(256) NOT NULL,
   `gambar` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rumah`
+-- Dumping data untuk tabel `rumah`
 --
 
-INSERT INTO `rumah` (`id_rumah`, `nama_rumah`, `kode_type`, `luas_tanah`, `luas_bangunan`, `status`, `interior`, `lokasi`, `kamar_tidur`, `kamar_mandi`, `harga`, `gambar`) VALUES
-(1, 'Rumah Tipe 36', '36', '72 Meter Persegi', '6 x 6 meter ', '1', 'Tidak Berperabot', 'Perumahan 1', '2', '1', '700 Juta', 'rumah6.jpg'),
-(5, 'Rumah Tipe 60', '60', '150 meter persegi', '5x12 meter', '1', 'Tidak Berperabot', 'Perumahan 1', '3', '2', '1 Milyar', 'post-1617863126072389501.jpeg'),
-(6, 'Rumah Tipe 45', '45', '90 meter persegi', '6x7,5 meter', '0', 'Tidak Berperabot', 'Perumahan 2', '3', '2', '900 Juta', 'rumah-tipe-4512.jpg');
+INSERT INTO `rumah` (`id_rumah`, `nama_rumah`, `kode_type`, `luas_bangunan`, `status`, `lokasi`, `kamar_tidur`, `kamar_mandi`, `ruangan`, `lantai`, `garasi`, `deskripsi`, `alamat`, `kota`, `kode_pos`, `harga`, `gambar`) VALUES
+(1, 'Rumah Tipe 36', '36 ', '6 x 6 meter ', '0', 'Perumahan 1', '2', '1', '3', '1', '0', 'Ukuran tipe rumah 36 tidak terlampau mungil dan harganya pun masih cukup terjangkau. Tipe rumah 36 biasanya menawarkan 1 – 2 kamar tidur, sebuah kamar mandi, ruang tamu, ruang makan, dan dapur.', 'Perumahan 1 blok 2 no,45C Malang', 'Malang', '65115', '700 Juta', 'rumah6.jpg'),
+(5, 'Rumah Tipe 60', '60', '5x12 meter', '1', 'Perumahan 1', '2', '2', '4', '1', '0', 'Kalau hanya untuk menampung dua kamar tidur, tipe 60 terhitung luas, tentu saja dengan ragam dimensi 5x12 meter.Dengan kemungkinan ruangan dan taman yang lebih luas dari tipe tipe rumah di bawahnya, tipe 60 menarik dimiliki. ', 'Perumahan 1 blok 8 no,56A Malang', 'Malang', '65115', '1 Milyar', 'post-1617863126072389501.jpeg'),
+(6, 'Rumah Tipe 45', '45 ', '6x7,5 ', '0', 'Perumahan 2', '3 ', '2 ', '6 ', '2 ', '1 ', 'Model ini menjadi jalan keluar bagi yang merasa tipe rumah 36 sedang tapi belum cukup.Ini juga tipe yang tertangkap radar para end user dan investor properti.Karena formatnya lebih luas, ruang yang bisa ditampung pun lebih banyak.', 'Perumahan 2 blok 1 no,22A Malang', 'Malang', '65111', '920 Juta', 'rumah-tipe-4512.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tipe`
+-- Struktur dari tabel `tipe`
 --
 
 CREATE TABLE `tipe` (
@@ -110,13 +114,44 @@ CREATE TABLE `tipe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tipe`
+-- Dumping data untuk tabel `tipe`
 --
 
 INSERT INTO `tipe` (`id_type`, `kode_type`, `nama_type`) VALUES
 (1, 36, 'Middle'),
 (4, 45, 'Middle Low'),
 (5, 60, 'Middle Up');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `transaksi`
+--
+
+CREATE TABLE `transaksi` (
+  `id_pesan` int(12) NOT NULL,
+  `id_customer` int(12) NOT NULL,
+  `id_rumah` int(12) NOT NULL,
+  `tgl_pesan` varchar(256) NOT NULL,
+  `harga` varchar(256) NOT NULL,
+  `status_pesan` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `ulas`
+--
+
+CREATE TABLE `ulas` (
+  `id_ulasan` int(12) NOT NULL,
+  `id_customer` int(12) NOT NULL,
+  `id_rumah` int(12) NOT NULL,
+  `nama` varchar(256) NOT NULL,
+  `nama_pengguna` varchar(256) NOT NULL,
+  `ulasan` text NOT NULL,
+  `rating` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -147,6 +182,18 @@ ALTER TABLE `tipe`
   ADD PRIMARY KEY (`id_type`);
 
 --
+-- Indexes for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  ADD PRIMARY KEY (`id_pesan`);
+
+--
+-- Indexes for table `ulas`
+--
+ALTER TABLE `ulas`
+  ADD PRIMARY KEY (`id_ulasan`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -159,7 +206,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id_customer` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_customer` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `rumah`
 --
@@ -170,6 +217,16 @@ ALTER TABLE `rumah`
 --
 ALTER TABLE `tipe`
   MODIFY `id_type` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  MODIFY `id_pesan` int(12) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `ulas`
+--
+ALTER TABLE `ulas`
+  MODIFY `id_ulasan` int(12) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
