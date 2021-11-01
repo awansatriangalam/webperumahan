@@ -23,7 +23,7 @@
 
                   <div class="form-group">
                     <div class="d-block">
-                    	<label for="pass" class="control-label">Katasandi</label>                     
+                    	<label for="pass" class="control-label">Kata Sandi</label>                     
                         <input id="pass" type="password" class="form-control" name="pass" tabindex="2" autofocus> 
                         <?php echo form_error('pass','<div class="text-small text-danger">','</div>') ?>                
                   </div></br>

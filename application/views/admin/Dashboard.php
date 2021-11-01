@@ -73,11 +73,11 @@
             <div class="col-lg-8 col-md-12 col-12 col-sm-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>Statistics</h4>
+                  <h4>Statistik</h4>
                   <div class="card-header-action">
                     <div class="btn-group">
-                      <a href="#" class="btn btn-primary">Week</a>
-                      <a href="#" class="btn">Month</a>
+                      <a href="#" class="btn btn-primary">Mingguan</a>
+                      <a href="#" class="btn">Bulanan</a>
                     </div>
                   </div>
                 </div>
@@ -87,119 +87,29 @@
                     <div class="statistic-details-item">
                       <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 7%</span>
                       <div class="detail-value">$243</div>
-                      <div class="detail-name">Today's Sales</div>
+                      <div class="detail-name">Penjualan Hari Ini</div>
                     </div>
                     <div class="statistic-details-item">
                       <span class="text-muted"><span class="text-danger"><i class="fas fa-caret-down"></i></span> 23%</span>
                       <div class="detail-value">$2,902</div>
-                      <div class="detail-name">This Week's Sales</div>
+                      <div class="detail-name">Penjualan Minggu Ini</div>
                     </div>
                     <div class="statistic-details-item">
                       <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span>9%</span>
                       <div class="detail-value">$12,821</div>
-                      <div class="detail-name">This Month's Sales</div>
+                      <div class="detail-name">Penjualan Bulan Ini</div>
                     </div>
                     <div class="statistic-details-item">
                       <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 19%</span>
                       <div class="detail-value">$92,142</div>
-                      <div class="detail-name">This Year's Sales</div>
+                      <div class="detail-name">Penjualan Tahun Ini</div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-12 col-12 col-sm-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Recent Activities</h4>
-                </div>
-                <div class="card-body">
-                  <ul class="list-unstyled list-unstyled-border">
-                    <li class="media">
-                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-1.png" alt="avatar">
-                      <div class="media-body">
-                        <div class="float-right text-primary">Now</div>
-                        <div class="media-title">Farhan A Mujib</div>
-                        <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-2.png" alt="avatar">
-                      <div class="media-body">
-                        <div class="float-right">12m</div>
-                        <div class="media-title">Ujang Maman</div>
-                        <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-3.png" alt="avatar">
-                      <div class="media-body">
-                        <div class="float-right">17m</div>
-                        <div class="media-title">Rizal Fakhri</div>
-                        <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-4.png" alt="avatar">
-                      <div class="media-body">
-                        <div class="float-right">21m</div>
-                        <div class="media-title">Alfa Zulkarnain</div>
-                        <span class="text-small text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</span>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="text-center pt-1 pb-1">
-                    <a href="#" class="btn btn-primary btn-lg btn-round">
-                      View All
-                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-6 col-md-12 col-12 col-sm-12">
-              <div class="card">
-                <div class="card-body pt-2 pb-2">
-                  <div id="myWeather">Please wait</div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-12 col-sm-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Authors</h4>
-                </div>
-                <div class="card-body">
-                  <div class="row pb-2">
-                    <div class="col-6 col-sm-3 col-lg-3 mb-4 mb-md-0">
-                      <div class="avatar-item mb-0">
-                        <img alt="image" src="../assets/img/avatar/avatar-5.png" class="img-fluid" data-toggle="tooltip" title="Alfa Zulkarnain">
-                        <div class="avatar-badge" title="Editor" data-toggle="tooltip"><i class="fas fa-wrench"></i></div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-sm-3 col-lg-3 mb-4 mb-md-0">
-                      <div class="avatar-item mb-0">
-                        <img alt="image" src="../assets/img/avatar/avatar-4.png" class="img-fluid" data-toggle="tooltip" title="Egi Ferdian">
-                        <div class="avatar-badge" title="Admin" data-toggle="tooltip"><i class="fas fa-cog"></i></div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-sm-3 col-lg-3 mb-4 mb-md-0">
-                      <div class="avatar-item mb-0">
-                        <img alt="image" src="../assets/img/avatar/avatar-1.png" class="img-fluid" data-toggle="tooltip" title="Jaka Ramadhan">
-                        <div class="avatar-badge" title="Author" data-toggle="tooltip"><i class="fas fa-pencil-alt"></i></div>
-                      </div>
-                    </div>
-                    <div class="col-6 col-sm-3 col-lg-3 mb-4 mb-md-0">
-                      <div class="avatar-item mb-0">
-                        <img alt="image" src="../assets/img/avatar/avatar-2.png" class="img-fluid" data-toggle="tooltip" title="Ryan">
-                        <div class="avatar-badge" title="Admin" data-toggle="tooltip"><i class="fas fa-cog"></i></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="row">
             <div class="col-lg-6 col-md-6 col-12">
@@ -257,53 +167,11 @@
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-header">
-                  <h4>Popular Browser</h4>
-                </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col text-center">
-                      <div class="browser browser-chrome"></div>
-                      <div class="mt-2 font-weight-bold">Chrome</div>
-                      <div class="text-muted text-small"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 48%</div>
-                    </div>
-                    <div class="col text-center">
-                      <div class="browser browser-firefox"></div>
-                      <div class="mt-2 font-weight-bold">Firefox</div>
-                      <div class="text-muted text-small"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 26%</div>
-                    </div>
-                    <div class="col text-center">
-                      <div class="browser browser-safari"></div>
-                      <div class="mt-2 font-weight-bold">Safari</div>
-                      <div class="text-muted text-small"><span class="text-danger"><i class="fas fa-caret-down"></i></span> 14%</div>
-                    </div>
-                    <div class="col text-center">
-                      <div class="browser browser-opera"></div>
-                      <div class="mt-2 font-weight-bold">Opera</div>
-                      <div class="text-muted text-small">7%</div>
-                    </div>
-                    <div class="col text-center">
-                      <div class="browser browser-internet-explorer"></div>
-                      <div class="mt-2 font-weight-bold">IE</div>
-                      <div class="text-muted text-small"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 5%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mt-sm-5 mt-md-0">
-                <div class="card-header">
-                  <h4>Visitors</h4>
-                </div>
-                <div class="card-body">
-                  <div id="visitorMap"></div>
-                </div>
-              </div>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>This Week Stats</h4>
+                  <h4>Statistik Minggu Ini</h4>
                   <div class="card-header-action">
                     <div class="dropdown">
                       <a href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown">Filter</a>
@@ -312,7 +180,7 @@
                         <a href="#" class="dropdown-item has-icon"><i class="far fa-circle"></i> T-shirt</a>
                         <a href="#" class="dropdown-item has-icon"><i class="far fa-circle"></i> Hat</a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">View All</a>
+                        <a href="#" class="dropdown-item">Lihat Semuanya</a>
                       </div>
                     </div>
                   </div>
@@ -323,7 +191,7 @@
                       <h4>$1,053</h4>
                       <div class="text-muted">Sold 3 items on 2 customers</div>
                       <div class="d-block mt-2">
-                        <a href="#">View All</a>
+                        <a href="#">Lihat Semuanya</a>
                       </div>
                     </div>
                     <div class="summary-item">
@@ -431,37 +299,10 @@
           <div class="row">
             <div class="col-lg-5 col-md-12 col-12 col-sm-12">
               <form method="post" class="needs-validation" novalidate="">
-                <div class="card">
-                  <div class="card-header">
-                    <h4>Quick Draft</h4>
-                  </div>
-                  <div class="card-body pb-0">
-                    <div class="form-group">
-                      <label>Title</label>
-                      <input type="text" name="title" class="form-control" required>
-                      <div class="invalid-feedback">
-                        Please fill in the title
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label>Content</label>
-                      <textarea class="summernote-simple"></textarea>
-                    </div>
-                  </div>
-                  <div class="card-footer pt-0">
-                    <button class="btn btn-primary">Save Draft</button>
-                  </div>
-                </div>
               </form>
             </div>
             <div class="col-lg-7 col-md-12 col-12 col-sm-12">
               <div class="card">
-                <div class="card-header">
-                  <h4>Latest Posts</h4>
-                  <div class="card-header-action">
-                    <a href="#" class="btn btn-primary">View All</a>
-                  </div>
-                </div>
                 <div class="card-body p-0">
                   <div class="table-responsive">
                     <table class="table table-striped mb-0">

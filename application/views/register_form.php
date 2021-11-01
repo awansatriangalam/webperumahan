@@ -45,7 +45,7 @@
 
                   <div class="row">
                     <div class="form-group form-group col-6">
-                      <label for="no_ktp">No KTP</label>
+                      <label for="no_ktp">No.KTP</label>
                       <input id="no_ktp" type="text" class="form-control" name="no_ktp">
                       <?php echo form_error('no_ktp','<div class="text-small text-danger">','</div>') ?>
                       <div class="invalid-feedback">
@@ -53,7 +53,7 @@
                     </div>
 
                       <div class="form-group col-6">
-                        <label>Katasandi</label>
+                        <label>Kata Sandi</label>
                         <input type="password" name="pass" class="form-control">
                         <?php echo form_error('pass','<div class="text-small text-danger">','</div>') ?>
                       </div>
@@ -68,7 +68,7 @@
               </div>
             </div>
             <div class="simple-footer">
-              Copyright &copy; Wep Perumahan 2021
+              Copyright &copy; Web Perumahan 2021
             </div>
           </div>
         </div>
