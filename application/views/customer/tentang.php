@@ -35,12 +35,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-md-5">
-                        <div class="about--img"><img class="img-responsive" src="<?php echo base_url()?>assets/assets_homepage/images/about/1.jpg" alt="about img"></div>
+                        <div class="about--img"><img class="img-responsive" src="<?php echo base_url()?>assets/assets_homepage/images/about/horizontal.jpg" alt="about img"></div>
                     </div>
                     <!-- .col-md-5 -->
                     <div class="col-xs-12 col-sm-7 col-md-6 col-md-offset-1">
                         <div class="heading heading-3">
-                            <h2 class="heading--title"></h2>
+                            <h2 class="heading--title">Visi dan Misi</h2>
                         </div>
                         <!-- .heading-title end -->
                         <div class="about--panel">

@@ -108,12 +108,12 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
                                         <label>Pesan*</label>
-                                        <textarea class="form-control" name="pesan"  rows="2"></textarea>
+                                        <textarea class="form-control" name="pesan_"  rows="2"></textarea>
                                     </div>
                                 </div>
                                 <!-- .col-md-12 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <input type="submit" value="Kirim Pesan" name="submit" class="btn btn--primary">
+                                    <input type="submit" value="Kirim Pesan"  class="btn btn--primary">
                                 </div>
                                 <!-- .col-md-12 -->
                             </div>
