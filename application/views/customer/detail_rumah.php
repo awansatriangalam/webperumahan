@@ -49,7 +49,7 @@
                                                     echo "<span class='btn btn-sm btn-danger' disable> Diisi
                                                     </span>";
                                                 }else{
-                                                    echo anchor('customer/pesan/tambah_pesan' .$dt->id_rumah, '<button class="btn btn-sm btn-success">Pesan</button>');
+                                                    echo anchor('customer/pesan/tambah_pesan' .$dt->id_rumah, '<button class="btn btn-sm btn-success "> Pesan</button>');
                                                 }
                                             ?>
                                     </span>
@@ -283,53 +283,50 @@
                         <!-- widget mortgage calculator
 =============================-->
                         <?php foreach ($ulas as $ul):?>
-                        <div class="widget widget-mortgage-calculator">
-                            <div class="widget--title">
-                                <h5>Komentar</h5>
+                            <div class="widget widget-mortgage-calculator">
+                                <div class="widget--title">
+                                    <h5>Komentar</h5>
+                                </div>
+                                    <div class="widget--content">
+                                        <ul class="property-review">
+                                            <li class="review-comment">
+                                                <div class="avatar"><i class="fa fa-user"></i></div>
+                                                    <div class="comment">
+                                                        <h6 class="hidden"> <?php echo $dt->id_rumah?> </h6>
+                                                        <h6><?php echo $ul->nama ?></h6>
+                                                        <p><?php echo $ul->ulasan ?></p>
+                                                    </div>
+                                            </li>
+                                        </ul>
+                                </div>
                             </div>
-                            <div class="widget--content">
-                                    <ul class="property-review">
-                                        <li class="review-comment">
-                                            <div class="avatar"><i class="fa fa-user"></i></div>
-                                            <div class="comment">
-                                                <h6 class="hidden"> <?php echo $dt->id_rumah?> </h6>
-                                                <h6><?php echo $ul->nama ?></h6>
-                                                <p><?php echo $ul->ulasan ?></p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                            </div>
-                        </div>
                         <?php endforeach;?>
-                        <div class="widget widget-mortgage-calculator">
-                            <div class="widget--title">
-                                <h5>Tinggalkan Komentar</h5>
-                            </div>
-                            <div class="widget--content">
-                                    <form  class="mb-0" method="POST" action="<?php echo base_url('customer/dashboard/kirim_ulasan/').$dt->id_rumah ?>">
-                                        <div class="row">
-                                            <div>
-                                                <div class="form-group">
-                                                    <label>Nama*</label>
-                                                    <input type="text" class="form-control" name="nama" required>
-                                                </div>                                       
-                                                <div class="form-group">
-                                                    <label>Nama Pengguna*</label>
-                                                    <input type="text" class="form-control" name="nama_pengguna"  required>
-                                                </div>                                           
-                                                <div class="form-group">
-                                                    <label>Komentar*</label>
-                                                    <textarea class="form-control" type="text" name="ulasan" required></textarea>
+                            <div class="widget widget-mortgage-calculator">
+                                <div class="widget--title">
+                                    <h5>Tinggalkan Komentar</h5>
+                                </div>
+                                    <div class="widget--content">
+                                        <form  class="mb-0" method="POST" action="<?php echo base_url('customer/dashboard/kirim_ulasan/').$dt->id_rumah ?>">
+                                            <div class="row">
+                                                <div>
+                                                    <div class="form-group">
+                                                        <label>Nama*</label>
+                                                        <input type="text" class="form-control" name="nama" required>
+                                                    </div>                                       
+                                                    <div class="form-group">
+                                                        <label>Nama Pengguna*</label>
+                                                        <input type="text" class="form-control" name="nama_pengguna"  required>
+                                                    </div>                                           
+                                                    <div class="form-group">
+                                                        <label>Komentar*</label>
+                                                        <textarea class="form-control" type="text" name="ulasan" required></textarea>
+                                                    </div>                                               
+                                                    <button type="submit" class="btn btn--primary">Kirim</button>
                                                 </div>
-                                            
-                                            <!-- .col-md-12 -->
-                                            
-                                                <button type="submit" class="btn btn--primary">Kirim</button>
                                             </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                             </div>
-                        </div>
                         <!-- . widget mortgage calculator end -->
                     </div>
                     <!-- .col-md-4 -->
