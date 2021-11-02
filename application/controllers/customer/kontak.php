@@ -35,7 +35,7 @@ class Kontak extends CI_Controller{
                     aria-label="Close"
                     <span aria-hidden="true">&times;</span>
                 </button>
-            </div>');
+                </div>');
                 redirect('customer/kontak'); 
             }
         }

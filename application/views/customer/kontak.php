@@ -75,6 +75,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="heading heading-2 mb-50">
                             <h2 class="heading--title">Kontak Kami</h2>
+                            <?php echo $this->session->flashdata('pesan') ?>
                         </div>
                     </div>
                     <!-- .col-md-12 end -->
