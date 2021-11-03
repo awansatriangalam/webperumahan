@@ -19,19 +19,6 @@ class Rental_model extends CI_model
         $this->db->delete($table);
     }
 
-    public function pencarian($keyword=null){
-        $this->db->select('*');
-        $this->db->from('rumah');
-        if(!empty($keyword)){
-            $this->db->like('lokasi',$keyword);
-            $this->db->or_like('kode_type',$keyword);
-            $this->db->or_like('status',$keyword);
-            $this->db->or_like('kamar_tidur',$keyword);
-            $this->db->or_like('kamar_mandi',$keyword);
-        }
-        return $this->db->get()->result();
-    }
-
     public function ambil_id_rumah($id)
     {
         $hasil = $this->db->where('id_rumah', $id)->get('rumah');

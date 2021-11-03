@@ -14,12 +14,14 @@ class Booking Extends CI_Controller
 
     public function add_aksi()
     {
+        $id_customer    = $this->session->userdata('id_customer');
         $id_rumah       = $this->input->post('id_rumah');
         $harga          = $this->input->post('harga');
         $status_pesan   = $this->input->post('status_pesan');
 
         
         $data           = array(
+            'id_customer'   => $id_customer,
             'id_rumah'      => $id_rumah,
             'harga'         => $harga,
             'status_pesan'  => 'Pending'
@@ -44,7 +46,7 @@ class Booking Extends CI_Controller
                     <span aria-hidden="true">&times;</span>
                 </button>
                 </div>');
-                redirect('customer/dashboard/detail_rumah/').$dt->id_rumah; 
+                redirect('customer/dashboard/detail_rumah/').$id; 
     }
 }
 

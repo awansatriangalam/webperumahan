@@ -72,7 +72,13 @@
                                         <div class="col-xs-12 col-sm-4 col-md-4">
                                             <div class="form-group">
                                                 <label for="select-status">Status</label>
-                                                <input type="text" class="form-control" name="status" value="<?php echo $dt->status ?>" readonly>
+                                                <input type="text" class="form-control" name="status" value="<?php 
+                                                if ($dt->status == "0"){
+                                                    echo "Diisi";
+                                                }else{
+                                                    echo "Tersedia";
+                                                }
+                                                ?>" readonly>
                                             </div>
                                         </div>
                                         <!-- .col-md-4 end -->
