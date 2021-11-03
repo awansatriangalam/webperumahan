@@ -49,7 +49,7 @@
                                                     echo "<span class='btn btn-sm btn-danger' disable> Diisi
                                                     </span>";
                                                 }else{
-                                                    echo anchor('customer/pesan/tambah_pesan' .$dt->id_rumah, '<button class="btn btn-sm btn-success "> Pesan</button>');
+                                                    echo anchor('customer/booking/add', '<button class="btn btn-sm btn-success "><i class="fa fa-book"></i>  Booking</button>');
                                                 }
                                             ?>
                                     </span>
@@ -255,7 +255,7 @@
                                                 <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
                                                 <span class="property--status"><?php 
                                                 if ($rm->status == "0"){
-                                                    echo "<span> Telah Terisi
+                                                    echo "<span> Diisi
                                                     </span>";
                                                 }else{
                                                     echo "<span> Tersedia

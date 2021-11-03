@@ -39,7 +39,7 @@
                             <?php foreach($customer as $cs) :?>
                                 <ul class="edit--profile-links list-unstyled mb-0">
                                     <li><a href="<?php echo base_url('customer/dashboard/profil/').$cs->id_customer?>"><i class="fa fa-user"></i> Profil Saya</a></li>
-                                    <li><a href="<?php echo base_url('customer/dashboard/favorit/').$cs->id_customer?>"><i class="fa fa-heart"></i> Favorit</a></li>
+                                    <li><a href="<?php echo base_url('customer/booking/')?>"><i class="fa fa-heart"></i> Favorit</a></li>
                                 </ul>
                             <?php endforeach;?>
                         </div>

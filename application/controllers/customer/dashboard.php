@@ -8,12 +8,18 @@ class Dashboard extends CI_Controller{
         $this->load->view('customer/dashboard', $data);
         $this->load->view('templates_customer/footer');
     }
+
+    function __construct()
+    {
+      parent::__construct();
+    }
     
     public function detail_rumah($id) 
     {
         $data['detail'] = $this->rental_model->ambil_id_rumah($id);
         $data['rumah'] = $this->rental_model->get_data('rumah')->result();
         $data['ulas'] = $this->rental_model->get_data('ulas')->result();
+        $this->load->model('detail_model','rumah',true);
         $this->load->view('templates_customer/header');
         $this->load->view('customer/detail_rumah', $data);
         $this->load->view('templates_customer/footer');
@@ -45,16 +51,7 @@ class Dashboard extends CI_Controller{
         $this->load->view('templates_customer/footer');
     }
 
-
-    public function favorit($id) 
-    {
-        $where = array('id_customer' => $id) ;
-        $data['customer'] = $this->db->query("SELECT * FROM customer WHERE id_customer = $id")->result();
-
-        $this->load->view('templates_customer/header');
-        $this->load->view('customer/favorit', $data);
-        $this->load->view('templates_customer/footer');
-    }
+    
 
     public function _rules()
     {
