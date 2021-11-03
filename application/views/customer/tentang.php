@@ -44,7 +44,7 @@
                         </div><hr>
                         <!-- .heading-title end -->
                             <div class="row">
-                                <div class="col-xs-12 col-sm-7 col-md-7">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="accordion accordion-1" id="accordion">
                             <div class="panel">
                                 <div class="panel--heading">
