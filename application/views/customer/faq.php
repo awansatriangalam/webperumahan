@@ -88,7 +88,7 @@
                     </div>
                     <!-- .col-md-7 end -->
                     <div class="col-xs-12 col-sm-5 col-md-4">
-                        <img class="img-responsive" src="<?php echo base_url()?>assets/assets_homepage/images/about/1.jpg" alt="about img">
+                        <img class="img-responsive" src="<?php echo base_url()?>assets/assets_homepage/images/accordion/faq.jpg" alt="img">
                     </div>
                     <!-- .col-md-4 end -->
                 </div>
