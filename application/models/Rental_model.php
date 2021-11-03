@@ -42,6 +42,17 @@ class Rental_model extends CI_model
             }
     }
 
+    public function ambil_id_type($id)
+    {
+        $hasil = $this->db->where('id_type', $id)->get('tipe');
+            if($hasil->num_rows() > 0){
+                return $hasil->result();
+            }else{
+                return false;
+            }
+    }
+
+
     public function cek_login()
     {
         $username = set_value('username');
