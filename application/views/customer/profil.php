@@ -38,7 +38,7 @@
                             <?php foreach($customer as $cs) :?>
                                 <ul class="edit--profile-links list-unstyled mb-0">
                                     <li><a href="<?php echo base_url('customer/dashboard/profil/').$cs->id_customer?>"><i class="fa fa-user"></i> Profil Saya</a></li>
-                                    <li><a href="<?php echo base_url('customer/booking/')?>"><i class="fa fa-heart"></i> Favorit</a></li>
+                                    <li><a href="<?php echo base_url('customer/book')?>"><i class="fa fa-book"></i> Book</a></li>
                                 </ul>
                             <?php endforeach;?>
                         </div>
@@ -52,27 +52,27 @@
                                     <div class="form-group">
                                         <label>Nama</label>
                                         <input type="hidden" name="id_customer" value="<?php echo $cs->id_customer ?>">
-                                        <input type="text" class="form-control" name="nama" value="<?php echo $cs->nama ?>">
+                                        <input type="text" class="form-control" name="nama" value="<?php echo $cs->nama?>"readonly>
                                     </div>
                                     <!-- .form-group end -->
                                     <div class="form-group">
                                         <label>Nama Pengguna</label>
-                                        <input type="text" class="form-control" name="username" value="<?php echo $cs->username ?>">
+                                        <input type="text" class="form-control" name="username" value="<?php echo $cs->username ?>"readonly>
                                     </div>
                                     <!-- .form-group end -->
                                     <div class="form-group">
                                         <label>Alamat</label>
-                                        <input type="email" class="form-control" name="alamat" value="<?php echo $cs->alamat ?>">
+                                        <input type="email" class="form-control" name="alamat" value="<?php echo $cs->alamat ?>"readonly>
                                     </div>
                                     <!-- .form-group end -->
                                     <div class="form-group">
                                         <label>No Telepon</label>
-                                        <input type="text" class="form-control" name="no_tlp" value="<?php echo $cs->no_tlp ?>">
+                                        <input type="text" class="form-control" name="no_tlp" value="<?php echo $cs->no_tlp ?>"readonly>
                                     </div>
                                     <!-- .form-group end -->
                                     <div class="form-group">
                                         <label>No KTP</label>
-                                        <input type="text" class="form-control" name="no_ktp" value="<?php echo $cs->no_ktp ?>">
+                                        <input type="text" class="form-control" name="no_ktp" value="<?php echo $cs->no_ktp ?>"readonly>
                                     </div>
                                     <!-- .form-group end -->
                                 </div>

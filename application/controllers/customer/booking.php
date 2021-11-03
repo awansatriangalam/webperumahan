@@ -1,8 +1,7 @@
 <?php
 
 class Booking Extends CI_Controller
-{
-    
+{  
     public function add($id)
     {
         $data['detail'] = $this->rental_model->ambil_id_rumah($id);

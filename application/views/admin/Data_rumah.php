@@ -18,8 +18,9 @@
                     <th>Type</th>
                     <th>Luas Bangunan</th>
                     <th>Status</th>
+                    <th>Lokasi</th>
                     <th>Harga</th>
-                    <th>Aksi</th>
+                    <th width="150px">Aksi</th>
                   </tr>
               </thead>
                 <tbody> 
@@ -43,7 +44,8 @@
                                     </span>";
                                 }
                                 ?></td>
-                                <td><?php echo $rm->harga ?></td>
+                                <td><?php echo $rm->lokasi ?></td>
+                                <td>Rp.<?php echo $rm->harga ?></td>
                                 <td>
                                     <a href="<?php echo base_url('admin/data_rumah/detail_rumah/') .$rm->id_rumah ?>" class="btn btn-sm btn-success"><i class="
                                     fas fa-eye"></i></a>

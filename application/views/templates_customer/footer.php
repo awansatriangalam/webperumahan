@@ -1,10 +1,10 @@
 
 <!-- Footer #1
 ============================================= -->
-<footer id="footer" class="footer footer-1 bg-white">
+<footer id="footer" class="footer footer-1 bg-white ">
             <!-- Widget Section
 	============================================= -->
-            <div class="footer-widget">
+            <div class="footer-widget fixed-bottom">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-3 widget--about">

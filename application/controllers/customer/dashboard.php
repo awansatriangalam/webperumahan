@@ -37,8 +37,8 @@ class Dashboard extends CI_Controller{
 
     public function profil() 
     {
-        $data['customer']= $this->rental_model->get_data('customer')->result();
-
+        $customer = $this->session->userdata('id_customer');
+        $data['customer']= $this->db->query("SELECT * FROM customer cs WHERE cs.id_customer='$customer'")->result();
         $this->load->view('templates_customer/header');
         $this->load->view('customer/profil', $data);
         $this->load->view('templates_customer/footer');
