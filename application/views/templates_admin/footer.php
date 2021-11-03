@@ -1,6 +1,6 @@
 <footer class="main-footer">
         <div class="footer-left">
-          Copyright &copy; 2021 <div class="bullet"></div> Design By <a href="https://nauval.in/">Web Perumahan Team</a>
+          Copyright &copy; 2021 <div class="bullet"></div> Design By <a href="<?php echo base_url('customer/dashboard')?>">Web Perumahan Team</a>
         </div>
         <div class="footer-right">
           2.3.0

@@ -75,7 +75,7 @@
                 <div class="container">
                     <div class="row footer--bar">
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <span>Copyright © 2021 <a href="http://themeforest.net/user/zytheme">Web Perumahan</a>.</span>
+                            <span>Copyright © 2021 <a href="<?php echo base_url('customer/dashboard')?>">Web Perumahan</a>.</span>
                         </div>
 
                     </div>
