@@ -34,6 +34,8 @@
                         <div class="card-header">
                             <h5>Data Transaksi</h5>
                         </div>
+
+                        <span><?php echo $this->session->flashdata('pesan')?></span>
                         <div class="card-body">
                             <table class="table table-bordered table-striped mb-0 ">
                                 <tr>
@@ -41,6 +43,7 @@
                                     <th><label>Nama Customer</label></th>
                                     <th><label>Nama Rumah</label></th>
                                     <th><label>Harga</label></th>
+                                    <th><label>Aksi</label></th>
                                 </tr>
 
                                 <?php $no=1;
@@ -50,6 +53,13 @@
                                     <td><?php echo $tr->nama ?></td>
                                     <td><?php echo $tr->nama_rumah ?></td>
                                     <td>Rp. <?php echo $tr->harga ?></td>
+                                    <td>
+                                        <?php if($tr->status_pesan=="Selesai") { ?>
+                                            <button class="btn btn-sm btn-danger" style="width:100%">Selesai</button>
+                                        <?php }else{ ?>
+                                            <a href="<?php echo base_url('customer/transaksi/pembayaran/'.$tr->id_pesan) ?>" class="btn btn-sm btn-success" style="width:100%">Cek Pembayaran</a>
+                                        <?php }?>
+                                    </td>
                                 </tr>
                                 <?php endforeach?>
                             </table>
