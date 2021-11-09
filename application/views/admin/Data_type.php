@@ -1,11 +1,11 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Data Type Rumah Baru</h1>
+            <h1>Data Tipe Rumah Baru</h1>
         </div>
 
         <a class="btn btn-primary mb-3" href="<?php echo base_url('admin/data_type/tambah_type')?>">
-            Tambah Type</a>
+            Tambah Tipe</a>
 
         <?php echo $this->session->flashdata('pesan') ?>
 
@@ -13,8 +13,8 @@
             <thead>
                 <tr>
                     <th width="20px">No</th>
-                    <th>Kode Type</th>
-                    <th>Nama Type</th>
+                    <th>Kode Tipe</th>
+                    <th>Nama Tipe</th>
                     <th width="180px">Aksi</th>
                 </tr>
             </thead>

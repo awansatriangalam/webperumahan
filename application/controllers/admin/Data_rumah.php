@@ -192,6 +192,16 @@ class Data_rumah extends CI_Controller{
             $this->form_validation->set_rules('harga','Harga','required');
         }
 
+            public function detail_rumah($id)
+            {
+                $data['detail'] = $this->rental_model->ambil_id_rumah($id);
+                $this->load->view('templates_admin/header');
+                $this->load->view('templates_admin/sidebar');
+                $this->load->view('admin/detail_rumah',$data);
+                $this->load->view('templates_admin/footer');
+            }
+
+
         public function delete_rumah($id)
         {
             $where = array ('id_rumah' => $id);

@@ -1,19 +1,19 @@
 <div class="main-content">
     <div class="section">
         <div class="section-header">
-            <h1>Form Tambah Data Type Rumah</h1>
+            <h1>Form Tambah Data Tipe Rumah</h1>
         </div>
     </div>
 
     <form method="POST" action="<?php echo base_url('admin/data_type/tambah_type_aksi')?>">
         <div class="form-group">
-            <label>Kode Type</label>
+            <label>Kode Tipe</label>
             <input type="text" name="kode_type" class="form-control">
             <?php echo form_error('kode_type','<div class="text-small text-danger">', 
             '</div>') ?>
         </div>
         <div class="form-group">
-            <label>Nama Type</label>
+            <label>Nama Tipe</label>
             <input type="text" name="nama_type" class="form-control">
             <?php echo form_error('nama_type','<div class="text-small text-danger">', 
             '</div>') ?>

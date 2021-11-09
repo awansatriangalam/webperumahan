@@ -40,7 +40,7 @@
                 <a class="nav-link" href="<?php echo base_url('admin/data_rumah')?>"><i class="fas fa-home"></i> <span>Data Rumah</span></a>
               </li>
               <li>
-                <a class="nav-link" href="<?php echo base_url('admin/data_type')?>"><i class="fas fa-grip-horizontal"></i> <span>Data Type</span></a>
+                <a class="nav-link" href="<?php echo base_url('admin/data_type')?>"><i class="fas fa-grip-horizontal"></i> <span>Data Tipe</span></a>
               </li>
               <li>
                 <a class="nav-link" href="<?php echo base_url('admin/data_customer')?>"><i class="fas fa-user"></i> <span>Data Customer</span></a>
