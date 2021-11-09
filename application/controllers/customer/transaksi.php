@@ -50,8 +50,21 @@ class Transaksi extends CI_Controller{
     public function cetak($id)
     {
         $data['transaksi']= $this->db->query("SELECT * FROM transaksi tr, rumah rm, customer cs WHERE tr.id_rumah=rm.id_rumah AND tr.id_customer=cs.id_customer AND tr.id_pesan='$id' ORDER BY id_pesan DESC")->result();
-        $this->load->view('customer/cetak',$data);
+        $this->load->view('customer/cetak',$data);   
+    }
+
+    public function batal_transaksi($id)
+    {
+        $where = array ('id_pesan' =>$id);
+        $data = $this->rental_model->get_where($where,'transaksi')->row();
         
+        $where2 = array ('id_rumah' => $data->id_rumah);
+        
+        $data2 = array ('status' => '1');
+
+        $this->rental_model->update_data('rumah', $data2,$where2);
+        $this->rental_model->delete_data($where,'transaksi');
+        redirect('customer/book');
     }
 }
 ?>

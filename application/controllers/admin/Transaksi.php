@@ -45,6 +45,34 @@
 			$file = 'assets/upload/' .$filePembayaran['bukti_bayar'];
 			force_download($file, NULL);
 		}
+
+		public function transaksi_selesai($id)
+		{
+			$where = array ('id_pesan' => $id);
+			$data['transaksi'] = $this->db->query("SELECT * FROM transaksi WHERE id_pesan='$id'")->result();
+			$this->load->view('templates_admin/header');
+			$this->load->view('templates_admin/sidebar');
+			$this->load->view('admin/transaksi_selesai', $data);
+			$this->load->view('templates_admin/footer');
+		}
+
+		public function transaksi_selesai_aksi()
+		{
+			$id 			= $this->input->post('id_pesan');
+			$status_pesan 	= $this->input->post('status_pesan');
+
+			$data = array (
+				'status_pesan' => $status_pesan
+			);
+
+			$where = array (
+				'id_pesan'		=> $id
+			);
+
+			$this->rental_model->update_data('transaksi',$data,$where);
+			redirect('admin/transaksi');
+		}
+
 	}
 	
 ?>

@@ -59,6 +59,7 @@
                         <td>Rp. <?php echo $tr->harga ?></td>
                     </tr>
                 <?php endforeach;?>
+                
         </table>
     </body>
 </html>
