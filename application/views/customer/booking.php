@@ -38,7 +38,7 @@
                                             <h4 class="form--title">Detail Rumah</h4>
                                         </div>
                                         <!-- .col-md-12 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                        <div class="col-xs-12 col-sm-4 col-md-4">
                                             <div class="form-group">
                                                 <label for="property-title">Nama Rumah</label>
                                                 <input type="hidden" name="id_rumah" value="<?php echo $dt->id_rumah ?>">
@@ -46,10 +46,17 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                        <div class="col-xs-12 col-sm-4 col-md-4">
                                             <div class="form-group">
                                                 <label for="property-description">Harga</label>
                                                 <input type="text" class="form-control" name="harga" value="<?php echo $dt->harga ?>" readonly>                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-3 col-md-3">
+                                            <div class="form-group">
+                                                <label for="property-description">Tanggal Transaksi</label>
+                                                <input type="date" class="form-control" name="tanggal_transaksi">                                            
+                                            </div>
                                         </div>
                                         <!-- .col-md-12 end -->
                                         <div class="col-xs-12 col-sm-12 col-md-12">

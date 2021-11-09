@@ -15,15 +15,17 @@ class Booking Extends CI_Controller
     {
         $id_customer    = $this->session->userdata('id_customer');
         $id_rumah       = $this->input->post('id_rumah');
+        $tanggal        = $this->input->post('tanggal_transaksi');
         $harga          = $this->input->post('harga');
         $status_pesan   = $this->input->post('status_pesan');
 
         
         $data           = array(
-            'id_customer'   => $id_customer,
-            'id_rumah'      => $id_rumah,
-            'harga'         => $harga,
-            'status_pesan'  => 'Pending'
+            'id_customer'       => $id_customer,
+            'id_rumah'          => $id_rumah,
+            'tanggal_transaksi' => $tanggal,
+            'harga'             => $harga,
+            'status_pesan'      => 'Belum Selesai'
         );
 
         $this->rental_model->insert_data($data,'transaksi');
@@ -45,7 +47,7 @@ class Booking Extends CI_Controller
                     <span aria-hidden="true">&times;</span>
                 </button>
                 </div>');
-                redirect('customer/dashboard/detail_rumah/').$id; 
+                redirect('customer/book/').$id; 
     }
 }
 

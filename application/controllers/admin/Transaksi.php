@@ -73,6 +73,20 @@
 			redirect('admin/transaksi');
 		}
 
+		public function transaksi_batal($id)
+		{
+			$where = array ('id_pesan' =>$id);
+			$data = $this->rental_model->get_where($where,'transaksi')->row();
+			
+			$where2 = array ('id_rumah' => $data->id_rumah);
+			
+			$data2 = array ('status' => '1');
+
+			$this->rental_model->update_data('rumah', $data2,$where2);
+			$this->rental_model->delete_data($where,'transaksi');
+			redirect('admin/transaksi');
+		}
+
 	}
 	
 ?>

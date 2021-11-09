@@ -14,9 +14,10 @@
                         <th>Customer</th>
                         <th>Rumah</th>
                         <th>Harga</th>
+                        <th>Tanggal Transaksi</th>
                         <th>Status</th>
                         <th>Cek Pembayaran</th>
-                        <th width="180px">Aksi</th>
+                        <th width="120px">Aksi</th>
                     </tr>
                 </thead>
 
@@ -29,6 +30,7 @@
                             <td><?php echo $tr->nama ?></td>
                             <td><?php echo $tr->nama_rumah ?></td>
                             <td><?php echo $tr->harga ?></td>
+                            <td><?php echo $tr->tanggal_transaksi ?></td>
                             <td><?php echo $tr->status_pesan ?></td>
                             <td>
                                 <center>

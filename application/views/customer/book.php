@@ -42,6 +42,7 @@
                                     <th><label>No</label></th>
                                     <th><label>Nama Customer</label></th>
                                     <th><label>Nama Rumah</label></th>
+                                    <th><label>Tanggal Transaksi</label></th>
                                     <th><label>Harga</label></th>
                                     <th style="width: 325px;"><label>Aksi</label></th>
                                 </tr>
@@ -52,6 +53,7 @@
                                     <td><?php echo $no++ ?></td>
                                     <td><?php echo $tr->nama ?></td>
                                     <td><?php echo $tr->nama_rumah ?></td>
+                                    <td><?php echo $tr->tanggal_transaksi?></td>
                                     <td>Rp. <?php echo $tr->harga ?></td>
                                     <td>
                                         <?php if($tr->status_pesan=="Selesai") { ?>
@@ -70,6 +72,7 @@
                                     </td>                      
                                 </tr>
                                 <?php endforeach?>
+                                <?echo date('d - M - y')?>;
                             </table>
                         </div>
                     </div>
