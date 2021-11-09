@@ -39,6 +39,12 @@ class Rental_model extends CI_model
             }
     }
 
+    public function downloadBukti($id)
+    {
+        $query = $this->db->get_where('transaksi', array('id_pesan' => $id));
+        return $query->row_array();
+    }
+
 
     public function cek_login()
     {

@@ -46,5 +46,12 @@ class Transaksi extends CI_Controller{
             </div>');
             redirect('customer/book'); 
     }
+
+    public function cetak($id)
+    {
+        $data['transaksi']= $this->db->query("SELECT * FROM transaksi tr, rumah rm, customer cs WHERE tr.id_rumah=rm.id_rumah AND tr.id_customer=cs.id_customer AND tr.id_pesan='$id' ORDER BY id_pesan DESC")->result();
+        $this->load->view('customer/cetak',$data);
+        
+    }
 }
 ?>
