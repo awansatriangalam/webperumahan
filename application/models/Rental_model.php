@@ -43,6 +43,16 @@ class Rental_model extends CI_model
             }
     }
 
+    public function ambil_id_ulas($id)
+    {
+        $hasil = $this->db->where('id_ulasan', $id)->get('ulas');
+            if($hasil->num_rows() > 0){
+                return $hasil->result();
+            }else{
+                return false;
+            }
+    }
+
     public function downloadBukti($id)
     {
         $query = $this->db->get_where('transaksi', array('id_pesan' => $id));

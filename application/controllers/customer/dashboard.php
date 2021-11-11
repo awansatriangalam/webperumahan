@@ -12,6 +12,7 @@ class Dashboard extends CI_Controller{
     public function detail_rumah($id) 
     {
         $data['detail'] = $this->rental_model->ambil_id_rumah($id);
+        $data['ulas'] = $this->rental_model->ambil_id_ulas($id);
         $data['rumah'] = $this->rental_model->get_data('rumah')->result();
         $this->load->view('templates_customer/header');
         $this->load->view('customer/detail_rumah', $data);
@@ -32,8 +33,9 @@ class Dashboard extends CI_Controller{
         'ulasan'            => $ulasan,
     );
        $this->rental_model->insert_data($data,'ulas');
-       redirect('customer/dashboard/detail_rumah/').$id;
+       redirect('customer/dashboard/detail_rumah',$data);
     }
+    
 
     public function profil() 
     {
