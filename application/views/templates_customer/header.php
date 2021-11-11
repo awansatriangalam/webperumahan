@@ -69,7 +69,7 @@
                         <!-- Module Consultation  -->
                         <div class="module module-property pull-left">
                             <?php if ($this->session->userdata('nama')) { ?>
-                                <a class="pull-left" href="<?php echo base_url('auth/logout')?> "><span class="btn"><i class="fa fa-sign-out"></i>Keluar</span></a>
+                                <a class="pull-left" href="<?php echo base_url('auth/logout')?> "><span class="btn btn-sm btn-warning"><i class="fa fa-sign-out"></i>Keluar</span></a>
                             <?php } else { ?>
                                 <a class="pull-left" href="<?php echo base_url('auth/login')?> "><span class="btn"><i class="fa fa-sign-in"></i> Masuk</span></a>
                             <?php } ?>

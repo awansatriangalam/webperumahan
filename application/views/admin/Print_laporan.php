@@ -3,12 +3,12 @@
 
 <table>
     <tr>
-        <td>Tanggal</td>
+        <td>Dari Tanggal</td>
         <td>:</td>
         <td><?php echo date('d-M-Y',strtotime($_GET['dari'])); ?></td>
     </tr>
     <tr>
-        <td>Tanggal</td>
+        <td>Sampai Tanggal</td>
         <td>:</td>
         <td><?php echo date('d-M-Y',strtotime($_GET['sampai'])); ?></td>
     </tr>

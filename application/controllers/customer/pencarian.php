@@ -1,18 +1,36 @@
 <?php 
 
-class Pencarian extends CI_Controller{
-    public function index() 
+class Pencarian extends CI_Controller
+{
+
+    public function index()
     {
-        $data['rumah'] = $this->rental_model->get_data('rumah')->result();
-        $data['rumah'] = $this->rental_model->pencarian('rumah')->result();
-        $lokasi     =$this->input->get('lokasi');
-        $kode_type  =$this->input->get('kode_type');
-        $status     =$this->input->get('status');
-        $kamar_tidur=$this->input->get('kamar_tidur');
-        $kamar_mandi=$this->input->get('kamar_mandi');
-        $this->load->view('templates_customer/header');
-        $this->load->view('customer/pencarian', $data);
-        $this->load->view('templates_customer/footer');
+        $lokasi = $this->input->post('lokasi');
+        $kode_type = $this->input->post('kode_type');
+        $kamar_tidur = $this->input->post('kamar_tidur');
+        $kamar_mandi = $this->input->post('kamar_mandi');
+        $this->_rules();
+        
+        $data['rumah'] = $this->rental_model->get_data('rumah')->result();  
+        if ($this->form_validation->run()== FALSE) {
+            $this->load->view('templates_customer/header');
+            $this->load->view('customer/rumah',$data);
+            $this->load->view('templates_customer/footer');
+        }else{
+            $data['filter'] = $this->db->query("SELECT * FROM rumah WHERE rumah.id_rumah AND option (lokasi) = '$lokasi' AND option (kode_type) = '$kode_type' AND option (kamar_tidur) = '$kamar_tidur' AND option (kamar_mandi) = '$kamar_mandi' ")->result();
+            $this->load->view('templates_customer/header');
+            $this->load->view('customer/filterrumah',$data);
+            $this->load->view('templates_customer/footer');
+        }  
+    }
+
+    public function _rules()
+    {
+        $this->form_validation->set_rules('lokasi','Tanggal');
+        $this->form_validation->set_rules('kode_type','Tanggal');
+        $this->form_validation->set_rules('status','Tanggal');
+        $this->form_validation->set_rules('kamar_tidur','Tanggal');
+        $this->form_validation->set_rules('kamar_mandi','Tanggal');
     }
 }
 
