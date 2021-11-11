@@ -33,9 +33,9 @@ class Rental_model extends CI_model
             }
     }
 
-    public function ambil_id_type($id)
+    public function ambil_id_ulasan($id)
     {
-        $hasil = $this->db->where('id_type', $id)->get('tipe');
+        $hasil = $this->db->where('id_rumah', $id)->get('ulas');
             if($hasil->num_rows() > 0){
                 return $hasil->result();
             }else{
@@ -43,9 +43,9 @@ class Rental_model extends CI_model
             }
     }
 
-    public function ambil_id_ulas($id)
+    public function ambil_id_type($id)
     {
-        $hasil = $this->db->where('id_ulasan', $id)->get('ulas');
+        $hasil = $this->db->where('id_type', $id)->get('tipe');
             if($hasil->num_rows() > 0){
                 return $hasil->result();
             }else{
