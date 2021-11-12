@@ -20,7 +20,7 @@ class Auth extends CI_Controller{
             if($cek == FALSE)
             {
                 $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible
-                    fade show" role="alert"> Nama Pengguna atau Katasandi Salah ! .
+                    fade show" role="alert"> Nama Pengguna atau Kata Sandi Salah ! .
                 <button type="button" class="close" data-dismiss="alert"
                     aria-label="Close"
                     <span aria-hidden="true">&times;</span>
@@ -50,7 +50,7 @@ class Auth extends CI_Controller{
     public function _rules()
     {
         $this->form_validation->set_rules('username','Nama Pengguna','required');
-        $this->form_validation->set_rules('pass','Katasandi','required');
+        $this->form_validation->set_rules('pass','Kata Sandi','required');
     }
 
     public function logout()

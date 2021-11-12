@@ -10,12 +10,12 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-5">
-                            <img src="<?php echo base_url(). 'assets/upload/' .$dt->gambar ?>" style="width: 150%; ">
+                        <div class="col-md-12 col-xs-12">
+                            <img src="<?php echo base_url(). 'assets/upload/' .$dt->gambar ?>" style="width: 100%; ">
                         </div>
                         <div>
                             <table class="table">
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-xs-12">
                                 <tr>
                                     <td>Nama Rumah</td>
                                     <td><?php echo $dt->nama_rumah ?></td>
