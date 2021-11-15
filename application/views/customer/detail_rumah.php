@@ -229,7 +229,7 @@
                                     <!-- .col-md-12 end -->
 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
-                                        <div id="googleMap" style="width:100%;height:380px;"></div>
+                                        <div id="googleMap" style="width:50%;height:100px;"></div>
                                     </div>
                                     <!-- .col-md-12 end -->
                                 </div>
@@ -293,7 +293,7 @@
                                                     <div class="date"><?php echo $ul->nama_pengguna ?></div>
                                                     <p><?php echo $ul->ulasan ?></p>
                                                 </div>
-                                            </li> <!-- comment end -->
+                                            </li> 
                                         </ul>
                                     <?php endforeach;?>
                                 </div>
@@ -320,7 +320,7 @@
                                                     <label>Komentar*</label>
                                                     <textarea class="form-control" type="text" name="ulasan" required></textarea>
                                                 </div>                                               
-                                                <button type="submit" class="btn btn--primary">Kirim</button>
+                                                <button type="submit" class="btn btn-success">Kirim</button>
                                             </div>
                                         </div>
                                     </form>

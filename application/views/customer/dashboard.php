@@ -11,87 +11,74 @@
                             <div class="text-center">
                                 <h1>Temukan Rumah Impian Anda</h1>
                             </div>
-                            <form class="mb-0">
-                                <div class="form-box search-properties">
+                            <form method="GET" action="<?php echo base_url('customer/rumah/filter')?>" class="mb-0 " >
+                                <div class="form-box ">
                                     <div class="row">
-                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                        <div class="col-xs-8 col-sm-6 col-md-3">
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
-                                                    <select name="select-location" id="select-location">
-                                                        <option>Semua Lokasi</option>
-                                                        <option>Malang</option>
-                                                        <option>Surabaya</option>
-                                                        <option>Jember</option>
-                                                        <option>Madura</option>
+                                                    <select name="kota">
+                                                        <option value="">Semua Lokasi</option>
+                                                        <option value="Malang">Malang</option>
+                                                        <option value="Surabaya">Surabaya</option>                                                      
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- .col-md-3 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                        <div class="col-xs-8 col-sm-6 col-md-3">
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
-                                                    <select name="select-type" id="select-type">
-                                                        <option>Rumah Tipe</option>
-                                                        <option>Ixora Valley</option>
-                                                        <option>Elishaa Valley</option>
-                                                        <option>Jishaa Valley</option>
+                                                    <select name="kode_type">
+                                                        <option value="">Rumah Tipe</option>
+                                                        <option value="36">Middle</option>
+                                                        <option value="45">Middle Low</option>
+                                                        <option value="60">Middle Up</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- .col-md-3 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                        <div class="col-xs-8 col-sm-6 col-md-3">
+                                            
+                                        </div>
+                                        <!-- .col-md-3 end -->
+                                        <div class="col-xs-8 col-sm-6 col-md-3">
+                                            <button type="submit" name="cari" class="btn btn-sm btn-primary btn--block mb-30"><i class="fa fa-search"></i> Cari</button>
+                                        </div>
+                                        <!-- .col-md-3 end -->
+                                        <div class="col-xs-8 col-sm-6 col-md-3 option-hide">
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
-                                                    <select name="select-status" id="select-status">
-                                                        <option>Semua Status</option>
-                                                        <option>Sewa</option>
-                                                        <option>Dijual</option>
+                                                    <select name="kamar_tidur">
+                                                        <option value="">Kamar Tidur</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- .col-md-3 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-3">
-                                            <input type="submit" value="Cari" name="submit" class="btn btn--primary btn--block">
-                                        </div>
-                                        <!-- .col-md-3 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-3 option-hide">
+                                        <div class="col-xs-8 col-sm-6 col-md-3 option-hide">
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
-                                                    <select name="select-beds" id="select-beds">
-                                                        <option>Kamar Tidur</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
+                                                    <select name="kamar_mandi" >
+                                                        <option value="">Kamar Mandi</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- .col-md-3 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-3 option-hide">
-                                            <div class="form-group">
-                                                <div class="select--box">
-                                                    <i class="fa fa-angle-down"></i>
-                                                    <select name="select-baths" id="select-baths">
-                                                        <option>Kamar Mandi</option>
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="col-xs-8 col-sm-8 col-md-8">
                                             <a href="#" class="less--options">Pilihan Lanjut</a>
                                         </div>
                                     </div>

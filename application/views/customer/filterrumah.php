@@ -13,28 +13,28 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
-                            <form method="POST" action="<?php echo base_url('customer/rumah')?>" class="mb-0 " >
+                        <form method="GET" action="<?php echo base_url('customer/rumah/filter')?>" class="mb-0 " >
                                 <div class="form-box ">
                                     <div class="row">
-                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                        <div class="col-xs-8 col-sm-6 col-md-3">
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
-                                                    <select name="lokasi">
-                                                        <option>Semua Lokasi</option>
-                                                        <option value="Perumahan 1">Perumahan 1</option>
-                                                        <option value="Perumahan 2">Perumahan 2</option>                                                      
+                                                    <select name="kota">
+                                                        <option value="">Semua Lokasi</option>
+                                                        <option value="Malang">Malang</option>
+                                                        <option value="Surabaya">Surabaya</option>                                                      
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- .col-md-3 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                        <div class="col-xs-8 col-sm-6 col-md-3">
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="kode_type">
-                                                        <option>Rumah Tipe</option>
+                                                        <option value="">Rumah Tipe</option>
                                                         <option value="36">Middle</option>
                                                         <option value="45">Middle Low</option>
                                                         <option value="60">Middle Up</option>
@@ -43,20 +43,20 @@
                                             </div>
                                         </div>
                                         <!-- .col-md-3 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-3">
+                                        <div class="col-xs-8 col-sm-6 col-md-3">
                                             
                                         </div>
                                         <!-- .col-md-3 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-3">
-                                            <input type="submit" value="Search" class="btn btn--primary btn--block mb-30">
+                                        <div class="col-xs-8 col-sm-6 col-md-3">
+                                            <button type="submit" name="cari" class="btn btn-sm btn-primary btn--block mb-30"><i class="fa fa-search"></i> Cari</button>
                                         </div>
                                         <!-- .col-md-3 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-3 option-hide">
+                                        <div class="col-xs-8 col-sm-6 col-md-3 option-hide">
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="kamar_tidur">
-                                                        <option>Kamar Tidur</option>
+                                                        <option value="">Kamar Tidur</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
@@ -66,12 +66,12 @@
                                             </div>
                                         </div>
                                         <!-- .col-md-3 end -->
-                                        <div class="col-xs-12 col-sm-6 col-md-3 option-hide">
+                                        <div class="col-xs-8 col-sm-6 col-md-3 option-hide">
                                             <div class="form-group">
                                                 <div class="select--box">
                                                     <i class="fa fa-angle-down"></i>
                                                     <select name="kamar_mandi" >
-                                                        <option>Kamar Mandi</option>
+                                                        <option value="">Kamar Mandi</option>
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
                                                         <option value="3">3</option>
@@ -80,7 +80,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="col-xs-8 col-sm-8 col-md-8">
                                             <a href="#" class="less--options">Pilihan Lanjut</a>
                                         </div>
                                     </div>
@@ -202,15 +202,15 @@
                             <div class="properties properties-list">
                                 <!-- .col-md-12 end -->
                                 <div class="col-xs-12 col-sm-12 col-md-12">
-                                    <?php foreach ($rumah as $rm) :  ?>
+                                    <?php foreach ($filter as $ft) :  ?>
                                     <!-- .property-item #1 -->
                                     <div class="property-item">
                                         <div class="property--img">
-                                            <a href="<?php echo base_url('customer/dashboard/detail_rumah/') .$rm->id_rumah ?>">
-                                                <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
+                                            <a href="<?php echo base_url('customer/dashboard/detail_rumah/') .$ft->id_rumah ?>">
+                                                <img src="<?php echo base_url('assets/upload/' .$ft->gambar) ?>" alt="property image" class="img-responsive">
 								            </a>
                                             <span class="property--status"><?php 
-                                                if ($rm->status == "0"){
+                                                if ($ft->status == "0"){
                                                     echo "<span> Telah Diisi
                                                     </span>";
                                                 }else{
@@ -221,16 +221,16 @@
                                         </div>
                                         <div class="property--content">
                                             <div class="property--info">
-                                                <h5 class="property--title"><a href="<?php echo base_url('customer/dashboard/detail_rumah/') .$rm->id_rumah ?>"><?php echo $rm->nama_rumah ?></a></h5>
-                                                <p class="property--location"><?php echo $rm->lokasi ?></p>
-                                                <p class="property--price"><?php echo $rm->harga ?></p>
+                                                <h5 class="property--title"><a href="<?php echo base_url('customer/dashboard/detail_rumah/') .$ft->id_rumah ?>"><?php echo $ft->nama_rumah ?></a></h5>
+                                                <p class="property--location"><?php echo $ft->lokasi ?></p>
+                                                <p class="property--price"><?php echo $ft->harga ?></p>
                                             </div>
                                             <!-- .property-info end -->
                                             <div class="property--features">
                                                 <ul class="list-unstyled mb-0">
-                                                    <li><span class="feature">Kamar Tidur:</span><span class="feature-num"><?php echo $rm->kamar_tidur ?></span></li>
-                                                    <li><span class="feature">Kamar Mandi:</span><span class="feature-num"><?php echo $rm->kamar_mandi ?></span></li>
-                                                    <li><span class="feature">Luas Bangunan:</span><span class="feature-num"><?php echo $rm->luas_bangunan ?></span></li>
+                                                    <li><span class="feature">Kamar Tidur:</span><span class="feature-num"><?php echo $ft->kamar_tidur ?></span></li>
+                                                    <li><span class="feature">Kamar Mandi:</span><span class="feature-num"><?php echo $ft->kamar_mandi ?></span></li>
+                                                    <li><span class="feature">Luas Bangunan:</span><span class="feature-num"><?php echo $ft->luas_bangunan ?></span></li>
                                                 </ul>
                                             </div>
                                             <!-- .property-features end -->
