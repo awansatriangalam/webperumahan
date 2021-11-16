@@ -14,6 +14,8 @@ class Dashboard extends CI_Controller{
         $data['detail'] = $this->rental_model->ambil_id_rumah($id);
         $data['ulas']  = $this->rental_model->ambil_id_ulasan($id);       
         $data['rumah']  = $this->rental_model->get_data('rumah')->result();
+        $customer = $this->session->userdata('id_customer');
+        $data['customer']= $this->db->query("SELECT * FROM customer cs WHERE cs.id_customer='$customer'")->result();
         $this->load->view('templates_customer/header');
         $this->load->view('customer/detail_rumah', $data);
         $this->load->view('templates_customer/footer');

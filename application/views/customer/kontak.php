@@ -83,30 +83,14 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <form class="mb-0" method="POST" action="<?php echo base_url('customer/kontak/pesan') ?>">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-4">
-                            <div class="form-group">
-                                <label>Nama*</label>
-                                <input type="text" class="form-control" name="nama" >
-                            </div>
-                        </div>
-                        <!-- .col-md-4 end -->
-                        <div class="col-xs-12 col-sm-12 col-md-4">
-                            <div class="form-group">
-                                <label>Alamat Email*</label>
-                                <input type="email" class="form-control" name="email" >
-                            </div>
-                        </div>
-                        <!-- .col-md-4 end -->
-                        <div class="col-xs-12 col-sm-12 col-md-4">
-                            <div class="form-group">
-                                <label>Nomor Telepon</label>
-                                <input type="text" class="form-control" name="no_tlp" >
-                            </div>
-                        </div>
-                        <!-- .col-md-4 end -->
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <label>Pesan*</label>
+                                <?php foreach($customer as $cs) : ?>
+                                    <input type="hidden" class="form-control" name="nama" value="<?php echo $cs->nama ?>" >
+                                    <input type="hidden" class="form-control" name="email" value="<?php echo $cs->no_ktp ?>">
+                                    <input type="hidden" class="form-control" name="no_tlp" value="<?php echo $cs->no_tlp ?>">
+                                <?php endforeach;?>
                                 <textarea class="form-control" name="pesan_"  rows="2"></textarea>
                             </div>
                         </div>

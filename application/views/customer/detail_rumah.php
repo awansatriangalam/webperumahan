@@ -282,20 +282,22 @@
                                     <h5>Komentar</h5>
                                 </div>
                                 <div class="widget--content">
-                                    <?php foreach($ulas as $ul):?>
-                                        <ul class="property-review">
-                                            <li class="review-comment">
-                                                <div class="avatar">
-                                                    <i class="fa fa-user"></i>
-                                                </div>
-                                                <div class="comment">
-                                                    <h6><?php echo $ul->nama ?></h6>
-                                                    <div class="date"><?php echo $ul->nama_pengguna ?></div>
-                                                    <p><?php echo $ul->ulasan ?></p>
-                                                </div>
-                                            </li> 
-                                        </ul>
-                                    <?php endforeach;?>
+                                    <div class="carousel slide" data-slide="1" data-slide-rs="1" data-autoplay="false" data-nav="true" data-dots="false" data-space="0" >
+                                        <?php foreach($ulas as $ul):?>
+                                            <ul class="property-review">  
+                                                <li class="review-comment">
+                                                    <div class="avatar">
+                                                        <i class="fa fa-user"></i>
+                                                    </div>
+                                                    <div class="comment">
+                                                        <h6><?php echo $ul->nama ?></h6>
+                                                        <div class="date"><?php echo $ul->nama_pengguna ?></div>
+                                                        <p><?php echo $ul->ulasan ?></p>
+                                                    </div>
+                                                </li> 
+                                            </ul>
+                                        <?php endforeach;?>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -306,18 +308,14 @@
                                 <div class="widget--content">
                                     <form  class="mb-0" method="POST" action="<?php echo base_url('customer/dashboard/kirim_ulasan')?>">
                                         <div class="row">
-                                            <div>
-                                                <div class="form-group">
-                                                    <label>Nama*</label>
-                                                    <input type="hidden" name="id_rumah" value="<?php echo $dt->id_rumah?>">
-                                                    <input type="text" class="form-control" name="nama" required>
-                                                </div>                                       
-                                                <div class="form-group">
-                                                    <label>Nama Pengguna*</label>
-                                                    <input type="text" class="form-control" name="nama_pengguna"  required>
-                                                </div>                                           
+                                            <div>                                        
                                                 <div class="form-group">
                                                     <label>Komentar*</label>
+                                                    <input type="hidden" name="id_rumah" value="<?php echo $dt->id_rumah?>">
+                                                    <?php foreach ($customer as $cs):?>
+                                                    <input type="hidden" name="nama" value="<?php echo $cs->nama?>">
+                                                    <input type="hidden" name="nama_pengguna" value="<?php echo $cs->username?>">
+                                                    <?php endforeach;?>
                                                     <textarea class="form-control" type="text" name="ulasan" required></textarea>
                                                 </div>                                               
                                                 <button type="submit" class="btn btn-success">Kirim</button>

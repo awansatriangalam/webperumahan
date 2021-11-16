@@ -57,7 +57,7 @@
                                 <td>Rp. <?php echo $tr->harga ?></td>
                                 <td>
                                     <?php if($tr->status_pesan=="Selesai") { ?>
-                                        <button class="btn btn-sm btn-danger">Selesai</button>
+                                        <button class="btn btn-sm btn-danger" style="width:100%">Selesai</button>
                                     <?php }else{ ?>
                                         <a href="<?php echo base_url('customer/transaksi/pembayaran/'.$tr->id_pesan) ?>" class="btn btn-sm btn-success" >Cek Pembayaran</a>
                                     <?php }?>
@@ -65,9 +65,6 @@
                                     <?php if($tr->status_pesan == 'Belum Selesai') { ?>
                                         <a onclick="return confirm('Yakin Membatalkan Transaksi ?...')" href="<?php echo base_url('customer/transaksi/batal_transaksi/'.$tr->id_pesan) ?>" class="btn btn-sm btn-danger">Batal</a>
                                     <?php }else { ?>
-                                        <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">
-                                            Batal
-                                        </button>
                                     <?php } ?>
                                 </td>                      
                             </tr>

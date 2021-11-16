@@ -50,7 +50,11 @@
                                 <tr>  
                                     <th><label>JUMLAH PEMBAYARAN</label></th>
                                     <td>:</td>
-                                    <td><button class="btn btn-sm btn-success" style="width:100%">Rp. <?php echo $tr->harga ?></button></td>
+                                    <td>
+                                        <button style="width:100%" type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal1">
+                                            Rp. <?php echo $tr->harga ?>
+                                        </button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td></td>
@@ -110,6 +114,52 @@
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-sm btn-success">Kirim</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Pembayaran</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"> &times; </span>
+                    </button>
+                </div>
+
+                <form method="POST" action="<?php echo base_url('customer/transaksi/bayar_aksi') ?>" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <div class="form-group col-md-6">
+                            <label>Nama Customer</label>
+                            <input type="hidden" name="id_pesan" class="form-control" value="<?php echo $tr->id_pesan?>">
+                            <input type="hidden" name="status_bayar" class="form-control" value="1">
+                            <input type="text" name="nama" class="form-control" value="<?php echo $tr->nama?>" readonly>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Nama Rumah</label>
+                            <input type="text" name="nama_rumah" class="form-control" value="<?php echo $tr->nama_rumah?>" readonly>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Harga</label>
+                            <input type="text" name="harga" class="form-control" value="<?php echo $tr->harga?>" readonly>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Jumlah Pembayaran</label>
+                            <input type="text" name="harga" class="form-control" value="<?php echo $tr->harga?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Pilih Bank</label>
+                                <select name="bank">
+                                    <option value="Bank BRI">Bank BRI</option>
+                                    <option value="Bank BNI">Bank BNI</option>
+                                    <option value="Bank Mandiri">Bank Mandiri</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-sm btn-success">Bayar</button>
                     </div>
                 </form>
             </div>
