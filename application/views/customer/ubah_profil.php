@@ -13,7 +13,7 @@
                                     <h1>Ubah Profil</h1>
                                 </div>
                                 <ol class="breadcrumb">
-                                    <li><a href="#">Beranda</a></li>
+                                    <li><a href="<?php echo base_url('customer/dashboard')?>">Beranda</a></li>
                                     <li class="active">Ubah Profil</li>
                                 </ol>
                             </div>

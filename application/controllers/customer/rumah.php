@@ -20,6 +20,7 @@
         }else{
           $data['filter']   = $this->rental_model->get_data('rumah')->result(); 
         }
+        $data['rumah'] = $this->rental_model->get_data('rumah')->result();
         $this->load->view('templates_customer/header');
         $this->load->view('customer/filterrumah',$data);
         $this->load->view('templates_customer/footer');

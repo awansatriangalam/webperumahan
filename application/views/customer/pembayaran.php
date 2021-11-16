@@ -1,6 +1,6 @@
 <section id="page-title" class="page-title bg-overlay bg-overlay-dark2">
     <div class="bg-section">
-                <img src="assets/images/page-titles/1.jpg" alt="Background" />
+         <img src="assets/images/page-titles/1.jpg" alt="Background" />
     </div>
     <div class="container">
         <div class="row">
@@ -8,11 +8,11 @@
                 <div class="title title-1 text-center">
                     <div class="title--content">
                         <div class="title--heading">
-                            <h1>Book</h1>
+                            <h1>Pembayaran</h1>
                         </div>
                             <ol class="breadcrumb">
-                                <li><a href="#">Home</a></li>
-                                <li class="active">Add Property</li>
+                                <li><a href="<?php echo base_url('customer/dashboard')?>">Beranda</a></li>
+                                <li class="active">Pembayaran</li>
                             </ol>
                         </div>
                 <div class="clearfix"></div>

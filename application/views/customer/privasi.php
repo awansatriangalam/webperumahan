@@ -10,11 +10,11 @@
                         <div class="title title-1 text-center">
                             <div class="title--content">
                                 <div class="title--heading">
-                                    <h1>FAQ</h1>
+                                    <h1>Privasi</h1>
                                 </div>
                                 <ol class="breadcrumb">
                                     <li><a href="<?php echo base_url('customer/dashboard')?>">Beranda</a></li>
-                                    <li class="active">FAQ</li>
+                                    <li class="active">Privasi</li>
                                 </ol>
                             </div>
                             <div class="clearfix"></div>
