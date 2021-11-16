@@ -47,7 +47,7 @@ class Booking Extends CI_Controller
                     <span aria-hidden="true">&times;</span>
                 </button>
                 </div>');
-                redirect('customer/book/').$id; 
+                redirect('customer/dashboard/detail_rumah/'.$id_rumah); 
     }
 }
 

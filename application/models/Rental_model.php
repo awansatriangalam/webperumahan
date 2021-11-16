@@ -77,7 +77,8 @@ class Rental_model extends CI_model
         }
     }
 
-    public function get_keyword($keyword){
+    public function get_keyword($keyword)
+    {
         $this->db->select('*');
         $this->db->from('rumah');
         $this->db->like('nama_rumah',$keyword);

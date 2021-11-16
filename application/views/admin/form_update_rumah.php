@@ -24,7 +24,7 @@
                                     <option value="<?php echo $rm->kode_type ?> "><?php echo $rm->kode_type ?></option>
                                     <?php foreach($tipe as $tp) : ?>
                                         <option value="<?php echo $tp->kode_type ?>">
-                                    <?php echo $tp->nama_type ?></option>
+                                    <?php echo $tp->kode_type ?></option>
                                     <?php endforeach; ?>
                                 </select>
                                 <?php echo form_error('kode_type','<div class="text-small text-danger">

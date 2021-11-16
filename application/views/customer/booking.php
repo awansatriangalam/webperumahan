@@ -70,7 +70,6 @@
                                             <div class="form-group">
                                                 <?php foreach($tipe as $tp): ?>
                                                     <label>Tipe</label>
-                                                    <input type="hidden" value="id_type" value="<?php echo $tp->id_type ?>">
                                                     <input type="text" class="form-control" name="nama_type" value="<?php echo $tp->nama_type ?>" readonly>
                                                 <?php endforeach;?>
                                             </div>

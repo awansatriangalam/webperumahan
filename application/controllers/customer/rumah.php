@@ -12,11 +12,11 @@
       public function filter()
       {
         if(isset($_GET['cari'])){
-          $kt = $_GET['kota'];
+          $lk = $_GET['lokasi'];
           $ktipe = $_GET['kode_type'];
           $ktd = $_GET['kamar_tidur'];
           $km = $_GET['kamar_mandi'];
-          $data['filter']   = $this->db->query("SELECT * FROM rumah WHERE kota like '%$kt%' AND kode_type like '%$ktipe%' AND kamar_tidur like '%$ktd%' AND kamar_mandi like '%$km%' ")->result();
+          $data['filter']   = $this->db->query("SELECT * FROM rumah WHERE lokasi like '%$lk%' AND kode_type like '%$ktipe%' AND kamar_tidur like '%$ktd%' AND kamar_mandi like '%$km%' ")->result();
         }else{
           $data['filter']   = $this->rental_model->get_data('rumah')->result(); 
         }

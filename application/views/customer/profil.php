@@ -38,7 +38,7 @@
                             <?php foreach($customer as $cs) :?>
                                 <ul class="edit--profile-links list-unstyled mb-0">
                                     <li><a href="<?php echo base_url('customer/dashboard/profil/').$cs->id_customer?>"><i class="fa fa-user"></i> Profil Saya</a></li>
-                                    <li><a href="<?php echo base_url('customer/book')?>"><i class="fa fa-book"></i> Book</a></li>
+                                    <li><a href="<?php echo base_url('customer/data_transaksi')?>"><i class="fa fa-random"></i> Transaksi</a></li>
                                 </ul>
                             <?php endforeach;?>
                         </div>

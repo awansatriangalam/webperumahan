@@ -221,7 +221,7 @@ class Data_rumah extends CI_Controller{
             $data['data_rumah'] = $this->rental_model->get_keyword($keyword); 
                 $this->load->view('templates_admin/header');
                 $this->load->view('templates_admin/sidebar');
-                $this->load->view('admin/data_rumah',$data);
+                $this->load->view('admin/data_rumah_filter',$data);
                 $this->load->view('templates_admin/footer');
         }
     

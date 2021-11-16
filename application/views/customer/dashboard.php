@@ -15,10 +15,10 @@
                                         <div class="form-group">
                                             <div class="select--box">
                                                 <i class="fa fa-angle-down"></i>
-                                                <select name="kota">
+                                                <select name="lokasi">
                                                     <option value="">Semua Lokasi</option>
-                                                    <option value="Malang">Malang</option>
-                                                    <option value="Surabaya">Surabaya</option>                                                      
+                                                    <option value="Perumahan 1">Perumahan 1</option>
+                                                    <option value="Perumahan 2">Perumahan 2</option>                                                      
                                                 </select>
                                             </div>
                                         </div>

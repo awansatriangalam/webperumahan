@@ -12,8 +12,7 @@
             </div>
             <div class=" col-md-5" >
                 <?php echo form_open('admin/data_rumah/search') ?>
-                <input type="text" name="keyword" class="form-control"
-                placeholder="Cari">
+                <input type="text" name="keyword" class="form-control" placeholder="Cari">
             </div>
             <div class="navbar-form navbar-right">
                 <button type="submit" class="btn btn-success">Cari</button>
@@ -37,7 +36,7 @@
                 <tbody> 
                     <?php
                         $no=1;
-                        foreach($rumah as $rm) : ?>
+                        foreach($data_rumah as $rm) : ?>
                             <tr>
                                 <td><?php echo $no++ ?></td>
                                 <td>

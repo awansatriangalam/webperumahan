@@ -44,7 +44,7 @@ class Transaksi extends CI_Controller{
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>');
-            redirect('customer/book'); 
+            redirect('customer/data_transaksi'); 
     }
 
     public function cetak($id)
@@ -64,7 +64,7 @@ class Transaksi extends CI_Controller{
 
         $this->rental_model->update_data('rumah', $data2,$where2);
         $this->rental_model->delete_data($where,'transaksi');
-        redirect('customer/book');
+        redirect('customer/data_transaksi');
     }
 }
 ?>
