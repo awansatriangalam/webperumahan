@@ -70,7 +70,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-8 col-md-12 col-12 col-sm-12">
+            <div class="col-lg-12 col-md-12 col-12 col-sm-12">
               <div class="card">
                 <div class="card-header">
                   <h4>Statistik</h4>
@@ -110,61 +110,32 @@
             </div>
           </div>
           <div class="row">
-          </div>
-          <div class="row">
-            <div class="col-lg-6 col-md-6 col-12">
+            <div class="col-lg-12 col-md-12 col-12">
               <div class="card">
                 <div class="card-header">
                   <h4>Pesan Customer</h4>
                 </div>
                 <div class="card-body">
-                  <div class="mb-4">
-                    <div class="text-small float-right font-weight-bold text-muted">2,100</div>
-                    <div class="font-weight-bold mb-1">Google</div>
-                    <div class="progress" data-height="3">
-                      <div class="progress-bar" role="progressbar" data-width="80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-
-                  <div class="mb-4">
-                    <div class="text-small float-right font-weight-bold text-muted">1,880</div>
-                    <div class="font-weight-bold mb-1">Facebook</div>
-                    <div class="progress" data-height="3">
-                      <div class="progress-bar" role="progressbar" data-width="67%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-
-                  <div class="mb-4">
-                    <div class="text-small float-right font-weight-bold text-muted">1,521</div>
-                    <div class="font-weight-bold mb-1">Bing</div>
-                    <div class="progress" data-height="3">
-                      <div class="progress-bar" role="progressbar" data-width="58%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-
-                  <div class="mb-4">
-                    <div class="text-small float-right font-weight-bold text-muted">884</div>
-                    <div class="font-weight-bold mb-1">Yahoo</div>
-                    <div class="progress" data-height="3">
-                      <div class="progress-bar" role="progressbar" data-width="36%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-
-                  <div class="mb-4">
-                    <div class="text-small float-right font-weight-bold text-muted">473</div>
-                    <div class="font-weight-bold mb-1">Kodinger</div>
-                    <div class="progress" data-height="3">
-                      <div class="progress-bar" role="progressbar" data-width="28%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-
-                  <div class="mb-4">
-                    <div class="text-small float-right font-weight-bold text-muted">418</div>
-                    <div class="font-weight-bold mb-1">Multinity</div>
-                    <div class="progress" data-height="3">
-                      <div class="progress-bar" role="progressbar" data-width="20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
+                  <table class="table table-striped table-responsive table-bordered">
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>No Telepon</th>
+                            <th style="width:55%;">Pesan</th>
+                        </tr>
+                      <?php
+                      $no =1;
+                      foreach ($pesan as $ps) : ?>
+                          <tr>
+                              <td><?php echo $no++ ?></td>
+                              <td><?php echo $ps->nama?></td>
+                              <td><?php echo $ps->email?></td>
+                              <td><?php echo $ps->no_tlp?></td>
+                              <td><?php echo $ps->pesan_?></td>
+                          </tr>
+                      <?php endforeach;?>
+                  </table>
                 </div>
               </div>
             </div>
@@ -234,6 +205,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
               <div class="card">
                 <div class="card-header">
                   <h4 class="d-inline">Tasks</h4>
@@ -292,133 +265,6 @@
                       </div>
                     </li>
                   </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-5 col-md-12 col-12 col-sm-12">
-              <form method="post" class="needs-validation" novalidate="">
-              </form>
-            </div>
-            <div class="col-lg-7 col-md-12 col-12 col-sm-12">
-              <div class="card">
-                <div class="card-body p-0">
-                  <div class="table-responsive">
-                    <table class="table table-striped mb-0">
-                      <thead>
-                        <tr>
-                          <th>Title</th>
-                          <th>Author</th>
-                          <th>Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            Introduction Laravel 5
-                            <div class="table-links">
-                              in <a href="#">Web Development</a>
-                              <div class="bullet"></div>
-                              <a href="#">View</a>
-                            </div>
-                          </td>
-                          <td>
-                            <a href="#" class="font-weight-600"><img src="../assets/img/avatar/avatar-1.png" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
-                          </td>
-                          <td>
-                            <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
-                            <a class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')"><i class="fas fa-trash"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Laravel 5 Tutorial - Installation
-                            <div class="table-links">
-                              in <a href="#">Web Development</a>
-                              <div class="bullet"></div>
-                              <a href="#">View</a>
-                            </div>
-                          </td>
-                          <td>
-                            <a href="#" class="font-weight-600"><img src="../assets/img/avatar/avatar-1.png" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
-                          </td>
-                          <td>
-                            <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
-                            <a class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')"><i class="fas fa-trash"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Laravel 5 Tutorial - MVC
-                            <div class="table-links">
-                              in <a href="#">Web Development</a>
-                              <div class="bullet"></div>
-                              <a href="#">View</a>
-                            </div>
-                          </td>
-                          <td>
-                            <a href="#" class="font-weight-600"><img src="../assets/img/avatar/avatar-1.png" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
-                          </td>
-                          <td>
-                            <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
-                            <a class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')"><i class="fas fa-trash"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Laravel 5 Tutorial - Migration
-                            <div class="table-links">
-                              in <a href="#">Web Development</a>
-                              <div class="bullet"></div>
-                              <a href="#">View</a>
-                            </div>
-                          </td>
-                          <td>
-                            <a href="#" class="font-weight-600"><img src="../assets/img/avatar/avatar-1.png" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
-                          </td>
-                          <td>
-                            <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
-                            <a class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')"><i class="fas fa-trash"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Laravel 5 Tutorial - Deploy
-                            <div class="table-links">
-                              in <a href="#">Web Development</a>
-                              <div class="bullet"></div>
-                              <a href="#">View</a>
-                            </div>
-                          </td>
-                          <td>
-                            <a href="#" class="font-weight-600"><img src="../assets/img/avatar/avatar-1.png" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
-                          </td>
-                          <td>
-                            <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
-                            <a class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')"><i class="fas fa-trash"></i></a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Laravel 5 Tutorial - Closing
-                            <div class="table-links">
-                              in <a href="#">Web Development</a>
-                              <div class="bullet"></div>
-                              <a href="#">View</a>
-                            </div>
-                          </td>
-                          <td>
-                            <a href="#" class="font-weight-600"><img src="../assets/img/avatar/avatar-1.png" alt="avatar" width="30" class="rounded-circle mr-1"> Bagus Dwi Cahya</a>
-                          </td>
-                          <td>
-                            <a class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="Edit"><i class="fas fa-pencil-alt"></i></a>
-                            <a class="btn btn-danger btn-action" data-toggle="tooltip" title="Delete" data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?" data-confirm-yes="alert('Deleted')"><i class="fas fa-trash"></i></a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
                 </div>
               </div>
             </div>
