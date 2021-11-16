@@ -83,29 +83,13 @@
             </div>
             <!-- .slider-text end -->
         </div>
-        <div class="carousel slider-navs" data-slide="1" data-slide-rs="1" data-autoplay="true" data-nav="true" data-dots="false" data-space="0" data-loop="true" data-speed="800">
-            <!-- Slide #1 -->
-            <div class="slide--item bg-overlay bg-overlay-dark3">
-                <div class="bg-section">
-                    <img src="<?php echo base_url()?>assets/assets_homepage/images/slider/slide-bg/3.jpg" alt="background">
-                </div>
+            
+        <div class="slide--item bg-overlay bg-overlay-dark3">
+            <div class="bg-section">
+                <img src="<?php echo base_url()?>assets/assets_homepage/images/slider/slide-bg/1.jpg" alt="background">
             </div>
-            <!-- .slide-item end -->
-            <!-- Slide #2 -->
-            <div class="slide--item bg-overlay bg-overlay-dark3">
-                <div class="bg-section">
-                    <img src="<?php echo base_url()?>assets/assets_homepage/images/slider/slide-bg/1.jpg" alt="background">
-                </div>
-            </div>
-            <!-- .slide-item end -->
-            <!-- Slide #3 -->
-            <div class="slide--item bg-overlay bg-overlay-dark3">
-                <div class="bg-section">
-                    <img src="<?php echo base_url()?>assets/assets_homepage/images/slider/slide-bg/3.jpg" alt="background">
-                </div>
-            </div>
-            <!-- .slide-item end -->
         </div>
+            
     </section>
         <!-- #map end -->
 
