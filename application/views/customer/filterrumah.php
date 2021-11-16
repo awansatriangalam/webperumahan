@@ -27,7 +27,7 @@
                                             <div class="select--box">
                                                 <i class="fa fa-angle-down"></i>
                                                 <select name="kode_type">
-                                                    <option value="">Rumah Tipe</option>
+                                                    <option value="">Semua Tipe Rumah</option>
                                                     <option value="36">Middle</option>
                                                     <option value="45">Middle Low</option>
                                                     <option value="60">Middle Up</option>
@@ -251,21 +251,6 @@
                                 </div>
                                 <!-- .property item end -->
                             </div>
-
-                            <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-50">
-                                <ul class="pagination">
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">...</a></li>
-                                    <li>
-                                        <a href="#" aria-label="Next">
-                                <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
-                            </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- .col-md-12 end -->
                         </div>
                         <!-- .row -->
                     </div>

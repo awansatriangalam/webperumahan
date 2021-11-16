@@ -2,7 +2,7 @@
 ============================================ -->
 <section id="page-title" class="page-title bg-overlay bg-overlay-dark2">
             <div class="bg-section">
-                <img src="assets/images/page-titles/1.jpg" alt="Background" />
+                <img src="<?php echo base_url() ?>assets/assets_homepage/images/page-titles/1.jpg" alt="Background" />
             </div>
             <div class="container">
                 <div class="row">
@@ -13,7 +13,7 @@
                                     <h1>Detail Rumah</h1>
                                 </div>
                                 <ol class="breadcrumb">
-                                    <li><a href="#">Bernanda</a></li>
+                                    <li><a href="<?php echo base_url('customer/dashboard')?>">Beranda</a></li>
                                     <li class="active">Detail Rumah</li>
                                 </ol>
                             </div>

@@ -29,7 +29,7 @@
                                             <div class="select--box">
                                                 <i class="fa fa-angle-down"></i>
                                                 <select name="kode_type">
-                                                    <option value="">Rumah Tipe</option>
+                                                    <option value="">Semua Tipe Rumah</option>
                                                     <option value="36">Middle</option>
                                                     <option value="45">Middle Low</option>
                                                     <option value="60">Middle Up</option>
