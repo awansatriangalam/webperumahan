@@ -41,16 +41,26 @@
                         <td>Rp. <?php echo $tr->harga ?></td>
                     </tr>
                     <tr>  
+                        <th>Bank</th>
+                        <td>:</td>
+                        <td><?php echo $tr->nama_bank ?></td>
+                    </tr>
+                    <tr>  
+                        <th>No Rekening Bank</th>
+                        <td>:</td>
+                        <td><?php echo $tr->no_rekening ?></td>
+                    </tr>
+                    <tr>  
                         <th>Status Pembayaran</th>
                         <td>:</td>
                         <td>
-                            <?php 
-                                if($tr->status_bayar == '0' ) {
-                                    echo "Belum Lunas";
-                                } else { 
-                                    echo "Lunas" ;
-                                } 
-                            ?>
+                        <?php if ($tr->status_bayar == "0") {
+                                echo "Belum Lunas";
+                            }elseif($tr->status_bayar == "1") {
+                                echo "Lunas";
+                            }else{
+                                echo "Menunggu Konfirmasi";
+                            } ?>
                         </td>
                     </tr>
                     <tr style="font-weight:bold; color:red">  

@@ -57,13 +57,13 @@
                                 <td>Rp. <?php echo $tr->harga ?></td>
                                 <td>
                                     <?php if($tr->status_pesan=="Selesai") { ?>
-                                        <button class="btn btn-sm btn-danger" style="width:100%">Selesai</button>
+                                        <button class="btn btn-sm btn-danger" style="width:100%"> <i class="fa fa-check"></i> Selesai</button>
                                     <?php }else{ ?>
-                                        <a href="<?php echo base_url('customer/transaksi/pembayaran/'.$tr->id_pesan) ?>" class="btn btn-sm btn-success" >Cek Pembayaran</a>
+                                        <a href="<?php echo base_url('customer/transaksi/pembayaran/'.$tr->id_pesan) ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Cek Pembayaran</a>
                                     <?php }?>
 
                                     <?php if($tr->status_pesan == 'Belum Selesai') { ?>
-                                        <a onclick="return confirm('Yakin Membatalkan Transaksi ?...')" href="<?php echo base_url('customer/transaksi/batal_transaksi/'.$tr->id_pesan) ?>" class="btn btn-sm btn-danger">Batal</a>
+                                        <a onclick="return confirm('Yakin Membatalkan Transaksi ?...')" href="<?php echo base_url('customer/transaksi/batal_transaksi/'.$tr->id_pesan) ?>" class="btn btn-sm btn-danger"><i class="fa fa-times"></i> Batal</a>
                                     <?php }else { ?>
                                     <?php } ?>
                                 </td>                      
