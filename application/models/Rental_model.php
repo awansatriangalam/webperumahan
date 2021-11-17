@@ -76,5 +76,26 @@ class Rental_model extends CI_model
             return FALSE;
         }
     }
+
+    public function get_keyword($keyword){
+        $this->db->select('*');
+        $this->db->from('rumah');
+        $this->db->like('nama_rumah',$keyword);
+        $this->db->or_like('kode_type',$keyword);
+        $this->db->or_like('luas_bangunan',$keyword);
+        $this->db->or_like('status',$keyword);
+        $this->db->or_like('lokasi',$keyword);
+        $this->db->or_like('kamar_tidur',$keyword);
+        $this->db->or_like('kamar_mandi',$keyword);
+        $this->db->or_like('ruangan',$keyword);
+        $this->db->or_like('lantai',$keyword);
+        $this->db->or_like('garasi',$keyword);
+        $this->db->or_like('deskripsi',$keyword);
+        $this->db->or_like('alamat',$keyword);
+        $this->db->or_like('kota',$keyword);
+        $this->db->or_like('kode_pos',$keyword);
+        $this->db->or_like('harga',$keyword);
+        return $this->db->get()->result();
+    }
 }
 ?>

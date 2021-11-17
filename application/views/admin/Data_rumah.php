@@ -3,12 +3,23 @@
           <div class="section-header">
             <h1>Data Rumah </h1>
           </div>
-
+            <div class="row">
+            <div class="col-md-6">
             <a href="<?php echo base_url('admin/data_rumah/tambah_rumah') ?>" class="btn btn-primary mb-3">
             Tambah Data</a>
 
             <?php echo $this->session->flashdata('pesan') ?>
-
+            </div>
+            <div class=" col-md-5" >
+                <?php echo form_open('admin/data_rumah/search') ?>
+                <input type="text" name="keyword" class="form-control"
+                placeholder="Search">
+            </div>
+            <div class="navbar-form navbar-right">
+                <button type="submit" class="btn btn-success">Cari</button>
+                <?php echo form_close() ?>
+            </div>
+            </div>
           <table class="table table-hover table-striped table-responsive ">
               <thead>
                   <tr>
