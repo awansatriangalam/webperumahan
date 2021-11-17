@@ -217,7 +217,7 @@ class Data_rumah extends CI_Controller{
         }
 
         public function search(){
-            $keyword = $this->input->get('keyword');
+            $keyword = $this->input->post('keyword');
             $data['data_rumah'] = $this->rental_model->get_keyword($keyword); 
                 $this->load->view('templates_admin/header');
                 $this->load->view('templates_admin/sidebar');
