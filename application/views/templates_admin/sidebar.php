@@ -24,6 +24,8 @@
           </li>
         </ul>
       </nav>
+    </div>
+  </div>
       <div class="main-sidebar">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
