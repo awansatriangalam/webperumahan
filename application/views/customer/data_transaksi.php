@@ -51,9 +51,9 @@
                             foreach($transaksi as $tr):?>
                             <tr>
                                 <td><?php echo $no++ ?></td>
-                                <td><?php echo $tr->nama ?></td>
+                                <td><?php echo $tr->nama_user ?></td>
                                 <td><?php echo $tr->nama_rumah ?></td>
-                                <td><?php echo $tr->tanggal_transaksi?></td>
+                                <td><?php echo date('d F,Y') ?></td>
                                 <td>Rp. <?php echo $tr->harga ?></td>
                                 <td>
                                     <?php if($tr->status_pesan=="Selesai") { ?>

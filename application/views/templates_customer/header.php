@@ -60,18 +60,18 @@
                         </ul>
                         <!-- Module Signup  -->
                         <div class="module module-login pull-left">
-                            <?php if ($this->session->userdata('nama')) { ?>
-                                <a class="pull-left" href="<?php echo base_url('customer/dashboard/profil/')?> "><span class="btn-popup"><i class="fa fa-user"></i> <?php echo $this->session->userdata('nama') ?></span></a>
+                            <?php if ($this->session->userdata('nama_user')) { ?>
+                                <a class="pull-left" href="<?php echo base_url('customer/dashboard/profil/')?> "><span class="btn-popup"><i class="fa fa-user"></i> <?php echo $this->session->userdata('nama_user') ?></span></a>
                             <?php } else { ?>
                                 <a class="pull-left" href="<?php echo base_url()?> "><span class="btn-popup"></span></a>
                             <?php } ?>
                         </div>
                         <!-- Module Consultation  -->
                         <div class="module module-property pull-left">
-                            <?php if ($this->session->userdata('nama')) { ?>
+                            <?php if ($this->session->userdata('email')) { ?>
                                 <a class="pull-left" href="<?php echo base_url('auth/logout')?> "><span class="btn btn-sm btn-warning"><i class="fa fa-sign-out"></i>Keluar</span></a>
                             <?php } else { ?>
-                                <a class="pull-left" href="<?php echo base_url('auth/login')?> "><span class="btn"><i class="fa fa-sign-in"></i> Masuk</span></a>
+                                <a class="pull-left" href="<?php echo base_url('authn')?> "><span class="btn"><i class="fa fa-sign-in"></i> Masuk</span></a>
                             <?php } ?>
                         </div>
                     </div>

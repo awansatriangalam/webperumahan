@@ -13,19 +13,20 @@ class Booking Extends CI_Controller
 
     public function add_aksi()
     {
-        $id_customer    = $this->session->userdata('id_customer');
-        $id_rumah       = $this->input->post('id_rumah');
-        $tanggal        = $this->input->post('tanggal_transaksi');
-        $harga          = $this->input->post('harga');
-        $status_pesan   = $this->input->post('status_pesan');
-
+        $id_user            = $this->session->userdata('id_user');
+        $id_rumah           = $this->input->post('id_rumah');
+        $tanggal            = $this->input->post('tanggal_transaksi');
+        $harga              = $this->input->post('harga');
+        $status_pesan       = $this->input->post('status_pesan');
+        $tanggal_transaksi  = $this->input->post('tanggal_transaksi');
         
         $data           = array(
-            'id_customer'       => $id_customer,
+            'id_user'           => $id_user,
             'id_rumah'          => $id_rumah,
             'tanggal_transaksi' => $tanggal,
             'harga'             => $harga,
-            'status_pesan'      => 'Belum Selesai'
+            'status_pesan'      => 'Belum Selesai',
+            'tanggal_transaksi' => time()
         );
 
         $this->rental_model->insert_data($data,'transaksi');

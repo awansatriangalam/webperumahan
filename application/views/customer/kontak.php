@@ -88,7 +88,7 @@
                                 <label>Pesan*</label>
                                 <?php foreach($customer as $cs) : ?>
                                     <input type="hidden" class="form-control" name="nama" value="<?php echo $cs->nama ?>" >
-                                    <input type="hidden" class="form-control" name="email" value="<?php echo $cs->no_ktp ?>">
+                                    <input type="hidden" class="form-control" name="email" value="<?php echo $cs->email_customer ?>">
                                     <input type="hidden" class="form-control" name="no_tlp" value="<?php echo $cs->no_tlp ?>">
                                 <?php endforeach;?>
                                 <textarea class="form-control" name="pesan_"  rows="2"></textarea>

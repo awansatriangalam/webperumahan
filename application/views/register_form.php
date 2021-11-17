@@ -12,50 +12,45 @@
               <div class="card-header"><h4>DAFTAR</h4></div>
 
               <div class="card-body">
-                <form method="POST" action="<?php echo base_url('register') ?>">
-                  <div class="row">
-                    <div class="form-group col-6">
+                <form method="POST" action="<?php echo base_url('authn/registrasi') ?>">
+                    <div class="form-group ">
                       <label for="nama">Nama</label>
-                      <input id="nama" type="text" class="form-control" name="nama" autofocus>
-                      <?php echo form_error('nama','<div class="text-small text-danger">','</div>') ?>
+                      <input id="nama_user" type="text" class="form-control" name="nama_user" placeholder="Nama" value="<?php echo set_value('nama_user') ?>" autofocus>
+                      <?php echo form_error('nama_user','<div class="text-small text-danger">','</div>') ?>
                     </div>
 
-                    <div class="form-group col-6">
-                      <label for="username">Nama Pengguna</label>
-                      <input id="username" type="text" class="form-control" name="username">
-                      <?php echo form_error('username','<div class="text-small text-danger">','</div>') ?>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input id="email" type="text" class="form-control" name="email" placeholder="Email" value="<?php echo set_value('email') ?>">
+                      <?php echo form_error('email','<div class="text-small text-danger">','</div>') ?>
                     </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="alamat">Alamat</label>
-                    <input id="alamat" type="text" class="form-control" name="alamat">
-                    <?php echo form_error('alamat','<div class="text-small text-danger">','</div>') ?>
-                    <div class="invalid-feedback">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="no_tlp">No Telepon</label>
-                    <input id="no_tlp" type="text" class="form-control" name="no_tlp">
-                    <?php echo form_error('no_tlp','<div class="text-small text-danger">','</div>') ?>
-                    <div class="invalid-feedback">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="form-group form-group col-6">
-                      <label for="no_ktp">No.KTP</label>
-                      <input id="no_ktp" type="text" class="form-control" name="no_ktp">
-                      <?php echo form_error('no_ktp','<div class="text-small text-danger">','</div>') ?>
+                 
+                    <div class="form-group">
+                      <label for="alamat">Alamat</label>
+                      <input id="alamat_user" type="text" class="form-control" name="alamat_user" placeholder="Alamat" value="<?php echo set_value('alamat_user') ?>">
+                      <?php echo form_error('alamat_user','<div class="text-small text-danger">','</div>') ?>
                       <div class="invalid-feedback">
                       </div>
                     </div>
 
+                    <div class="form-group">
+                        <label for="no_tlp">No Telepon</label>
+                        <input id="no_tlp" type="text" class="form-control" name="no_tlp" placeholder="Nomor Telepon" value="<?php echo set_value('no_tlp') ?>">
+                        <?php echo form_error('no_tlp','<div class="text-small text-danger">','</div>') ?>
+                        <div class="invalid-feedback">
+                    </div>
+
+                  <div class="row">
                       <div class="form-group col-6">
                         <label>Kata Sandi</label>
-                        <input type="password" name="pass" class="form-control">
-                        <?php echo form_error('pass','<div class="text-small text-danger">','</div>') ?>
+                        <input id="pass_user1" type="password" name="pass_user1"  placeholder="Kata Sandi (minimal 6 karakter)" value="<?php echo set_value('pass_user1') ?>" class="form-control">
+                        <?php echo form_error('pass_user1','<div class="text-small text-danger">','</div>') ?>
+                      </div>
+
+                      <div class="form-group col-6">
+                        <label>Ulangi Kata Sandi</label>
+                        <input id="pass_user2" type="password" name="pass_user2" placeholder="Ulangi Kata Sandi" value="<?php echo set_value('pass_user2') ?>" class="form-control">
+                        <?php echo form_error('pass_user2','<div class="text-small text-danger">','</div>') ?>
                       </div>
                     </div>
                     

@@ -34,14 +34,9 @@
                     <?php echo form_error('no_tlp','<span class="text-small text-danger">','</span>') ?>
                 </div>
                 <div class="form-group">
-                    <label>No KTP</label>
-                    <input type="text" name="no_ktp" class="form-control" value="<?php echo $cs->no_ktp ?>">
-                    <?php echo form_error('no_ktp','<span class="text-small text-danger">','</span>') ?>
-                </div>
-                <div class="form-group">
-                    <label>Katasandi</label>
-                    <input type="text" name="pass" class="form-control" value="<?php echo $cs->pass ?>">
-                    <?php echo form_error('pass','<span class="text-small text-danger">','</span>') ?>
+                    <label>Email</label>
+                    <input type="email" name="email_customer" class="form-control" value="<?php echo $cs->email_customer ?>">
+                    <?php echo form_error('email_customer','<span class="text-small text-danger">','</span>') ?>
                 </div>
             </div>
         </div>

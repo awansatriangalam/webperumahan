@@ -15,18 +15,18 @@ class Register Extends CI_Controller{
             $username               = $this->input->post('username');
             $alamat                 = $this->input->post('alamat');
             $no_tlp                 = $this->input->post('no_tlp');
-            $no_ktp                 = $this->input->post('no_ktp');
+            $email_customer         = $this->input->post('email_customer');
             $pass                   = md5($this->input->post('pass'));
             $role_id                = '2';
 
             $data = array (
-                'nama'      => $nama,
-                'username'  => $username,
-                'alamat'    => $alamat,
-                'no_tlp'    => $no_tlp,
-                'no_ktp'    => $no_ktp,
-                'pass'      => $pass,
-                'role_id'   => $role_id
+                'nama'              => $nama,
+                'username'          => $username,
+                'alamat'            => $alamat,
+                'no_tlp'            => $no_tlp,
+                'email_customer'    => $email_customer,
+                'pass'              => $pass,
+                'role_id'           => $role_id
             );
        
                 $this->rental_model->insert_data($data,'customer');
@@ -47,7 +47,7 @@ class Register Extends CI_Controller{
         $this->form_validation->set_rules('username','Username','required');
         $this->form_validation->set_rules('alamat','Alamat','required');
         $this->form_validation->set_rules('no_tlp','No Telepon','required');
-        $this->form_validation->set_rules('no_ktp','No KTP','required');
+        $this->form_validation->set_rules('email_customer','Email','required');
         $this->form_validation->set_rules('pass','Katasandi','required');
         
     }

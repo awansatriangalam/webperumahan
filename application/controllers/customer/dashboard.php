@@ -45,8 +45,7 @@ class Dashboard extends CI_Controller{
 
     public function profil() 
     {
-        $customer = $this->session->userdata('id_customer');
-        $data['customer']= $this->db->query("SELECT * FROM customer cs WHERE cs.id_customer='$customer'")->result();
+        $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
         $this->load->view('templates_customer/header');
         $this->load->view('customer/profil', $data);
         $this->load->view('templates_customer/footer');

@@ -14,18 +14,18 @@
               <span class="m-2"><?php echo $this->session->flashdata('pesan') ?></span>
 
               <div class="card-body">
-                <form method="POST" action="<?php echo base_url('auth/login') ?>">
+                <form method="POST" action="<?php echo base_url('authn') ?>">
                   <div class="form-group">
-                    <label for="username">Nama Pengguna</label>
-                    <input id="username" type="username" class="form-control" name="username" tabindex="1" autofocus>
-                    <?php echo form_error('username','<div class="text-small text-danger">','</div>') ?>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" class="form-control" name="email" tabindex="1" autofocus>
+                    <?php echo form_error('email','<div class="text-small text-danger">','</div>') ?>
                   </div>
 
                   <div class="form-group">
                     <div class="d-block">
                     	<label for="pass" class="control-label">Kata Sandi</label>                     
-                        <input id="pass" type="password" class="form-control" name="pass" tabindex="2" autofocus> 
-                        <?php echo form_error('pass','<div class="text-small text-danger">','</div>') ?>                
+                        <input id="pass_user" type="password" class="form-control" name="pass_user" tabindex="2" autofocus> 
+                        <?php echo form_error('pass_user','<div class="text-small text-danger">','</div>') ?>                
                   </div></br>
 
                   <div class="form-group">

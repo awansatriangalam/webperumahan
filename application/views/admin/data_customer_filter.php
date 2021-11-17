@@ -23,7 +23,7 @@
                 <th>Username</th>
                 <th>Alamat</th>
                 <th>No Telepon</th>
-                <th>No KTP</th>
+                <th>Email</th>
                 <th>Password</th>
                 <th>Aksi</th>
             </tr>
@@ -37,7 +37,7 @@
                     <td><?php echo $cs->username?></td>
                     <td><?php echo $cs->alamat?></td>
                     <td><?php echo $cs->no_tlp?></td>
-                    <td><?php echo $cs->no_ktp?></td>
+                    <td><?php echo $cs->email_customer?></td>
                     <td><?php echo $cs->pass?></td>
                     <td>
                         <div class="row">

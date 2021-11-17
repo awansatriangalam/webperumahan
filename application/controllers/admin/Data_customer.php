@@ -30,16 +30,16 @@
                 $username           = $this->input->post('username');
                 $alamat             = $this->input->post('alamat');
                 $no_tlp             = $this->input->post('no_tlp');
-                $no_ktp             = $this->input->post('no_ktp');
+                $email_customer     = $this->input->post('email_customer');
                 $pass               = md5($this->input->post('pass'));
 
                 $data = array(
-                    'nama'          => $nama,
-                    'username'      => $username,
-                    'alamat'        => $alamat,
-                    'no_tlp'        => $no_tlp,
-                    'no_ktp'        => $no_ktp,
-                    'pass'          => $pass,
+                    'nama'              => $nama,
+                    'username'          => $username,
+                    'alamat'            => $alamat,
+                    'no_tlp'            => $no_tlp,
+                    'email_customer'    => $email_customer,
+                    'pass'              => $pass,
                 );
 
                 $this->rental_model->insert_data($data, 'customer');
@@ -77,16 +77,14 @@
                 $username           = $this->input->post('username');
                 $alamat             = $this->input->post('alamat');
                 $no_tlp             = $this->input->post('no_tlp');
-                $no_ktp             = $this->input->post('no_ktp');
-                $pass               = md5($this->input->post('pass'));
+                $email_customer     = $this->input->post('email_customer');
 
                 $data = array(
-                    'nama'          => $nama,
-                    'username'      => $username,
-                    'alamat'        => $alamat,
-                    'no_tlp'        => $no_tlp,
-                    'no_ktp'        => $no_ktp,
-                    'pass'          => $pass,
+                    'nama'              => $nama,
+                    'username'          => $username,
+                    'alamat'            => $alamat,
+                    'no_tlp'            => $no_tlp,
+                    'email_customer'    => $email_customer,
                 );
 
                 $where = array(
@@ -111,8 +109,7 @@
             $this->form_validation->set_rules('username','Nama Pengguna','required');
             $this->form_validation->set_rules('alamat','Alamat','required');
             $this->form_validation->set_rules('no_tlp','No Telepon','required');
-            $this->form_validation->set_rules('no_ktp','No KTP','required');
-            $this->form_validation->set_rules('pass','Katasandi','required');
+            $this->form_validation->set_rules('email_customer','Email','required');
         }
 
         public function delete_customer($id)

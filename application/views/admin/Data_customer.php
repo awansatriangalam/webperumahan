@@ -4,8 +4,9 @@
             <h1>Data Customer</h1>
         </div>
 
+        <?php echo $this->session->flashdata('pesan') ?>
+        
         <div class="row">
-            <?php echo $this->session->flashdata('pesan') ?>
             <div class="col-md-6 mb-3">
                 <?php echo form_open('admin/data_customer/search') ?>
                 <input type="text" name="keyword" class="form-control"
@@ -23,7 +24,7 @@
                 <th>Username</th>
                 <th>Alamat</th>
                 <th>No Telepon</th>
-                <th>No KTP</th>
+                <th>Email</th>
                 <th>Password</th>
                 <th>Aksi</th>
             </tr>
@@ -37,7 +38,7 @@
                     <td><?php echo $cs->username?></td>
                     <td><?php echo $cs->alamat?></td>
                     <td><?php echo $cs->no_tlp?></td>
-                    <td><?php echo $cs->no_ktp?></td>
+                    <td><?php echo $cs->email_customer?></td>
                     <td><?php echo $cs->pass?></td>
                     <td>
                         <div class="row">
