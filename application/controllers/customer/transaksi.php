@@ -13,9 +13,11 @@ class Transaksi extends CI_Controller{
     public function bayar_aksi($id)
     {
         $id				= $this->input->post('id_pesan');
-        $status_bayar	= '1';
+        $id_bank		= $this->input->post('id_bank');
+        $status_bayar	= '2';
 
         $data = array (
+            'id_bank'       => $id_bank,
             'status_bayar'	=> $status_bayar,
         );
 
@@ -66,7 +68,7 @@ class Transaksi extends CI_Controller{
 
     public function cetak($id)
     {
-        $data['transaksi']= $this->db->query("SELECT * FROM transaksi tr, rumah rm, customer cs WHERE tr.id_rumah=rm.id_rumah AND tr.id_customer=cs.id_customer AND tr.id_pesan='$id' ORDER BY id_pesan DESC")->result();
+        $data['transaksi']= $this->db->query("SELECT * FROM transaksi tr, rumah rm, customer cs, bank bnk WHERE tr.id_rumah=rm.id_rumah AND tr.id_customer=cs.id_customer AND tr.id_bank=bnk.id_bank AND tr.id_pesan='$id' ORDER BY id_pesan DESC")->result();
         $this->load->view('customer/cetak',$data);   
     }
 

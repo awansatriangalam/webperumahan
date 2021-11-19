@@ -75,9 +75,9 @@
                         <p class="text-success mb-3">Silahkan Melakukan Pembayaran Melalui Nomor Rekening di Bawah ini !</p>
 
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Bank Mandiri</li>
-                            <li class="list-group-item">Bank BCA</li>
-                            <li class="list-group-item">Bank BNI</li>
+                            <li class="list-group-item">Bank BRI    : 009812567532111</li>
+                            <li class="list-group-item">Bank BNI    : 0098122111</li>
+                            <li class="list-group-item">Bank Mandiri: 0097654238971</li>
                         </ul>
 
                         <?php if(empty($tr->bukti_bayar)) { ?>
@@ -134,7 +134,7 @@
                         <div class="form-group col-md-6">
                             <label>Nama Customer</label>
                             <input type="hidden" name="id_pesan" class="form-control" value="<?php echo $tr->id_pesan?>">
-                            <input type="hidden" name="status_bayar" class="form-control" value="1">
+                            <input type="hidden" name="status_bayar" class="form-control" value="2">
                             <input type="text" name="nama" class="form-control" value="<?php echo $tr->nama?>" readonly>
                         </div>
                         <div class="form-group col-md-6">
@@ -151,15 +151,17 @@
                         </div>
                         <div class="form-group">
                             <label>Pilih Bank</label>
-                                <select name="bank">
-                                    <option value="Bank BRI">Bank BRI</option>
-                                    <option value="Bank BNI">Bank BNI</option>
-                                    <option value="Bank Mandiri">Bank Mandiri</option>
+                                <select name="id_bank">
+                                    <option value="1">Bank BRI</option>
+                                    <option value="2">Bank BNI</option>
+                                    <option value="5">Bank Mandiri</option>
                                 </select>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-sm btn-success">Bayar</button>
+                        <center>
+                            <button type="submit" class="btn btn-sm btn-success" style="width:80%">Bayar</button>
+                        </center>
                     </div>
                 </form>
             </div>
