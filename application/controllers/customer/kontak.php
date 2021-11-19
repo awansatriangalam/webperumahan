@@ -4,6 +4,8 @@ class Kontak extends CI_Controller{
     public function index() 
     {
         $data['rumah'] = $this->rental_model->get_data('rumah')->result();
+        $customer = $this->session->userdata('id_customer');
+        $data['customer']= $this->db->query("SELECT * FROM customer cs WHERE cs.id_customer='$customer'")->result();
         $this->load->view('templates_customer/header');
         $this->load->view('customer/kontak', $data);
         $this->load->view('templates_customer/footer');
@@ -16,6 +18,7 @@ class Kontak extends CI_Controller{
             if($this->form_validation->run() == FALSE) {
                 $this->index();
             }else{
+                $id_customer     = $this->session->userdata('id_customer');
                 $nama               = $this->input->post('nama');
                 $email              = $this->input->post('email');
                 $no_tlp             = $this->input->post('no_tlp');

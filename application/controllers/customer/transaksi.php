@@ -10,6 +10,23 @@ class Transaksi extends CI_Controller{
         $this->load->view('templates_customer/footer');
     }
 
+    public function bayar_aksi($id)
+    {
+        $id				= $this->input->post('id_pesan');
+        $status_bayar	= '1';
+
+        $data = array (
+            'status_bayar'	=> $status_bayar,
+        );
+
+        $where = array (
+            'id_pesan'		=> $id
+        );
+
+        $this->rental_model->update_data('transaksi', $data,$where);
+        redirect('customer/data_transaksi');
+    }
+
     public function pembayaran_aksi()
     {
         $id                                 = $this->input->post('id_pesan');
