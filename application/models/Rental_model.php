@@ -77,6 +77,12 @@ class Rental_model extends CI_model
         }
     }
 
+    public function update_pass($where,$data,$table)
+    {
+        $this->db->where($where);
+        $this->db->update($table,$data);
+    }
+
     public function get_keyword($keyword)
     {
         $this->db->select('*');

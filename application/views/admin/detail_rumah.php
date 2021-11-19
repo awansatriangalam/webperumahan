@@ -11,7 +11,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-12 col-xs-12">
-                        <img src="<?php echo base_url('assets/upload/'.$dt->gambar)  ?>" style="width: 100%; ">
+                        <img src="<?php echo base_url('assets/upload/'.$dt->gambar)  ?>" style="width: 70%; ">
                     </div>
                     <div>
                         <table class="table">
