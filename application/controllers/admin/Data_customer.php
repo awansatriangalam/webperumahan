@@ -129,6 +129,17 @@
                 redirect('admin/data_customer');
         }
 
+         public function search(){
+
+            $keyword = $this->input->post('keyword');
+            $data['data_customer'] = $this->rental_model->get_keyword_customer($keyword); 
+                $this->load->view('templates_admin/header');
+                $this->load->view('templates_admin/sidebar');
+                $this->load->view('admin/data_customer_filter',$data);
+
+            
+        }
+
 	}
 	
 ?>

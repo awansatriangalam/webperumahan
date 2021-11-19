@@ -87,6 +87,18 @@
 			redirect('admin/transaksi');
 		}
 
+		public function search(){
+
+            $keyword = $this->input->post('keyword');
+            $data['data_transaksi'] = $this->rental_model->get_keyword_transaksi($keyword); 
+                $this->load->view('templates_admin/header');
+                $this->load->view('templates_admin/sidebar');
+                $this->load->view('admin/data_transaksi_filter',$data);
+                $this->load->view('templates_admin/footer');
+
+            
+        }
+
 	}
 	
 ?>

@@ -34,7 +34,7 @@
             <tbody>
                 <?php
                 $no = 1;
-                foreach($tipe as $tp) :?>
+                foreach($data_type as $tp) :?>
                     <tr>
                         <td><?php echo $no++ ?></td>
                         <td><?php echo $tp->kode_type ?></td>

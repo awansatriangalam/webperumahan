@@ -30,7 +30,7 @@
 
             <?php
             $no =1;
-            foreach ($customer as $cs) : ?>
+            foreach ($data_customer as $cs) : ?>
                 <tr>
                     <td><?php echo $no++ ?></td>
                     <td><?php echo $cs->nama?></td>

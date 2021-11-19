@@ -108,6 +108,17 @@
                 </div>');
                 redirect('admin/data_type');
         }
+
+        public function search(){
+
+            $keyword = $this->input->post('keyword');
+            $data['data_type'] = $this->rental_model->get_keyword_type($keyword); 
+                $this->load->view('templates_admin/header');
+                $this->load->view('templates_admin/sidebar');
+                $this->load->view('admin/data_type_filter',$data);
+
+            
+        }
     }
 
 ?>

@@ -98,5 +98,36 @@ class Rental_model extends CI_model
         $this->db->or_like('harga',$keyword);
         return $this->db->get()->result();
     }
+
+    public function get_keyword_type($keyword)
+    {
+        $this->db->select('*');
+        $this->db->from('tipe');
+        $this->db->like('nama_type',$keyword);
+        $this->db->or_like('kode_type',$keyword);
+        return $this->db->get()->result();
+    }
+
+    public function get_keyword_customer($keyword)
+    {
+        $this->db->select('*');
+        $this->db->from('customer');
+        $this->db->like('nama',$keyword);
+        $this->db->or_like('username',$keyword);
+        $this->db->or_like('alamat',$keyword);
+        $this->db->or_like('no_tlp',$keyword);
+        return $this->db->get()->result();
+    }
+
+    public function get_keyword_transaksi($keyword)
+    {
+        $this->db->select('*');
+        $this->db->from('transaksi');
+        $this->db->like('nama',$keyword);
+        $this->db->or_like('username',$keyword);
+        $this->db->or_like('alamat',$keyword);
+        $this->db->or_like('no_tlp',$keyword);
+        return $this->db->get()->result();
+    }
 }
 ?>

@@ -5,7 +5,18 @@
         </div>
 
         <?php echo $this->session->flashdata('pesan') ?>
-
+        <div class="row">
+            <div class="col-md-5 mb-3">
+                <?php echo form_open('admin/data_transaksi/search') ?>
+                <input type="text" name="keyword" class="form-control"
+                placeholder="Cari">
+            </div>
+            <div class="navbar-form navbar-right">
+                <button type="submit" class="btn btn-success">Cari</button>
+                <?php echo form_close() ?>
+            </div>
+                
+        </div>
         <div class="table-responsive">
             <table class="table table-responsive table-bordered table-striped">
                 <thead>

@@ -217,20 +217,14 @@ class Data_rumah extends CI_Controller{
         }
 
         public function search(){
-<<<<<<< Updated upstream
+
             $keyword = $this->input->post('keyword');
             $data['data_rumah'] = $this->rental_model->get_keyword($keyword); 
                 $this->load->view('templates_admin/header');
                 $this->load->view('templates_admin/sidebar');
                 $this->load->view('admin/data_rumah_filter',$data);
-=======
-            $keyword = $this->input->get('keyword');
-            $data['rumah'] = $this->rental_model->get_keyword($keyword); 
-                $this->load->view('templates_admin/header');
-                $this->load->view('templates_admin/sidebar');
-                $this->load->view('admin/Data_rumah',$data);
->>>>>>> Stashed changes
-                $this->load->view('templates_admin/footer');
+
+            
         }
     
 }
