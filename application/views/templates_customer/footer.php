@@ -28,7 +28,7 @@
                             <div class="widget--content">
                                 <ul class="list-unstyled mb-0">
                                     <li><a href="<?php echo base_url('customer/tentang')?>">Tentang Kami</a></li>
-                                    <li><a href="<?php echo base_url('customer/layanan')?>">Layanan</a></li>
+                                    <li><a href="<?php echo base_url('customer/panduan')?>">Panduan</a></li>
                                     <li><a href="<?php echo base_url('customer/rumah')?>">Rumah</a></li>
                                     <li><a href="<?php echo base_url('customer/kontak')?>">Kontak</a></li>
                                 </ul>
