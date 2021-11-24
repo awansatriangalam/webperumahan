@@ -4,7 +4,7 @@
 
 		public function index()
 		{
-            $data['customer']= $this->rental_model->get_data('customer')->result();
+            $data['user']= $this->rental_model->get_data('user')->result();
 			$this->load->view('templates_admin/header');
 			$this->load->view('templates_admin/sidebar');
 			$this->load->view('admin/data_customer',$data);
@@ -56,8 +56,8 @@
 
         public function update_customer($id)
         {
-            $where = array('id_customer' => $id) ;
-            $data['customer'] = $this->db->query("SELECT * FROM customer WHERE id_customer = $id")->result();
+            $where = array('id_user' => $id) ;
+            $data['user'] = $this->db->query("SELECT * FROM user WHERE id_user = $id")->result();
 
             $this->load->view('templates_admin/header');
 			$this->load->view('templates_admin/sidebar');
@@ -72,26 +72,24 @@
             if($this->form_validation->run() == FALSE) {
                 $this->update_customer();
             }else{
-                $id                 = $this->input->post('id_customer');
-                $nama               = $this->input->post('nama');
-                $username           = $this->input->post('username');
-                $alamat             = $this->input->post('alamat');
+                $id                 = $this->input->post('id_user');
+                $nama_user          = $this->input->post('nama_user');
+                $email              = $this->input->post('email');
+                $alamat_user        = $this->input->post('alamat_user');
                 $no_tlp             = $this->input->post('no_tlp');
-                $email_customer     = $this->input->post('email_customer');
 
                 $data = array(
-                    'nama'              => $nama,
-                    'username'          => $username,
-                    'alamat'            => $alamat,
-                    'no_tlp'            => $no_tlp,
-                    'email_customer'    => $email_customer,
+                    'nama_user'      => $nama_user,
+                    'email'          => $email,
+                    'alamat_user'    => $alamat_user,
+                    'no_tlp'         => $no_tlp,
                 );
 
                 $where = array(
                     'id_customer'   => $id
                 );
 
-                $this->rental_model->update_data('customer',$data,$where);
+                $this->rental_model->update_data('user',$data,$where);
                 $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible
                     fade show" role="alert"> Data Customer Berhasil Diubah !.
                 <button type="button" class="close" data-dismiss="alert"
@@ -105,17 +103,16 @@
 
         public function _rules()
         {
-            $this->form_validation->set_rules('nama','Nama','required');
-            $this->form_validation->set_rules('username','Nama Pengguna','required');
-            $this->form_validation->set_rules('alamat','Alamat','required');
+            $this->form_validation->set_rules('nama_user','Nama','required');
+            $this->form_validation->set_rules('email','Email','required');
+            $this->form_validation->set_rules('alamat_user','Alamat','required');
             $this->form_validation->set_rules('no_tlp','No Telepon','required');
-            $this->form_validation->set_rules('email_customer','Email','required');
         }
 
         public function delete_customer($id)
         {
-            $where = array ('id_customer' => $id);
-            $this->rental_model->delete_data($where, 'customer');
+            $where = array ('id_user' => $id);
+            $this->rental_model->delete_data($where, 'user');
             $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible
                     fade show" role="alert"> Data Berhasil Dihapus ! .
                     <button type="button" class="close" data-dismiss="alert"
@@ -133,8 +130,7 @@
                 $this->load->view('templates_admin/header');
                 $this->load->view('templates_admin/sidebar');
                 $this->load->view('admin/data_customer_filter',$data);
-
-            
+                $this->load->view('templates_admin/footer');
         }
 
 	}

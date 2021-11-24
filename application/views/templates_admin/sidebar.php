@@ -13,7 +13,7 @@
           <li class="dropdown ">
             <a href="#" class="nav-link nav-link-lg nav-link-user">
                 <div class="d-sm-none d-lg-inline-block">
-                  Selamat Datang <?php echo $this->session->userdata('nama') ?>
+                  Selamat Datang <?php echo $this->session->userdata('nama_user') ?>
                 </div>
             </a>            
           </li>
@@ -24,10 +24,10 @@
       <div class="main-sidebar">
         <aside id="sidebar-wrapper"> 
           <div class="sidebar-brand">
-            <a href="index.html">Web Perumahan</a>
+            <a href="<?php echo base_url('admin/dashboard') ?>">Web Perumahan</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">WP</a>
+            <a href="<?php echo base_url('admin/dashboard') ?>">WP</a>
           </div>
           <ul class="sidebar-menu">
             <li>
@@ -48,17 +48,19 @@
               <li>
                 <a class="nav-link" href="<?php echo base_url('admin/laporan')?>"><i class="fas fa-clipboard-list"></i> <span>Laporan</span></a>
               </li>
+              <hr>
               <li>
-                    <?php if ($this->session->userdata('nama')) { ?>
+                <?php if ($this->session->userdata('email')) { ?>
+                  <a class="nav-link" href="<?php echo base_url('admin/profil')?>"><i class="fas fa-user"></i> <span>Profil</span></a>
+                  <a class="nav-link" href="<?php echo base_url('auth/ganti_password')?>"><i class="fas fa-lock"></i> <span>Ganti Password</span></a>
+                <?php } ?>
+              </li>
+              <li>
+                    <?php if ($this->session->userdata('email')) { ?>
                       <a class="nav-link" href="<?php echo base_url('auth/logout')?>"><i class="fas fa-sign-out-alt"></i> <span>Keluar</span></a>
                     <?php } else { ?>
                       <a class="nav-link" href="<?php echo base_url('auth/login')?>"><i class="fas fa-sign-in-alt"></i> <span>Masuk</span></a>
                     <?php }?>
-              </li>
-              <li>
-                <?php if ($this->session->userdata('nama')) { ?>
-                <a class="nav-link" href="<?php echo base_url('auth/ganti_password')?>"><i class="fas fa-lock"></i> <span>Ganti Password</span></a>
-              <?php } ?>
               </li>
             </ul>
         </aside>

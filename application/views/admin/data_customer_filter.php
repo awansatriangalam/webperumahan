@@ -20,11 +20,11 @@
             <tr>
                 <th>No</th>
                 <th>Nama</th>
-                <th>Username</th>
+                <th>Email</th>
                 <th>Alamat</th>
                 <th>No Telepon</th>
-                <th>Email</th>
-                <th>Password</th>
+                <th>Gambar</th>
+                <th>Kata Sandi</th>
                 <th>Aksi</th>
             </tr>
 
@@ -33,23 +33,26 @@
             foreach ($data_customer as $cs) : ?>
                 <tr>
                     <td><?php echo $no++ ?></td>
-                    <td><?php echo $cs->nama?></td>
-                    <td><?php echo $cs->username?></td>
-                    <td><?php echo $cs->alamat?></td>
+                    <td><?php echo $cs->nama_user?></td>
+                    <td><?php echo $cs->email?></td>
+                    <td><?php echo $cs->alamat_user?></td>
                     <td><?php echo $cs->no_tlp?></td>
-                    <td><?php echo $cs->email_customer?></td>
-                    <td><?php echo $cs->pass?></td>
+                    <td>
+                        <img width="100px" src="<?php echo base_url().'assets/assets_stisla/assets/img/profil/' .$cs->gambar_user ?>">
+                    </td>
+                    <td><?php echo $cs->pass_user?></td>
                     <td>
                         <div class="row">
-                            <a href="<?php echo base_url('admin/data_customer/delete_customer/') .$cs->id_customer ?>" 
+                            <a href="<?php echo base_url('admin/data_customer/delete_customer/') .$cs->id_user ?>" 
                             class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
-                            <a href="<?php echo base_url('admin/data_customer/update_customer/') .$cs->id_customer ?>" 
+                            <a href="<?php echo base_url('admin/data_customer/update_customer/') .$cs->id_user ?>" 
                             class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
                         </div>
                     </td>
                 </tr>
             <?php endforeach;?>
         </table>
+
 
 
     </section>
