@@ -84,7 +84,7 @@
                                 <button style="width:100%" type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">
                                     Upload Bukti Pembayaran
                                 </button>
-                        <?php } elseif($tr->status_bayar == '0') { ?>
+                        <?php } elseif($tr->status_bayar == '2') { ?>
                                 <button class="btn btn-sm btn-warning" style="width:100%"><i class="fa fa-clock-o"></i> Menunggu Konfirmasi</button>
                         <?php } elseif($tr->status_bayar == '1') { ?>
                                 <button class="btn btn-sm btn-success" style="width:100%"><i class="fa fa-check"></i> Pembayaran Selesai</button>
@@ -135,7 +135,7 @@
                             <label>Nama Customer</label>
                             <input type="hidden" name="id_pesan" class="form-control" value="<?php echo $tr->id_pesan?>">
                             <input type="hidden" name="status_bayar" class="form-control" value="2">
-                            <input type="text" name="nama" class="form-control" value="<?php echo $tr->nama?>" readonly>
+                            <input type="text" name="nama_user" class="form-control" value="<?php echo $tr->nama_user?>" readonly>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Nama Rumah</label>

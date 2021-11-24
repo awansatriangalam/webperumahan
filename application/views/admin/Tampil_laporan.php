@@ -43,10 +43,10 @@
                     foreach($laporan as $lr) :?>
                         <tr>
                             <td><?php echo $no++ ?></td>
-                            <td><?php echo $lr->nama ?></td>
+                            <td><?php echo $lr->nama_user ?></td>
                             <td><?php echo $lr->nama_rumah ?></td>
                             <td><?php echo $lr->harga ?></td>
-                            <td><?php echo $lr->tanggal_transaksi ?></td>
+                            <td><?php echo date('d F Y',strtotime($lr->tanggal_transaksi)) ?></td>
                             <td><?php echo $lr->status_pesan ?></td>
                         </tr>
                     <?php endforeach; ?>

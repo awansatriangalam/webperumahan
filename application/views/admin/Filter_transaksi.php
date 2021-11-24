@@ -5,7 +5,7 @@
         </div>
 
         <?php echo $this->session->flashdata('pesan') ?>
-        <form method="POST" action="<?php echo base_url('admin/transaki') ?>">
+        <form method="POST" action="<?php echo base_url('admin/transaksi') ?>">
             <div class="row">
                 <div class="form-group col-md-6">
                     <label>Dari Tanggal</label>
@@ -45,10 +45,10 @@
                     foreach($ftransaksi as $tr) :?>
                         <tr>
                             <td><?php echo $no++ ?></td>
-                            <td><?php echo $tr->nama ?></td>
+                            <td><?php echo $tr->nama_user ?></td>
                             <td><?php echo $tr->nama_rumah ?></td>
                             <td><?php echo $tr->harga ?></td>
-                            <td><?php echo $tr->tanggal_transaksi ?></td>
+                            <td><?php echo date('d F Y',strtotime($tr->tanggal_transaksi)) ?></td>
                             <td><?php echo $tr->status_pesan ?></td>
                             <td>
                                 <center>

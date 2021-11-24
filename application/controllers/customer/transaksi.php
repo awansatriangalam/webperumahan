@@ -4,7 +4,7 @@ class Transaksi extends CI_Controller{
 
     public function pembayaran($id)
     {
-        $data['transaksi']= $this->db->query("SELECT * FROM transaksi tr, rumah rm, customer cs WHERE tr.id_rumah=rm.id_rumah AND tr.id_customer=cs.id_customer AND tr.id_pesan='$id' ORDER BY id_pesan DESC")->result();
+        $data['transaksi']= $this->db->query("SELECT * FROM transaksi tr, rumah rm, user cs WHERE tr.id_rumah=rm.id_rumah AND tr.id_user=cs.id_user AND tr.id_pesan='$id' ORDER BY id_pesan DESC")->result();
         $this->load->view('templates_customer/header');
         $this->load->view('customer/pembayaran', $data);
         $this->load->view('templates_customer/footer');
@@ -68,7 +68,7 @@ class Transaksi extends CI_Controller{
 
     public function cetak($id)
     {
-        $data['transaksi']= $this->db->query("SELECT * FROM transaksi tr, rumah rm, customer cs, bank bnk WHERE tr.id_rumah=rm.id_rumah AND tr.id_customer=cs.id_customer AND tr.id_bank=bnk.id_bank AND tr.id_pesan='$id' ORDER BY id_pesan DESC")->result();
+        $data['transaksi']= $this->db->query("SELECT * FROM transaksi tr, rumah rm, user cs, bank bnk WHERE tr.id_rumah=rm.id_rumah AND tr.id_user=cs.id_user AND tr.id_bank=bnk.id_bank AND tr.id_pesan='$id' ORDER BY id_pesan DESC")->result();
         $this->load->view('customer/cetak',$data);   
     }
 

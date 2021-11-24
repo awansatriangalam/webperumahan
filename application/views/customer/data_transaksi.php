@@ -53,7 +53,7 @@
                                 <td><?php echo $no++ ?></td>
                                 <td><?php echo $tr->nama_user ?></td>
                                 <td><?php echo $tr->nama_rumah ?></td>
-                                <td><?php echo date('d F,Y') ?></td>
+                                <td><?php echo date('d F Y',strtotime($tr->tanggal_transaksi)) ?></td>
                                 <td>Rp. <?php echo $tr->harga ?></td>
                                 <td>
                                     <?php if($tr->status_pesan=="Selesai") { ?>

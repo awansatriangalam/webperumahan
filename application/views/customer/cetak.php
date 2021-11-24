@@ -28,7 +28,7 @@
                     <tr>
                         <th>Nama Customer</th>
                         <td>:</td>
-                        <td><?php echo $tr->nama ?></td>
+                        <td><?php echo $tr->nama_user ?></td>
                     </tr>
                     <tr>
                         <th>Nama Rumah</th>

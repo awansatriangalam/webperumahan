@@ -42,12 +42,12 @@
                                             <div class="form-group">
                                                 <label for="property-title">Nama Rumah</label>
                                                 <input type="hidden" name="id_rumah" value="<?php echo $dt->id_rumah ?>">
-                                                <input type="hidden" name="tanggal_transaksi">
+                                                <input type="hidden" name="tanggal_transaksi"  value="<?php echo date('Y-m-d')?>">
                                                 <input type="text" class="form-control" name="nama_rumah" value="<?php echo $dt->nama_rumah ?>" readonly>
                                             </div>
                                         </div>
 
-                                        <div class="col-xs-12 col-sm-6 col-md-6">
+                                        <div class="col-xs-12 col-sm-6 col-md-6">   
                                             <div class="form-group">
                                                 <label for="property-description">Harga</label>
                                                 <input type="text" class="form-control" name="harga" value=" Rp. <?php echo $dt->harga ?>" readonly>                                            </div>

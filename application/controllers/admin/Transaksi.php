@@ -15,7 +15,7 @@
                 $this->load->view('admin/data_transaksi',$data);
                 $this->load->view('templates_admin/footer');
             }else{
-                $data['ftransaksi'] = $this->db->query("SELECT * FROM transaksi tr, rumah rm, customer cs WHERE tr.id_rumah=rm.id_rumah AND tr.id_customer=cs.id_customer AND date (tanggal_transaksi) >= '$dari' AND date (tanggal_transaksi) <= '$sampai' ")->result();
+                $data['ftransaksi'] = $this->db->query("SELECT * FROM transaksi tr, rumah rm, user cs WHERE tr.id_rumah=rm.id_rumah AND tr.id_user=cs.id_user AND date (tanggal_transaksi) >= '$dari' AND date (tanggal_transaksi) <= '$sampai' ")->result();
                 $this->load->view('templates_admin/header');
                 $this->load->view('templates_admin/sidebar');
                 $this->load->view('admin/filter_transaksi',$data);
