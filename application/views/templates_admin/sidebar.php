@@ -13,7 +13,10 @@
           <li class="dropdown ">
             <a href="#" class="nav-link nav-link-lg nav-link-user">
                 <div class="d-sm-none d-lg-inline-block">
-                  Selamat Datang <?php echo $this->session->userdata('nama_user') ?>
+                  Selamat Datang <?php if ($this->session->userdata('email')) { ?>
+                                <?php echo $this->session->userdata('nama_user') ?>
+                            <?php } else { ?>   
+                            <?php } ?>
                 </div>
             </a>            
           </li>
