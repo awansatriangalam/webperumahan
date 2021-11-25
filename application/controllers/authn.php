@@ -11,8 +11,8 @@ class Authn extends CI_Controller
 
     public function index()
     {
-        $this->form_validation->set_rules('email','Email', 'required|trim|valid_email'); 
-        $this->form_validation->set_rules('pass_user','Kata Sandi', 'required|trim');
+        $this->form_validation->set_rules('email','Email', 'required|trim|valid_email', [ 'required' => 'Email Wajib Diisi!']); 
+        $this->form_validation->set_rules('pass_user','Kata Sandi', 'required|trim', ['required' => 'Kata Sandi Wajib Diisi!']);
 
         if($this->form_validation->run() == FALSE){
             $this->load->view('templates_admin/header');
@@ -42,7 +42,7 @@ class Authn extends CI_Controller
                     if($user['role_id'] == 1){
                         redirect('admin/dashboard');
                     }else{
-                        redirect('customer/dashboard');
+                        redirect('welcome');
                     }
             }else{
                 $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible

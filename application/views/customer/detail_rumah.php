@@ -287,11 +287,10 @@
                                             <ul class="property-review">  
                                                 <li class="review-comment">
                                                     <div class="avatar">
-                                                        <i class="fa fa-user"></i>
+                                                        <img src="<?php echo base_url('assets/assets_stisla/assets/img/profil/') .$user['gambar_user'] ?>" >
                                                     </div>
                                                     <div class="comment">
-                                                        <h6><?php echo $ul->nama ?></h6>
-                                                        <div class="date"><?php echo $ul->nama_pengguna ?></div>
+                                                        <h6><?php echo $ul->nama_user ?></h6>
                                                         <p><?php echo $ul->ulasan ?></p>
                                                     </div>
                                                 </li> 
@@ -313,8 +312,8 @@
                                                     <label>Komentar*</label>
                                                     <input type="hidden" name="id_rumah" value="<?php echo $dt->id_rumah?>">
                                                     <?php foreach ($customer as $cs):?>
-                                                    <input type="hidden" name="nama" value="<?php echo $cs->nama?>">
-                                                    <input type="hidden" name="nama_pengguna" value="<?php echo $cs->username?>">
+                                                    <input type="hidden" name="nama_user" value="<?php echo $cs->nama_user?>">
+                                                    <input type="hidden" name="email" value="<?php echo $cs->email?>">
                                                     <?php endforeach;?>
                                                     <textarea class="form-control" type="text" name="ulasan" required></textarea>
                                                 </div>                                               

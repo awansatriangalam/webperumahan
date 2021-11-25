@@ -53,14 +53,14 @@
                     <div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
                         <ul class="nav navbar-nav nav-pos-center navbar-left">
                             <!-- Home Menu -->
-                            <li><a href="<?php echo base_url('customer/dashboard')?>" >Beranda</a></li>
+                            <li><a href="<?php echo base_url('welcome')?>" >Beranda</a></li>
                             <li><a href="<?php echo base_url('customer/rumah')?>" >Rumah</a></li>
                             <li><a href="<?php echo base_url('customer/tentang')?>" >Tentang</a></li>
                             <li><a href="<?php echo base_url('customer/kontak')?>" >Kontak</a> </li>                              
                         </ul>
                         <!-- Module Signup  -->
                         <div class="module module-login pull-left">
-                            <?php if ($this->session->userdata('email')) { ?>
+                            <?php if ($this->session->userdata('nama_user')) { ?>
                                 <a class="pull-left" href="<?php echo base_url('customer/profil/')?> "><span class="btn-popup"><i class="fa fa-user"></i> <?php echo $this->session->userdata('nama_user') ?></span></a>
                             <?php } else { ?>
                                 <a class="pull-left" href="<?php echo base_url()?> "><span class="btn-popup"></span></a>
