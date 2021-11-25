@@ -8,12 +8,12 @@
                 <div class="title title-1 text-center">
                     <div class="title--content">
                         <div class="title--heading">
-                            <h1>Data Transaksi</h1>
+                            <h1>Data Transaksi Dibatalkan</h1>
                         </div>
                         <ol class="breadcrumb">
                             <li><a href="<?php echo base_url('welcome')?>">Beranda</a></li>
-                            <li  class="active"><a href="<?php echo base_url('customer/data_transaksi')?>">Data Transaksi</a></li>
-                            <li><a href="<?php echo base_url('customer/data_transaksi_batal')?>">Data Transaksi Dibatalkan </a></li>
+                            <li><a href="<?php echo base_url('customer/data_transaksi')?>">Data Transaksi</a></li>
+                            <li class="active"><a href="<?php echo base_url('customer/data_transaksi_batal')?>">Data Transaksi Dibatalkan </a></li>
                         </ol>
                     </div>
                     <div class="clearfix"></div>
@@ -33,7 +33,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="card mx-auto" >
                     <div class="card-header">
-                        <h5>Data Transaksi</h5>
+                        <h5>Data Transaksi Dibatalkan</h5>
                     </div>
 
                     <span><?php echo $this->session->flashdata('pesan')?></span>
