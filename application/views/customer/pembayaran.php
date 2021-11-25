@@ -129,7 +129,7 @@
                     </button>
                 </div>
 
-                <form method="POST" action="<?php echo base_url('customer/transaksi/bayar_aksi') ?>" enctype="multipart/form-data">
+                <form method="POST" action="<?php echo base_url('customer/transaksi/bayar_aksi/'.$tr->id_pesan) ?>" enctype="multipart/form-data">
                     <div class="modal-body">
                         <div class="form-group col-md-6">
                             <label>Nama Customer</label>
