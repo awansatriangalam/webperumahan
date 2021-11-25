@@ -14,8 +14,8 @@ class Dashboard extends CI_Controller{
         $data['detail'] = $this->rental_model->ambil_id_rumah($id);
         $data['ulas']  = $this->rental_model->ambil_id_ulasan($id);       
         $data['rumah']  = $this->rental_model->get_data('rumah')->result();
-        $customer = $this->session->userdata('id_customer');
-        $data['customer']= $this->db->query("SELECT * FROM customer cs WHERE cs.id_customer='$customer'")->result();
+        $customer = $this->session->userdata('id_user');
+        $data['customer']= $this->db->query("SELECT * FROM user cs WHERE cs.id_user='$customer'")->result();
         $this->load->view('templates_customer/header');
         $this->load->view('customer/detail_rumah', $data);
         $this->load->view('templates_customer/footer');
@@ -23,44 +23,23 @@ class Dashboard extends CI_Controller{
 
     public function kirim_ulasan() 
     {
-       $id_customer     = $this->session->userdata('id_customer');
+       $id_user     = $this->session->userdata('id_user');
        $id_rumah        = $this->input->post('id_rumah');
        $id              = $this->input->post('id_ulasan');
-       $nama            = $this->input->post('nama');
-       $nama_pengguna   = $this->input->post('nama_pengguna');
+       $nama_user       = $this->input->post('nama_user');
+       $email           = $this->input->post('email');
        $ulasan          = $this->input->post('ulasan');
 
        $data = array (
         'id_customer'       => $id_customer,
         'id_rumah'          => $id_rumah,
         'id_ulasan'         => $id,
-        'nama'              => $nama,
-        'nama_pengguna'     => $nama_pengguna,
+        'nama_user'         => $nama_user,
+        'email'             => $email,
         'ulasan'            => $ulasan,
     );
        $this->rental_model->insert_data($data,'ulas');
        redirect('customer/dashboard/detail_rumah/'.$id_rumah);
-    }
-    
-
-    public function profil() 
-    {
-        $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
-        $this->load->view('templates_customer/header');
-        $this->load->view('customer/profil', $data);
-        $this->load->view('templates_customer/footer');
-    }
-
-    
-
-    public function _rules()
-    {
-        $this->form_validation->set_rules('nama','Nama','required');
-        $this->form_validation->set_rules('username','Nama Pengguna','required');
-        $this->form_validation->set_rules('alamat','Alamat','required');
-        $this->form_validation->set_rules('no_tlp','No Telepon','required');
-        $this->form_validation->set_rules('no_ktp','No KTP','required');
-        $this->form_validation->set_rules('pass','Katasandi','required');
     }
 
 }

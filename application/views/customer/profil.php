@@ -36,19 +36,26 @@
                     <div class="col-xs-12 col-sm-12 col-md-4">
                         <div class="edit--profile-area">
                                 <ul class="edit--profile-links list-unstyled mb-0">
-                                    <li><a href="<?php echo base_url('customer/dashboard/profil/')?>"><i class="fa fa-user"></i> Profil Saya</a></li>
-                                    <li><a href="<?php echo base_url('customer/data_transaksi')?>"><i class="fa fa-random"></i> Transaksi</a></li>
+                                    <li><a href="<?php echo base_url('customer/profil')?>"><i class="fa fa-user"></i> Profil Saya</a></li>
+                                    <li><a href="<?php echo base_url('customer/profil/ubah_sandi')?>"><i class="fa fa-lock"></i> Ubah Kata Sandi</a></li>
+                                    <li><a href="<?php echo base_url('customer/data_transaksi/')?>"><i class="fa fa-random"></i> Transaksi</a></li>
                                 </ul>
                         </div>
                     </div>
                     <!-- .col-md-4 -->
                     <div class="col-xs-12 col-sm-12 col-md-8">
-                        <form class="mb-0">
-                                <div class="form-box">
-                                    <h4 class="form--title">Detail Profil</h4>
-                                    <div class="form-group">
-                                        <img src="<?php echo base_url('assets/assets_stisla/assets/img/profil/') .$user['gambar_user'] ?>" >
+                        <form>
+                            <div class="form-box">
+                                <h4 class="form--title">Detail Profil</h4>
+                                <div class="row">
+                                    <div class="form-group col-md-8">
+                                        <img style="width:180px" src="<?php echo base_url('assets/assets_stisla/assets/img/profil/') .$user['gambar_user'] ?>" >
                                     </div>
+                                    <div class="form-group col-md-3">
+                                        <a href="<?php echo base_url('customer/profil/ubah_profil')?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Ubah Profil</a>
+                                    </div>
+                                </div><hr>
+                                <div class="row">
                                     <div class="form-group">
                                         <label>Nama</label>
                                         <input type="hidden" name="id_user" value="<?php echo $user['id_user'] ?>">
@@ -69,8 +76,9 @@
                                         <label>No Telepon</label>
                                         <input type="text" class="form-control" name="no_tlp" value="<?php echo $user['no_tlp'] ?>"readonly>
                                     </div>
-                                    <!-- .form-group end -->
                                 </div>
+                                <!-- .form-group end -->
+                            </div>
                         </form>
                     </div>
                     <!-- .col-md-8 end -->

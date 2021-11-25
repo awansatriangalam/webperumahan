@@ -52,14 +52,14 @@
               <li>
                 <?php if ($this->session->userdata('email')) { ?>
                   <a class="nav-link" href="<?php echo base_url('admin/profil')?>"><i class="fas fa-user"></i> <span>Profil</span></a>
-                  <a class="nav-link" href="<?php echo base_url('auth/ganti_password')?>"><i class="fas fa-lock"></i> <span>Ganti Password</span></a>
+                  <a class="nav-link" href="<?php echo base_url('admin/profil/ganti_password')?>"><i class="fas fa-lock"></i> <span>Ganti Password</span></a>
                 <?php } ?>
               </li>
               <li>
                     <?php if ($this->session->userdata('email')) { ?>
-                      <a class="nav-link" href="<?php echo base_url('auth/logout')?>"><i class="fas fa-sign-out-alt"></i> <span>Keluar</span></a>
+                      <a class="nav-link" href="<?php echo base_url('authn/logout')?>"><i class="fas fa-sign-out-alt"></i> <span>Keluar</span></a>
                     <?php } else { ?>
-                      <a class="nav-link" href="<?php echo base_url('auth/login')?>"><i class="fas fa-sign-in-alt"></i> <span>Masuk</span></a>
+                      <a class="nav-link" href="<?php echo base_url('authn')?>"><i class="fas fa-sign-in-alt"></i> <span>Masuk</span></a>
                     <?php }?>
               </li>
             </ul>

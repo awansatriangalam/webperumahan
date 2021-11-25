@@ -86,7 +86,7 @@
                 );
 
                 $where = array(
-                    'id_customer'   => $id
+                    'id_user'   => $id
                 );
 
                 $this->rental_model->update_data('user',$data,$where);
