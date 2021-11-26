@@ -44,15 +44,18 @@
                 $alamat_user        = $this->input->post('alamat_user');
                 $no_tlp             = $this->input->post('no_tlp');
 				$gambar_user        = $_FILES['gambar_user']['name'];
-				if($gambar_user=''){}else{
+				if($gambar_user)
+                {
                     $config ['upload_path']     = './assets/assets_stisla/assets/img/profil';
                     $config ['allowed_types']   = 'jpg|jpeg|png|tiff';
     
                     $this->load->library('upload', $config);
-                    if(!$this->upload->do_upload('gambar_user')){
-                        echo "Gambar Gagal Diupload !";
+
+                    if($this->upload->do_upload('gambar_user')){
+                        $gambar_user = $this->upload->data('file_name');
+                        $this->db->set('gambar_user', $gambar_user);
                     }else{
-                        $gambar_user=$this->upload->data('file_name');
+                        echo $this->upload->display_errors();
                     }
                 }
     
@@ -61,7 +64,6 @@
                     'email'          => $email,
                     'alamat_user'    => $alamat_user,
                     'no_tlp'         => $no_tlp,
-                    'gambar_user'	 => $gambar_user,
                 );
 
                 $where = array(
