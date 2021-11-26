@@ -16,17 +16,19 @@
 
         public function index()
         {
+            $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
             $data['tipe']= $this->rental_model->get_data('tipe')->result();
             $this->load->view('templates_admin/header');
-            $this->load->view('templates_admin/sidebar');
+            $this->load->view('templates_admin/sidebar',$data);
             $this->load->view('admin/data_type',$data);
             $this->load->view('templates_admin/footer');
         }
 
         public function tambah_type()
         {
+            $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
             $this->load->view('templates_admin/header');
-            $this->load->view('templates_admin/sidebar');
+            $this->load->view('templates_admin/sidebar',$data);
             $this->load->view('admin/form_tambah_type');
             $this->load->view('templates_admin/footer');
         }
@@ -60,10 +62,11 @@
 
         public function update_type($id){
             $where = array('id_type' => $id);
+            $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
             $data['tipe'] = $this->db->query("SELECT * FROM tipe WHERE id_type='$id'")->result();
 
             $this->load->view('templates_admin/header');
-            $this->load->view('templates_admin/sidebar');
+            $this->load->view('templates_admin/sidebar',$data);
             $this->load->view('admin/form_update_type', $data);
             $this->load->view('templates_admin/footer');
         }
@@ -124,9 +127,10 @@
         public function search(){
 
             $keyword = $this->input->post('keyword');
+            $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
             $data['data_type'] = $this->rental_model->get_keyword_type($keyword); 
                 $this->load->view('templates_admin/header');
-                $this->load->view('templates_admin/sidebar');
+                $this->load->view('templates_admin/sidebar',$data);
                 $this->load->view('admin/data_type_filter',$data);
 
             

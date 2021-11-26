@@ -11,12 +11,13 @@
         </form>
         <ul class="navbar-nav navbar-right">
           <li class="dropdown ">
-            <a href="#" class="nav-link nav-link-lg nav-link-user">
+            <a href="<?php echo base_url('admin/profil')?>" class="nav-link nav-link-lg nav-link-user">
                 <div class="d-sm-none d-lg-inline-block">
                   Selamat Datang <?php if ($this->session->userdata('email')) { ?>
                                 <?php echo $this->session->userdata('nama_user') ?>
                             <?php } else { ?>   
                             <?php } ?>
+              <img alt="image" src="<?php echo base_url('assets/assets_stisla/assets/img/profil/') .$user['gambar_user'] ?>" class="rounded-circle mr-1">
                 </div>
             </a>            
           </li>

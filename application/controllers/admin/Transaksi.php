@@ -21,15 +21,17 @@
             $this->_rules();
 
             if($this->form_validation->run()== FALSE) {
+            	$data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
 				$data['transaksi']= $this->db->query("SELECT * FROM transaksi tr, rumah rm, user cs WHERE tr.id_rumah=rm.id_rumah AND tr.status_transaksi='1' AND tr.id_user=cs.id_user")->result();
                 $this->load->view('templates_admin/header');
-                $this->load->view('templates_admin/sidebar');
+                $this->load->view('templates_admin/sidebar',$data);
                 $this->load->view('admin/data_transaksi',$data);
                 $this->load->view('templates_admin/footer');
             }else{
+            	$data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
                 $data['ftransaksi'] = $this->db->query("SELECT * FROM transaksi tr, rumah rm, user cs WHERE tr.id_rumah=rm.id_rumah AND tr.id_user=cs.id_user AND date (tanggal_transaksi) >= '$dari' AND date (tanggal_transaksi) <= '$sampai' ")->result();
                 $this->load->view('templates_admin/header');
-                $this->load->view('templates_admin/sidebar');
+                $this->load->view('templates_admin/sidebar',$data);
                 $this->load->view('admin/filter_transaksi',$data);
                 $this->load->view('templates_admin/footer');
             }
@@ -38,9 +40,10 @@
 		public function pembayaran($id)
 		{
 			$where = array ('id_pesan' => $id);
+			$data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
 			$data['pembayaran'] = $this->db->query("SELECT * FROM transaksi WHERE id_pesan='$id'")->result();
 			$this->load->view('templates_admin/header');
-			$this->load->view('templates_admin/sidebar');
+			$this->load->view('templates_admin/sidebar',$data);
 			$this->load->view('admin/konfirmasi_pembayaran', $data);
 			$this->load->view('templates_admin/footer');
 		}
@@ -73,9 +76,10 @@
 		public function transaksi_selesai($id)
 		{
 			$where = array ('id_pesan' => $id);
+			$data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
 			$data['transaksi'] = $this->db->query("SELECT * FROM transaksi WHERE id_pesan='$id'")->result();
 			$this->load->view('templates_admin/header');
-			$this->load->view('templates_admin/sidebar');
+			$this->load->view('templates_admin/sidebar',$data);
 			$this->load->view('admin/transaksi_selesai', $data);
 			$this->load->view('templates_admin/footer');
 		}

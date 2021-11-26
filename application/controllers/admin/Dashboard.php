@@ -21,9 +21,10 @@
 			$data['jumlah_admin'] = $this->M_user->jumlah_admin();
 			$data['jumlah_rumah'] = $this->M_rumah->jumlah_rumah();
 			$data['jumlah_customer'] = $this->M_user->jumlah_customer();
+			$data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
 			$data['pesan']= $this->db->query("SELECT * FROM pesan ps, user cs WHERE ps.id_pesan=id_pesan AND cs.id_user='$customer'")->result();
 			$this->load->view('templates_admin/header');
-			$this->load->view('templates_admin/sidebar');
+			$this->load->view('templates_admin/sidebar',$data);
 			$this->load->view('admin/dashboard',$data);
 			$this->load->view('templates_admin/footer');
 		}

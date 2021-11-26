@@ -16,19 +16,21 @@ class Data_rumah extends CI_Controller{
     
     public function index()
     {
+        $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
         $data['rumah'] = $this->rental_model->get_data('rumah')->result();
         $data['tipe'] = $this->rental_model->get_data('tipe')->result();
         $this->load->view('templates_admin/header');
-        $this->load->view('templates_admin/sidebar');
+        $this->load->view('templates_admin/sidebar',$data);
         $this->load->view('admin/data_rumah',$data);
         $this->load->view('templates_admin/footer');
     }
 
     public function tambah_rumah()
     { 
+        $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
         $data['tipe'] = $this->rental_model->get_data('tipe')->result();
         $this->load->view('templates_admin/header');
-        $this->load->view('templates_admin/sidebar');
+        $this->load->view('templates_admin/sidebar',$data);
         $this->load->view('admin/form_tambah_rumah',$data);
         $this->load->view('templates_admin/footer');
 
@@ -103,11 +105,12 @@ class Data_rumah extends CI_Controller{
     public function update_rumah($id)
     {
         $where = array('id_rumah' => $id);
+        $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
         $data['rumah']  = $this->db->query("SELECT * FROM rumah, tipe WHERE rumah.kode_type=tipe.kode_type AND rumah.id_rumah='$id'")->result();
         $data['tipe']   = $this->rental_model->get_data('tipe')->result();
 
         $this->load->view('templates_admin/header');
-        $this->load->view('templates_admin/sidebar');
+        $this->load->view('templates_admin/sidebar',$data);
         $this->load->view('admin/form_update_rumah',$data);
         $this->load->view('templates_admin/footer');
     }
@@ -207,9 +210,10 @@ class Data_rumah extends CI_Controller{
 
             public function detail_rumah($id)
             {
+                $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
                 $data['detail'] = $this->rental_model->ambil_id_rumah($id);
                 $this->load->view('templates_admin/header');
-                $this->load->view('templates_admin/sidebar');
+                $this->load->view('templates_admin/sidebar',$data);
                 $this->load->view('admin/detail_rumah',$data);
                 $this->load->view('templates_admin/footer');
             }
@@ -231,9 +235,10 @@ class Data_rumah extends CI_Controller{
 
         public function search(){
             $keyword = $this->input->post('keyword');
+            $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
             $data['data_rumah'] = $this->rental_model->get_keyword($keyword); 
                 $this->load->view('templates_admin/header');
-                $this->load->view('templates_admin/sidebar');
+                $this->load->view('templates_admin/sidebar',$data);
                 $this->load->view('admin/data_rumah_filter',$data);
 
     
