@@ -12,7 +12,7 @@
                         </div>
                         <ol class="breadcrumb">
                             <li><a href="<?php echo base_url('welcome')?>">Beranda</a></li>
-                            <li  class="active"><a href="<?php echo base_url('customer/data_transaksi')?>">Data Transaksi</a></li>
+                            <li class="active"><a href="<?php echo base_url('customer/data_transaksi')?>">Data Transaksi</a></li>
                             <li><a href="<?php echo base_url('customer/data_transaksi_batal')?>">Data Transaksi Dibatalkan </a></li>
                         </ol>
                     </div>
@@ -36,7 +36,6 @@
                         <h5>Data Transaksi</h5>
                     </div>
 
-                    <span><?php echo $this->session->flashdata('pesan')?></span>
                     <div class="card-body">
                         <table class="table table-bordered table-striped mb-0 ">
                             <tr>
@@ -45,7 +44,7 @@
                                 <th><label>Nama Rumah</label></th>
                                 <th><label>Tanggal Transaksi</label></th>
                                 <th><label>Harga</label></th>
-                                <th style="width: 325px;"><label>Aksi</label></th>
+                                <th style="width: 325px"><label>Aksi</label></th>
                             </tr>
 
                             <?php $no=1;

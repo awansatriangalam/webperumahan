@@ -21,7 +21,7 @@
             $this->_rules();
 
             if($this->form_validation->run()== FALSE) {
-				$data['transaksi']= $this->db->query("SELECT * FROM transaksi tr, rumah rm, user cs WHERE tr.id_rumah=rm.id_rumah AND tr.id_user=cs.id_user")->result();
+				$data['transaksi']= $this->db->query("SELECT * FROM transaksi tr, rumah rm, user cs WHERE tr.id_rumah=rm.id_rumah AND tr.status_transaksi='1' AND tr.id_user=cs.id_user")->result();
                 $this->load->view('templates_admin/header');
                 $this->load->view('templates_admin/sidebar');
                 $this->load->view('admin/data_transaksi',$data);

@@ -25,6 +25,7 @@
            </div> 
         </form>
         <div class="table-responsive">
+            <div class="col-md-3 ml-auto"><a href="<?php echo base_url('admin/data_transaksi_batal') ?>"><i class="fa fa-random"></i> Transaksi Dibatalkan</a></div>
             <table class="table table-responsive table-bordered table-striped">
                 <thead>
                     <tr>

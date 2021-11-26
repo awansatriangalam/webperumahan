@@ -39,7 +39,6 @@
                         <li><a href="<?php echo base_url('customer/profil')?>"><i class="fa fa-user"></i> Profil Saya</a></li>
                         <li><a href="<?php echo base_url('customer/profil/ubah_sandi')?>"><i class="fa fa-lock"></i> Ubah Kata Sandi</a></li>
                         <li><a href="<?php echo base_url('customer/data_transaksi/')?>"><i class="fa fa-random"></i> Transaksi</a></li>
-                        <li><a href="<?php echo base_url('customer/data_transaksi_batal/')?>"><i class="fa fa-trash"></i> Transaksi Dibatalkan</a></li>
                     </ul>
             </div>
         </div>

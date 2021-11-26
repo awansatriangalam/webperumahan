@@ -13,7 +13,7 @@
                         <ol class="breadcrumb">
                             <li><a href="<?php echo base_url('welcome')?>">Beranda</a></li>
                             <li><a href="<?php echo base_url('customer/data_transaksi')?>">Data Transaksi</a></li>
-                            <li class="active"><a href="<?php echo base_url('customer/data_transaksi_batal')?>">Data Transaksi Dibatalkan </a></li>
+                            <li><a href="<?php echo base_url('customer/data_transaksi_batal')?>">Data Transaksi Dibatalkan </a></li>
                         </ol>
                     </div>
                     <div class="clearfix"></div>
@@ -43,14 +43,13 @@
                                 <th><label>No</label></th>
                                 <th><label>Nama Customer</label></th>
                                 <th><label>Nama Rumah</label></th>
-                                <th><label>Tanggal Transaksi</label></th>
+                                <th><label>Tanggal Batal</label></th>
                                 <th><label>Harga</label></th>
                                 <th style="width: 325px;"><label>Aksi</label></th>
                             </tr>
 
                             <?php $no=1;
                             foreach($transaksi as $tr):?>
-                            <input type="hidden" value="<?php echo $tr->status_transaksi?>">
                             <tr>
                                 <td><?php echo $no++ ?></td>
                                 <td><?php echo $tr->nama_user ?></td>
@@ -58,16 +57,11 @@
                                 <td><?php echo date('d F Y',strtotime($tr->tanggal_transaksi)) ?></td>
                                 <td>Rp. <?php echo $tr->harga ?></td>
                                 <td>
-                                    <?php if($tr->status_pesan=="Selesai") { ?>
-                                        <button class="btn btn-sm btn-danger" style="width:100%"> <i class="fa fa-check"></i> Selesai</button>
-                                    <?php }else{ ?>
-                                        <a href="<?php echo base_url('customer/transaksi/pembayaran/'.$tr->id_pesan) ?>" class="btn btn-sm btn-success"><i class="fa fa-eye"></i> Cek Pembayaran</a>
-                                    <?php }?>
-
-                                    <?php if($tr->status_pesan == 'Belum Selesai') { ?>
-                                        <a onclick="return confirm('Yakin Membatalkan Transaksi ?...')" href="<?php echo base_url('customer/transaksi/batal_transaksi/'.$tr->id_pesan) ?>" class="btn btn-sm btn-danger"><i class="fa fa-times"></i> Batal</a>
-                                    <?php }else { ?>
-                                    <?php } ?>
+                                    <form method="POST" action="<?php echo base_url('customer/booking/add_aksi/'.$tr->id_pesan) ?>">
+                                        <input type="hidden" name="id_rumah" value="<?php echo $tr->id_rumah?>">
+                                        <input type="hidden" name="harga" value="<?php echo $tr->harga?>">
+                                        <input type="submit" onclick="return confirm('Yakin Untuk Membooking Lagi ?...')" value="Booking Kembali" style="width:100%" class="btn btn-sm btn-success">
+                                    </form>
                                 </td>                      
                             </tr>
                             <?php endforeach?>

@@ -30,13 +30,15 @@ class Booking Extends CI_Controller
         $tanggal            = $this->input->post('tanggal_transaksi');
         $harga              = $this->input->post('harga');
         $status_pesan       = $this->input->post('status_pesan');
+        $status_transaksi   = $this->input->post('status_transaksi');
         
         $data           = array(
             'id_user'           => $id_user,
             'id_rumah'          => $id_rumah,
             'tanggal_transaksi' => date('Y-m-d'),
             'harga'             => $harga,
-            'status_pesan'      => 'Belum Selesai'
+            'status_pesan'      => 'Belum Selesai',
+            'status_transaksi'  => '1'
         );
 
         $this->rental_model->insert_data($data,'transaksi');
