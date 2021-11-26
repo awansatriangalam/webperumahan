@@ -15,7 +15,7 @@
                     <h4>Admin</h4>
                   </div>
                   <div class="card-body">
-                    2
+                    <?php echo $jumlah_admin ?>
                   </div>
                 </div>
               </div>
@@ -30,7 +30,7 @@
                     <h4>Rumah</h4>
                   </div>
                   <div class="card-body">
-                    42
+                    <?php echo $jumlah_rumah ?>
                   </div>
                 </div>
               </div>
@@ -45,7 +45,7 @@
                     <h4>Tipe</h4>
                   </div>
                   <div class="card-body">
-                    1,201
+                    <?php echo $jumlah_tipe ?>
                   </div>
                 </div>
               </div>
@@ -60,7 +60,7 @@
                     <h4>Customer</h4>
                   </div>
                   <div class="card-body">
-                    47
+                    <?php echo $jumlah_customer ?>
                   </div>
                 </div>
               </div>

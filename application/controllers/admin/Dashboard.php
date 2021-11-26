@@ -17,6 +17,10 @@
 		public function index()
 		{
 			$customer = $this->session->userdata('id_user');
+			$data['jumlah_tipe'] = $this->M_tipe->jumlah_tipe();
+			$data['jumlah_admin'] = $this->M_user->jumlah_admin();
+			$data['jumlah_rumah'] = $this->M_rumah->jumlah_rumah();
+			$data['jumlah_customer'] = $this->M_user->jumlah_customer();
 			$data['pesan']= $this->db->query("SELECT * FROM pesan ps, user cs WHERE ps.id_pesan=id_pesan AND cs.id_user='$customer'")->result();
 			$this->load->view('templates_admin/header');
 			$this->load->view('templates_admin/sidebar');
