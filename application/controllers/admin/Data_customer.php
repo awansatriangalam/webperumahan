@@ -17,7 +17,7 @@
 		public function index()
 		{
             $data1['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
-            $data['user']= $this->rental_model->get_data('user')->result();
+            $data['user']= $this->db->query("SELECT * FROM user tr WHERE tr.role_id='2' ")->result();
 			$this->load->view('templates_admin/header');
 			$this->load->view('templates_admin/sidebar',$data1);
 			$this->load->view('admin/data_customer',$data);

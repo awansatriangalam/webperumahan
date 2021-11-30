@@ -5,6 +5,8 @@
 		public function __construct(){
 			parent::__construct();
 
+			$this->load->model('Chart_model');
+
 			if($this->session->userdata('role_id') !='1'){
 				$this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible fade show" role="alert">
  				Anda Belum Login!
@@ -23,9 +25,24 @@
 			$data['jumlah_customer'] = $this->M_user->jumlah_customer();
 			$data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
 			$data['pesan']= $this->db->query("SELECT * FROM pesan ps, user cs WHERE ps.id_pesan=id_pesan AND cs.id_user='$customer'")->result();
+			foreach($this->Chart_model->chart()->result_array() as $row)
+			{
+				$chart['grafik'][]=(float)$row['Januari'];
+				$chart['grafik'][]=(float)$row['Februari'];
+				$chart['grafik'][]=(float)$row['Maret'];
+				$chart['grafik'][]=(float)$row['April'];
+				$chart['grafik'][]=(float)$row['Mei'];
+				$chart['grafik'][]=(float)$row['Juni'];
+				$chart['grafik'][]=(float)$row['Juli'];
+				$chart['grafik'][]=(float)$row['Agustus'];
+				$chart['grafik'][]=(float)$row['September'];
+				$chart['grafik'][]=(float)$row['Oktober'];
+				$chart['grafik'][]=(float)$row['November'];
+				$chart['grafik'][]=(float)$row['Desember'];
+			}
 			$this->load->view('templates_admin/header');
 			$this->load->view('templates_admin/sidebar',$data);
-			$this->load->view('admin/dashboard',$data);
+			$this->load->view('admin/dashboard',$chart,$data);
 			$this->load->view('templates_admin/footer');
 		}
 	}

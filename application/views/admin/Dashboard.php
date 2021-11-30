@@ -71,36 +71,51 @@
               <div class="card">
                 <div class="card-header">
                   <h4>Statistik</h4>
-                  <div class="card-header-action">
-                    <div class="btn-group">
-                      <a href="#" class="btn btn-primary">Mingguan</a>
-                      <a href="#" class="btn">Bulanan</a>
-                    </div>
-                  </div>
                 </div>
                 <div class="card-body">
-                  <canvas id="myChart" height="182"></canvas>
-                  <div class="statistic-details mt-sm-4">
-                    <div class="statistic-details-item">
-                      <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 7%</span>
-                      <div class="detail-value">$243</div>
-                      <div class="detail-name">Penjualan Hari Ini</div>
-                    </div>
-                    <div class="statistic-details-item">
-                      <span class="text-muted"><span class="text-danger"><i class="fas fa-caret-down"></i></span> 23%</span>
-                      <div class="detail-value">$2,902</div>
-                      <div class="detail-name">Penjualan Minggu Ini</div>
-                    </div>
-                    <div class="statistic-details-item">
-                      <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span>9%</span>
-                      <div class="detail-value">$12,821</div>
-                      <div class="detail-name">Penjualan Bulan Ini</div>
-                    </div>
-                    <div class="statistic-details-item">
-                      <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 19%</span>
-                      <div class="detail-value">$92,142</div>
-                      <div class="detail-name">Penjualan Tahun Ini</div>
-                    </div>
+                  
+                  <div id="chart" class="statistic-details mt-sm-4">
+                      <script src="<?php echo base_url('assets/highcharts/jquery.min.js')?>" type="text/javascript"></script>
+                      <script src="<?php echo base_url('assets/highcharts/highcharts.js')?>" type="text/javascript"></script>
+                      <script src="<?php echo base_url('assets/highcharts/modules/exporting.js')?>" type="text/javascript"></script>
+                      <script src="<?php echo base_url('assets/highcharts/modules/offline-exporting.js')?>" type="text/javascript"></script>
+                      <script type="text/javascript">
+                        jQuery(function(){
+                        new Highcharts.Chart({
+                          chart: {
+                          renderTo: 'chart',
+                          type: 'column',
+                          },
+                          title: {
+                          text: 'Grafik Statistik Penjualan',
+                          x: -20
+                          },
+                          xAxis: {
+                          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun','Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des']
+                          },
+                          yAxis: {
+                            min: 0,
+                            title: {
+                            text: 'Total Terjual'
+                            }
+                          },
+                          tooltip: {
+                              valueSuffix: ' Unit'
+                          },
+                          plotOptions: {
+                              bar: {
+                                  dataLabels: {
+                                      enabled: true
+                                  }
+                              }
+                          },
+                          series: [{
+                          name: 'Terjual dalam Bulan',
+                          data: <?php echo json_encode($grafik); ?>
+                          }]
+                        });
+                        }); 
+                      </script>
                   </div>
                 </div>
               </div>

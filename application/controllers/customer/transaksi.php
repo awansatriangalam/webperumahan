@@ -80,7 +80,7 @@ class Transaksi extends CI_Controller{
         
         $where2 = array ('id_rumah' => $data->id_rumah);
         
-        $data2 = array ('status' => '1');
+        $data2 = array ('status' => '0');
 
         $this->rental_model->update_data('transaksi', $data1,$where);
         $this->rental_model->update_data('rumah', $data2,$where2);
