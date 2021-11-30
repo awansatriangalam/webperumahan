@@ -24,7 +24,7 @@
 			$data['jumlah_rumah'] = $this->M_rumah->jumlah_rumah();
 			$data['jumlah_customer'] = $this->M_user->jumlah_customer();
 			$data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
-			$data['pesan']= $this->db->query("SELECT * FROM pesan ps, user cs WHERE ps.id_pesan=id_pesan AND cs.id_user='$customer'")->result();
+			$data['pesan'] = $this->rental_model->get_data('pesan')->result();
 			foreach($this->Chart_model->chart()->result_array() as $row)
 			{
 				$chart['grafik'][]=(float)$row['Januari'];

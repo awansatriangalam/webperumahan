@@ -134,7 +134,7 @@
                       foreach ($pesan as $ps) : ?>
                           <tr>
                               <td><?php echo $no++ ?></td>
-                              <td><?php echo $ps->nama_user?></td>
+                              <td><?php echo $ps->nama?></td>
                               <td><?php echo $ps->email?></td>
                               <td><?php echo $ps->no_tlp?></td>
                               <td><?php echo $ps->pesan_?></td>

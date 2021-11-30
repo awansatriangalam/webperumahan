@@ -76,7 +76,7 @@
                             <!-- .form-group end -->
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="text" class="form-control" name="email" value="<?php echo $user['email'] ?>">
+                                <input type="text" class="form-control" name="email" value="<?php echo $user['email'] ?>" readonly>
                             </div>
                             <!-- .form-group end -->
                             <div class="form-group">
