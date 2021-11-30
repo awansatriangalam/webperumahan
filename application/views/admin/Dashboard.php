@@ -102,13 +102,6 @@
                           tooltip: {
                               valueSuffix: ' Unit'
                           },
-                          plotOptions: {
-                              bar: {
-                                  dataLabels: {
-                                      enabled: true
-                                  }
-                              }
-                          },
                           series: [{
                           name: 'Terjual dalam Bulan',
                           data: <?php echo json_encode($grafik); ?>
