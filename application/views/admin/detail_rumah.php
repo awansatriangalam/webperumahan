@@ -10,10 +10,10 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-12 col-xs-12">
-                        <img src="<?php echo base_url('assets/upload/'.$dt->gambar)  ?>" style="width: 70%; ">
+                    <div class="col-md-8 mx-auto">
+                        <img src="<?php echo base_url('assets/upload/'.$dt->gambar)  ?>" style="width: 85%; ">
                     </div>
-                    <div>
+                    <div class="col-md-8 mx-auto">
                         <table class="table">
                             <div class="col-md-6 col-xs-12">
                                 <tr>

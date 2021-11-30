@@ -3,12 +3,13 @@
           <div class="section-header">
             <h1>Data Rumah </h1>
           </div>
+           <?php echo $this->session->flashdata('pesan') ?>
             <div class="row">
             <div class="col-md-6">
             <a href="<?php echo base_url('admin/data_rumah/tambah_rumah') ?>" class="btn btn-primary mb-3">
             Tambah Data</a>
 
-            <?php echo $this->session->flashdata('pesan') ?>
+           
             </div>
             <div class=" col-md-5" >
                 <?php echo form_open('admin/data_rumah/search') ?>

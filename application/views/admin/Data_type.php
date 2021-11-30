@@ -3,13 +3,14 @@
         <div class="section-header">
             <h1>Data Tipe Rumah Baru</h1>
         </div>
+         <?php echo $this->session->flashdata('pesan') ?>
         
             <div class="row">
             <div class="col-md-6">   
         <a class="btn btn-primary mb-3" href="<?php echo base_url('admin/data_type/tambah_type')?>">
             Tambah Tipe</a>
             </div>
-        <?php echo $this->session->flashdata('pesan') ?>
+       
             <div class=" col-md-5" >
                 <?php echo form_open('admin/data_type/search') ?>
                 <input type="text" name="keyword" class="form-control"
