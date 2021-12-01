@@ -240,8 +240,7 @@ class Data_rumah extends CI_Controller{
                 $this->load->view('templates_admin/header');
                 $this->load->view('templates_admin/sidebar',$data);
                 $this->load->view('admin/data_rumah_filter',$data);
-
-    
+        
         }
     
 }
