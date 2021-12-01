@@ -17,7 +17,7 @@
 		public function index()
 		{
             $data1['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
-            $data['user']= $this->rental_model->get_data('user')->result();
+            $data['user']= $this->db->query("SELECT * FROM user WHERE role_id='2' ")->result();
 			$this->load->view('templates_admin/header');
 			$this->load->view('templates_admin/sidebar',$data1);
 			$this->load->view('admin/data_customer',$data);
@@ -73,7 +73,6 @@
             $where = array('id_user' => $id) ;
             $data1['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
             $data['user'] = $this->db->query("SELECT * FROM user WHERE id_user = $id")->result();
-
             $this->load->view('templates_admin/header');
 			$this->load->view('templates_admin/sidebar',$data1);
 			$this->load->view('admin/form_update_customer',$data);
@@ -143,6 +142,7 @@
             $keyword = $this->input->post('keyword');
             $data1['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
             $data['data_customer'] = $this->rental_model->get_keyword_customer($keyword); 
+            $data['data_customer']= $this->db->query("SELECT * FROM user WHERE role_id='2' ")->result();
                 $this->load->view('templates_admin/header');
                 $this->load->view('templates_admin/sidebar',$data1);
                 $this->load->view('admin/data_customer_filter',$data);
