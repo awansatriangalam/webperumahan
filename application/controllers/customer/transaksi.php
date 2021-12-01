@@ -80,11 +80,26 @@ class Transaksi extends CI_Controller{
         
         $where2 = array ('id_rumah' => $data->id_rumah);
         
-        $data2 = array ('status' => '0');
+        $data2 = array ('status' => '1');
 
         $this->rental_model->update_data('transaksi', $data1,$where);
         $this->rental_model->update_data('rumah', $data2,$where2);
         redirect('customer/data_transaksi');
+    }
+
+    public function pesan_kembali($id)
+    {
+        $where = array ('id_pesan' =>$id);
+        $data = $this->rental_model->get_where($where,'transaksi')->row();
+        $data1 = array('status_transaksi' => '1');
+        
+        $where2 = array ('id_rumah' => $data->id_rumah);
+        
+        $data2 = array ('status' => '0');
+
+        $this->rental_model->update_data('transaksi', $data1,$where);
+        $this->rental_model->update_data('rumah', $data2,$where2);
+        redirect('customer/data_transaksi_batal');
     }
 }
 ?>

@@ -57,7 +57,7 @@
                                 <td><?php echo date('d F Y',strtotime($tr->tanggal_transaksi)) ?></td>
                                 <td>Rp. <?php echo $tr->harga ?></td>
                                 <td>
-                                    <form method="POST" action="<?php echo base_url('customer/booking/add_aksi/'.$tr->id_pesan) ?>">
+                                    <form method="POST" action="<?php echo base_url('customer/transaksi/pesan_kembali/'.$tr->id_pesan) ?>">
                                         <input type="hidden" name="id_rumah" value="<?php echo $tr->id_rumah?>">
                                         <input type="hidden" name="harga" value="<?php echo $tr->harga?>">
                                         <input type="submit" onclick="return confirm('Yakin Untuk Membooking Lagi ?...')" value="Booking Kembali" style="width:100%" class="btn btn-sm btn-success">
