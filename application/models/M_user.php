@@ -3,9 +3,9 @@ defined('BASEPATH') or exit ('No direct script 	access allowed');
 
 Class M_user extends CI_Model
 {
-	public function get_tipe()
+	public function get_user()
 	{
-		return $this->db->get('tipe')->result();
+		return $this->db->get('user')->result();
 	}
 
 	public function jumlah_admin()

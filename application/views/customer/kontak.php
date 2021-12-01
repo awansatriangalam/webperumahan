@@ -55,8 +55,10 @@
             </div>
             <!-- .col-md-3 end -->
 
-            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-1 bg-white p-30 bg-white">
-                <div id="googleMap" style="width:100%;height:370px;"></div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-1 bg-white p-30 bg-white mx-a">
+                <div id="googleMap" style="width:100%;height:370px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31611.59250865201!2d112.62164239022164!3d-7.952458695757812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788271ef5219e1%3A0xf848ce90b308e5f9!2sPerumahan%20Istana%20Gajayana!5e0!3m2!1sid!2sid!4v1638342358264!5m2!1sid!2sid" width="720" height="370" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
             <!-- .col-md-8 end -->
         </div>
