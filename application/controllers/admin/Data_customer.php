@@ -141,8 +141,8 @@
 
             $keyword = $this->input->post('keyword');
             $data1['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
+            $data['data_customer']  = $this->db->get_where('user', ['role_id' => '2'])->row_array(); 
             $data['data_customer'] = $this->rental_model->get_keyword_customer($keyword); 
-            $data['data_customer']= $this->db->query("SELECT * FROM user WHERE role_id='2' ")->result();
                 $this->load->view('templates_admin/header');
                 $this->load->view('templates_admin/sidebar',$data1);
                 $this->load->view('admin/data_customer_filter',$data);

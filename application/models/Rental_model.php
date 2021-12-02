@@ -122,7 +122,6 @@ class Rental_model extends CI_model
         $this->db->or_like('email',$keyword);
         $this->db->or_like('alamat_user',$keyword);
         $this->db->or_like('no_tlp',$keyword);
-        $this->db->or_like('role_id',2,$keyword);
         return $this->db->get()->result();
     }
 
