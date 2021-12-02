@@ -13,7 +13,7 @@
                                     <h1>Panduan</h1>
                                 </div>
                                 <ol class="breadcrumb">
-                                    <li><a href="<?php echo base_url('customer/dashboard')?>">Beranda</a></li>
+                                    <li><a href="<?php echo base_url('welcome')?>">Beranda</a></li>
                                     <li class="active">Panduan</li>
                                 </ol>
                             </div>
