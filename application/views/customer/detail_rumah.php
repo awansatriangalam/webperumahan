@@ -287,7 +287,7 @@
                                             <ul class="property-review">  
                                                 <li class="review-comment">
                                                     <div class="avatar">
-                                                        <img src="<?php echo base_url('assets/assets_stisla/assets/img/profil/') .$user['gambar_user'] ?>" >
+                                                        <i class="fa fa-user"></i>
                                                     </div>
                                                     <div class="comment">
                                                         <h6><?php echo $ul->nama_user ?></h6>
