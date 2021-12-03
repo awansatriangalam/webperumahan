@@ -107,15 +107,15 @@ class Profil extends CI_Controller
                     $this->db->where('email',$this->session->userdata('email'));
                     $this->db->update('user');
                     $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible
-                        fade show" role="alert"> Profil Berhasil di Ubah !.
+                        fade show" role="alert"> Kata Sandi Berhasil di Ubah !.
                     <button type="button" class="close" data-dismiss="alert"
                         aria-label="Close"
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>');
-                    redirect('customer/profil');
+                    redirect('authn');
                 }
-            }
+            }   
         }  
     }
 }

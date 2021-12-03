@@ -46,7 +46,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="logo" href="<?php echo base_url('customer/dashboard') ?>"><i class="fa fa-home"></i> Web Perumahan</a>
+                        <a class="logo" href="<?php echo base_url('welcome') ?>"><i class="fa fa-home"></i> Web Perumahan</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
