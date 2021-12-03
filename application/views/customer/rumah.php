@@ -104,17 +104,14 @@
                                 <h5>Tipe Rumah</h5>
                             </div>
                             <div class="widget--content">
-                                <ul class="list-unstyled mb-0">
-                                    <li>
-                                        <a href="#">Middle <span></span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Middle Low <span></span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Middle Up <span></span></a>
-                                    </li>
-                                </ul>
+                                <form method="GET" action="<?php echo base_url('customer/rumah/kat_tipe')?>"> 
+                                    <select name="kode_type"  onchange="this.form.submit();">
+                                        <option value="">Pilih Tipe</option>
+                                        <option value="36">Middle</option>
+                                        <option value="45">Middle Low</option> 
+                                        <option value="60">Middle Up</option>                
+                                    </select>
+                                </form>
                             </div>
                         </div>
                         <!-- . widget property type end -->
@@ -126,14 +123,13 @@
                                 <h5>Status Rumah</h5>
                             </div>
                             <div class="widget--content">
-                                <ul class="list-unstyled mb-0">
-                                    <li>
-                                        <a href="#">Diisi <span></span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Tersedia <span></span></a>
-                                    </li>
-                                </ul>
+                                <form method="GET" action="<?php echo base_url('customer/rumah/kat_status')?>"> 
+                                    <select name="status"  onchange="this.form.submit();">
+                                        <option value="">Status</option>
+                                        <option value="0">Diisi</option>
+                                        <option value="1">Tersedia</option>                
+                                    </select>
+                                </form>
                             </div>
                         </div>
                         <!-- . widget property status end -->

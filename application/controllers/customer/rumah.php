@@ -25,5 +25,35 @@
         $this->load->view('customer/filterrumah',$data);
         $this->load->view('templates_customer/footer');
       }
+
+      public function kat_tipe()
+      {
+        if(isset($_GET['kode_type'])){
+          $ktipe = $_GET['kode_type'];
+          $data['filter']   = $this->db->query("SELECT * FROM rumah WHERE kode_type like '%$ktipe%' ")->result();
+        }else{
+          $data['filter']   = $this->rental_model->get_data('rumah')->result(); 
+        }
+        $data['rumah'] = $this->rental_model->get_data('rumah')->result();
+        $this->load->view('templates_customer/header');
+        $this->load->view('customer/filterrumah',$data);
+        $this->load->view('templates_customer/footer');
+      }
+
+      public function kat_status()
+      {
+        if(isset($_GET['status'])){
+          $ktipe = $_GET['status'];
+          $data['filter']   = $this->db->query("SELECT * FROM rumah WHERE status like '%$ktipe%' ")->result();
+        }else{
+          $data['filter']   = $this->rental_model->get_data('rumah')->result(); 
+        }
+        $data['rumah'] = $this->rental_model->get_data('rumah')->result();
+        $this->load->view('templates_customer/header');
+        $this->load->view('customer/filterrumah',$data);
+        $this->load->view('templates_customer/footer');
+      }
+
+
   }
 ?>  
