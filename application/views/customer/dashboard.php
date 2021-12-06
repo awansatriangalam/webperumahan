@@ -135,15 +135,17 @@
                                     <div class="property--img">
                                         <a href="<?php echo base_url('welcome/detail_rumah/').$rm->id_rumah ?>">
                                             <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
-                                            <span class="property--status"><?php 
-                                                if ($rm->status == "0"){
-                                                    echo "<span> Telah Terisi
-                                                    </span>";
-                                                }else{
-                                                    echo "<span> Tersedia
-                                                    </span>";
-                                                }
-                                                ?></span>   
+                                            <span class="property--status"> 
+                                                <?php 
+                                                    if($rm->status == "0"){
+                                                        echo "Terisi";
+                                                    }elseif($rm->status == "1"){
+                                                        echo "Tersedia";
+                                                    }else{
+                                                        echo "Sedang diBooking";
+                                                    }
+                                                ?>
+                                            </span>   
                                         </a>
                                     </div>
                                     <div class="property--content">

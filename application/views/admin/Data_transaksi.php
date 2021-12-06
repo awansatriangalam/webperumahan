@@ -62,10 +62,6 @@
                                 </center>
                             </td>
                             <td>
-                                <a class="btn btn-sm btn-success mr-2" href="<?php echo base_url
-                                            ('admin/transaksi/transaksi_selesai/'.$tr->id_pesan)?>"><i class="
-                                            fas fa-check"></i>
-                                </a>
                                 <a class="btn btn-sm btn-danger" href="<?php echo base_url
                                             ('admin/transaksi/transaksi_batal/'.$tr->id_pesan)?>"><i class="
                                             fas fa-times"></i></a>

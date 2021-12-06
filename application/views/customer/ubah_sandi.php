@@ -32,50 +32,49 @@
 ============================================= -->
 <section id="user-profile" class="user-profile">
     <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-4">
-            <div class="edit--profile-area">
-                    <ul class="edit--profile-links list-unstyled mb-0">
-                        <li><a href="<?php echo base_url('customer/profil')?>"><i class="fa fa-user"></i> Profil Saya</a></li>
-                        <li><a href="<?php echo base_url('customer/profil/ubah_sandi')?>"><i class="fa fa-lock"></i> Ubah Kata Sandi</a></li>
-                        <li><a href="<?php echo base_url('customer/data_transaksi/')?>"><i class="fa fa-random"></i> Transaksi</a></li>
-                    </ul>
-            </div>
-        </div>
-        <!-- .col-md-4 -->
-        <div class="col-xs-12 col-sm-12 col-md-8">
-            <?= form_open_multipart('customer/profil/ubah_sandi');?>
-
-                <div class="form-box">
-                    <h4 class="form--title">Ubah Kata Sandi</h4>
-                    <?php echo $this->session->flashdata('pesan') ?>
-                    <div class="form-group">
-                        <label>Kata Sandi Lama</label>
-                        <input type="hidden" name="id_user" value="<?php echo $user['id_user'] ?>">
-                        <input type="password" class="form-control" name="sandi_lama" id="sandi_lama">
-                        <?php echo form_error('sandi_lama','<div class="text-small text-danger">','</div>') ?>
-                    </div>
-                    <!-- .form-group end -->
-                    <div class="form-group">
-                        <label>Kata Sandi Baru</label>
-                        <input type="password" class="form-control" name="sandi_baru1" id="sandi_baru1">
-                        <?php echo form_error('sandi_baru1','<div class="text-small text-danger">','</div>') ?>
-                    </div>
-                    <!-- .form-group end -->
-                    <div class="form-group">
-                        <label>Ulangi Kata Sandi Baru</label>
-                        <input type="password" class="form-control" name="sandi_baru2" id="sandi_baru2">
-                        <?php echo form_error('sandi_baru2','<div class="text-small text-danger">','</div>') ?>
-                    </div>
-
-                    <input type="submit" class="btn btn-sm btn-primary" value="Ubah Sandi">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <div class="edit--profile-area">
+                        <ul class="edit--profile-links list-unstyled mb-0">
+                            <li><a href="<?php echo base_url('customer/profil')?>"><i class="fa fa-user"></i> Profil Saya</a></li>
+                            <li><a href="<?php echo base_url('customer/profil/ubah_sandi')?>"><i class="fa fa-lock"></i> Ubah Kata Sandi</a></li>
+                            <li><a href="<?php echo base_url('customer/data_transaksi/')?>"><i class="fa fa-random"></i> Transaksi</a></li>
+                        </ul>
                 </div>
-                        
+            </div>
+            <!-- .col-md-4 -->
+            <div class="col-xs-12 col-sm-12 col-md-8">
+                <?= form_open_multipart('customer/profil/ubah_sandi');?>
+                    <div class="form-box">
+                        <?php echo $this->session->flashdata('pesan') ?>
+                        <h4 class="form--title">Ubah Kata Sandi</h4>
+                        <div class="form-group">
+                            <label>Kata Sandi Lama</label>
+                            <input type="hidden" name="id_user" value="<?php echo $user['id_user'] ?>">
+                            <input type="password" class="form-control" name="sandi_lama" id="sandi_lama">
+                            <?php echo form_error('sandi_lama','<div class="text-small text-danger">','</div>') ?>
+                        </div>
+                        <!-- .form-group end -->
+                        <div class="form-group">
+                            <label>Kata Sandi Baru</label>
+                            <input type="password" class="form-control" name="sandi_baru1" id="sandi_baru1">
+                            <?php echo form_error('sandi_baru1','<div class="text-small text-danger">','</div>') ?>
+                        </div>
+                        <!-- .form-group end -->
+                        <div class="form-group">
+                            <label>Ulangi Kata Sandi Baru</label>
+                            <input type="password" class="form-control" name="sandi_baru2" id="sandi_baru2">
+                            <?php echo form_error('sandi_baru2','<div class="text-small text-danger">','</div>') ?>
+                        </div>
 
-            </form>
+                        <input type="submit" class="btn btn-sm btn-primary" value="Ubah Sandi">
+                    </div>
+                            
+
+                </form>
+            </div>
+            <!-- .col-md-8 end -->
         </div>
-        <!-- .col-md-8 end -->
-    </div>
         <!-- .row end -->
     </div>
 </section>

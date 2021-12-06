@@ -52,9 +52,11 @@
 		{
 			$id				= $this->input->post('id_pesan');
 			$status_bayar	= $this->input->post('status_bayar');
+			$status_pesan	= $this->input->post('status_pesan');
 
 			$data = array (
 				'status_bayar'	=> $status_bayar,
+				'status_pesan'	=> $status_pesan,
 			);
 
 			$where = array (

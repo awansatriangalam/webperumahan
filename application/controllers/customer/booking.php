@@ -44,7 +44,7 @@ class Booking Extends CI_Controller
         $this->rental_model->insert_data($data,'transaksi');
 
         $status  = array(
-            'status' => '0'
+            'status' => '2'
         );
         $id      = array(
             'id_rumah'  =>$id_rumah

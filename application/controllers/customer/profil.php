@@ -82,20 +82,16 @@ class Profil extends CI_Controller
             $sandi_lama = $this->input->post('sandi_lama');
             $pass_baru  = $this->input->post('sandi_baru1');
             if(!password_verify($sandi_lama, $data['user']['pass_user'])){
-                $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible
-                    fade show" role="alert"> Kata Sandi Salah !.
-                <button type="button" class="close" data-dismiss="alert"
-                    aria-label="Close"
+                $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible"> Kata Sandi Salah  !.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 </div>');
                 redirect('customer/profil/ubah_sandi');
             }else{
                 if($sandi_lama == $pass_baru ){
-                    $this->session->set_flashdata('pesan','<div class="alert alert-success alert-dismissible
-                    fade show" role="alert"> Kata Sandi Tidak Boleh Sama  !.
-                    <button type="button" class="close" data-dismiss="alert"
-                        aria-label="Close"
+                    $this->session->set_flashdata('pesan','<div class="alert alert-danger alert-dismissible"> Kata Sandi Tidak Boleh Sama  !.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>');

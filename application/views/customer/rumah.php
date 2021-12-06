@@ -128,6 +128,7 @@
                                         <option value="">Status</option>
                                         <option value="0">Diisi</option>
                                         <option value="1">Tersedia</option>                
+                                        <option value="2">Dibooking</option>                
                                     </select>
                                 </form>
                             </div>
@@ -151,12 +152,12 @@
                                                 <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
 								            </a>
                                             <span class="property--status"><?php 
-                                                if ($rm->status == "0"){
-                                                    echo "<span> Telah Terisi
-                                                    </span>";
+                                                if($rm->status == "0"){
+                                                    echo "Terisi";
+                                                }elseif($rm->status == "1"){
+                                                    echo "Tersedia";
                                                 }else{
-                                                    echo "<span> Tersedia
-                                                    </span>";
+                                                    echo "Sedang diBooking";
                                                 }
                                                 ?></span>
                                         </div>
@@ -199,12 +200,12 @@
                                                 <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
 								            </a>
                                             <span class="property--status"><?php 
-                                                if ($rm->status == "0"){
-                                                    echo "<span> Telah Diisi
-                                                    </span>";
+                                                if($rm->status == "0"){
+                                                    echo "Terisi";
+                                                }elseif($rm->status == "1"){
+                                                    echo "Tersedia";
                                                 }else{
-                                                    echo "<span> Tersedia
-                                                    </span>";
+                                                    echo "Sedang diBooking";
                                                 }
                                                 ?></span>
                                         </div>

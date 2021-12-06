@@ -44,12 +44,15 @@
                                     </div>
                                     <div class="pull-right">
                                         <span class="property--status">
-                                                <?php 
+                                                <?php
                                                     if ($dt->status == "0"){
-                                                        echo "<span class='btn btn-sm btn-danger' disable> Diisi
+                                                        echo "<span class='btn btn-sm btn-danger' disable> Terisi
                                                         </span>";
-                                                    }else{
+                                                    }elseif($dt->status == "1"){
                                                         echo anchor('customer/booking/add/'.$dt->id_rumah, '<button class="btn btn-sm btn-success "><i class="fa fa-book"></i>  Booking</button>');
+                                                    }else{
+                                                        echo "<span class='btn btn-sm btn-warning' disable> Di Booking
+                                                        </span>";
                                                     }
                                                 ?>
                                         </span>
@@ -66,10 +69,13 @@
                                             <li>
                                                 Status:<span class="value"><?php 
                                                     if ($dt->status == "0"){
-                                                        echo "<span style='color:red;font-weight:bold'> Telah Terisi
+                                                        echo "<span style='color:red;font-weight:bold'> Terisi
+                                                        </span>";
+                                                    }elseif($dt->status == "1"){
+                                                        echo "<span style='color:blue;font-weight:bold'> Tersedia
                                                         </span>";
                                                     }else{
-                                                        echo "<span style='color:blue;font-weight:bold'> Tersedia
+                                                        echo "<span style='color:orange;font-weight:bold'> Dibooking
                                                         </span>";
                                                     }
                                                     ?></span>
@@ -252,14 +258,14 @@
                                                 <div class="property--img">
                                                     <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
                                                     <span class="property--status"><?php 
-                                                    if ($rm->status == "0"){
-                                                        echo "<span> Diisi
-                                                        </span>";
+                                                    if($rm->status == "0"){
+                                                        echo "Terisi";
+                                                    }elseif($rm->status = "1"){
+                                                        echo "Tersedia";
                                                     }else{
-                                                        echo "<span> Tersedia
-                                                        </span>";
+                                                        echo "Sedang diBooking";
                                                     }
-                                                    ?></span>
+                                                ?></span>
                                                 </div>
                                                 <div class="property--content">
                                                     <div class="property--info">

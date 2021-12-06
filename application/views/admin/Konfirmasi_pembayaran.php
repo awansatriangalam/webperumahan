@@ -15,8 +15,9 @@
                             <div class="mx-auto mt-5">
                                 <form method="POST" action="<?php echo base_url('admin/transaksi/cek_pembayaran')?>">
                                     <div class="custom-control custom-switch mt-5">
-                                        <input type="checkbox" class="custom-control-input" id="customSwitch1" value="1" name="status_bayar">
                                         <input type="hidden" class="custom-control-input"  value="<?php echo $pm->id_pesan ?>" name="id_pesan">
+                                        <input type="hidden" class="custom-control-input" value="Selesai" name="status_pesan">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitch1" value="1" name="status_bayar">
                                         <label for="customSwitch1" class="custom-control-label"> Konfirmasi Pembayaran</label>
                                     </div>
                                     <hr>
