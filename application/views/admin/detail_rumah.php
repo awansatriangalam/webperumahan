@@ -10,10 +10,10 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-8 mx-auto">
-                        <img src="<?php echo base_url('assets/upload/'.$dt->gambar)  ?>" style="width: 85%; ">
+                    <div class="col-md-6">
+                        <img src="<?php echo base_url('assets/upload/'.$dt->gambar)  ?>" style="width: 90%; ">
                     </div>
-                    <div class="col-md-8 mx-auto">
+                    <div class="col-md-6">
                         <table class="table">
                             <div class="col-md-6 col-xs-12">
                                 <tr>
@@ -55,19 +55,28 @@
                                     <td><?php echo $dt->kamar_mandi ?></td>
                                 </tr>
                             </div>
+                                </table>
+                                </div>
+                                <div class="col-md-12">
+                                    <table class="table">
+                                <div class="col-md-4">
                                 <tr>
                                     <td>Ruangan</td>
                                     <td><?php echo $dt->ruangan ?></td>
                                 </tr>
-                                    <tr>
+                                </div>
+                                <div class="col-md-4">
+                                <tr>
                                     <td>Lantai</td>
                                     <td><?php echo $dt->lantai ?></td>
                                 </tr>
-                            <div class="col-md-10">
+                                </div>
+                                <div class="col-md-4">
                                     <tr>
                                     <td>Garasi</td>
                                     <td><?php echo $dt->garasi ?></td>
                                 </tr>
+                                </div>
                                     <tr>
                                     <td>Deskripsi</td>
                                     <td><?php echo $dt->deskripsi ?></td>
@@ -100,7 +109,7 @@
                                         ?>    
                                     </td>
                                 </tr>
-                            </div>
+                            
                                 
                         </table>
                         <a class="btn btn-sm btn-danger ml-4" href="<?php echo base_url('admin/data_rumah') ?>">Kembali</a>

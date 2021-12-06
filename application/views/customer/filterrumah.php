@@ -149,7 +149,7 @@
                                     <!-- .property-item #1 -->
                                     <div class="property-item">
                                         <div class="property--img">
-                                            <a href="<?php echo base_url('customer/dashboard/detail_rumah/') .$rm->id_rumah ?>">
+                                            <a href="<?php echo base_url('welcome/detail_rumah/') .$rm->id_rumah ?>">
                                                 <img src="<?php echo base_url('assets/upload/' .$rm->gambar) ?>" alt="property image" class="img-responsive">
 								            </a>
                                             <span class="property--status"><?php 
@@ -164,7 +164,7 @@
                                         </div>
                                         <div class="property--content">
                                             <div class="property--info">
-                                                <h5 class="property--title"><a href="<?php echo base_url('customer/dashboard/detail_rumah/') .$rm->id_rumah ?>"><?php echo $rm->nama_rumah ?></a></h5>
+                                                <h5 class="property--title"><a href="<?php echo base_url('welcome/detail_rumah/') .$rm->id_rumah ?>"><?php echo $rm->nama_rumah ?></a></h5>
                                                 <p class="property--location"><?php echo $rm->lokasi ?></p>
                                                 <p class="property--price"><?php echo $rm->harga ?></p>
                                             </div>
@@ -197,7 +197,7 @@
                                     <!-- .property-item #1 -->
                                     <div class="property-item">
                                         <div class="property--img">
-                                            <a href="<?php echo base_url('customer/dashboard/detail_rumah/') .$ft->id_rumah ?>">
+                                            <a href="<?php echo base_url('welcome/detail_rumah/') .$ft->id_rumah ?>">
                                                 <img src="<?php echo base_url('assets/upload/' .$ft->gambar) ?>" alt="property image" class="img-responsive">
 								            </a>
                                             <span class="property--status"><?php 
@@ -212,7 +212,7 @@
                                         </div>
                                         <div class="property--content">
                                             <div class="property--info">
-                                                <h5 class="property--title"><a href="<?php echo base_url('customer/dashboard/detail_rumah/') .$ft->id_rumah ?>"><?php echo $ft->nama_rumah ?></a></h5>
+                                                <h5 class="property--title"><a href="<?php echo base_url('welcome/detail_rumah/') .$ft->id_rumah ?>"><?php echo $ft->nama_rumah ?></a></h5>
                                                 <p class="property--location"><?php echo $ft->lokasi ?></p>
                                                 <p class="property--price"><?php echo $ft->harga ?></p>
                                             </div>
