@@ -10,111 +10,93 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-6">
-                        <img src="<?php echo base_url('assets/upload/'.$dt->gambar)  ?>" style="width: 90%; ">
+                    <div class="col-md-3">
+                        <img src="<?php echo base_url('assets/upload/'.$dt->gambar)  ?>" style="width: 100%; ">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-9">
                         <table class="table">
-                            <div class="col-md-6 col-xs-12">
-                                <tr>
-                                    <td>Nama Rumah</td>
-                                    <td><?php echo $dt->nama_rumah ?></td>
-                                </tr>
-                                <tr>
-                                    <td>Tipe Rumah</td>
-                                    <td>
-                                    <?php 
-                                        if ($dt->kode_type = "36") {
-                                            echo "Middle";
-                                        }elseif($dt->kode_type = "45") {
-                                            echo "Middle Low";
-                                        }elseif ($dt->kode_type = "60") {
-                                            echo "Middle Up";
-                                        }else{
-                                            echo "<span class='text-danger'>Tipe rumah belum terdaftar
-                                            </span>";
-                                        }
-
-                                        ?>
-                                        </td>
-                                </tr>
-                                    <tr>
-                                    <td>Luas Bangunan</td>
-                                    <td><?php echo $dt->luas_bangunan ?></td>
-                                </tr>
-                                    <tr>
-                                    <td>Lokasi</td>
-                                    <td><?php echo $dt->lokasi ?></td>
-                                </tr>
-                                    <tr>
-                                    <td>Kamar Tidur</td>
-                                    <td><?php echo $dt->kamar_tidur ?></td>
-                                </tr>
-                                    <tr>
-                                    <td>Kamar Mandi</td>
-                                    <td><?php echo $dt->kamar_mandi ?></td>
-                                </tr>
-                            </div>
-                                </table>
-                                </div>
-                                <div class="col-md-12">
-                                    <table class="table">
-                                <div class="col-md-4">
-                                <tr>
-                                    <td>Ruangan</td>
-                                    <td><?php echo $dt->ruangan ?></td>
-                                </tr>
-                                </div>
-                                <div class="col-md-4">
-                                <tr>
-                                    <td>Lantai</td>
-                                    <td><?php echo $dt->lantai ?></td>
-                                </tr>
-                                </div>
-                                <div class="col-md-4">
-                                    <tr>
-                                    <td>Garasi</td>
-                                    <td><?php echo $dt->garasi ?></td>
-                                </tr>
-                                </div>
-                                    <tr>
-                                    <td>Deskripsi</td>
-                                    <td><?php echo $dt->deskripsi ?></td>
-                                </tr>
-                                    <tr>
-                                    <td>Alamat</td>
-                                    <td><?php echo $dt->alamat ?></td>
-                                </tr>
-                                    <tr>
-                                    <td>Kota</td>
-                                    <td><?php echo $dt->kota ?></td>
-                                </tr>
-                                    <tr>
-                                    <td>Kode Pos</td>
-                                    <td><?php echo $dt->kode_pos ?></td>
-                                </tr>
-                                    <tr>
-                                    <td>Harga</td>
-                                    <td><?php echo $dt->harga ?></td>
-                                </tr>
-                                    <tr>
-                                    <td>Status</td>
-                                    <td><?php 
-                                            if ($dt->status == "0"){
-                                                echo "<span class='badge badge-danger'>Tidak Tersedia</span>";
-                                            }else{
-                                                echo "<span class='badge badge-success'>Tersedia</span>";
-                                            }
-
-                                        ?>    
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>Nama Rumah :</td>
+                                <td><?php echo $dt->nama_rumah ?></td>
                             
-                                
+                                <td>Tipe Rumah :</td>
+                                <td>
+                                <?php 
+                                    if ($dt->kode_type = "36") {
+                                        echo "Middle";
+                                    }elseif($dt->kode_type = "45") {
+                                        echo "Middle Low";
+                                    }elseif ($dt->kode_type = "60") {
+                                        echo "Middle Up";
+                                    }else{
+                                        echo "<span class='text-danger'>Tipe rumah belum terdaftar
+                                        </span>";
+                                    }
+
+                                    ?>
+                                </td>  
+
+                                <td>Luas Bangunan :</td>
+                                <td><?php echo $dt->luas_bangunan ?></td>
+                            </tr>
+                            <tr>
+                                <td>Lokasi :</td>
+                                <td><?php echo $dt->lokasi ?></td>
+
+                                <td>Kamar Tidur :</td>
+                                <td><?php echo $dt->kamar_tidur ?></td>
+                            
+                                <td>Kamar Mandi :</td>
+                                <td><?php echo $dt->kamar_mandi ?></td>
+                            </tr>
+                            <tr>
+                                <td>Ruangan :</td>
+                                <td><?php echo $dt->ruangan ?></td>
+                            
+                                <td>Lantai :</td>
+                                <td><?php echo $dt->lantai ?></td>
+                            
+                                <td>Garasi :</td>
+                                <td><?php echo $dt->garasi ?></td>   
+                            </tr>
                         </table>
+                    </div>
+                    <div class="col-md-15">
+                        <table class="table">
+                            <td>Alamat :</td>
+                            <td><?php echo $dt->alamat ?></td>
+                        
+                            <td>Kota :</td>
+                            <td><?php echo $dt->kota ?></td>
+                        
+                            <td>Kode Pos :</td>
+                            <td><?php echo $dt->kode_pos ?></td>
+                        
+                            <td>Harga :</td>
+                            <td><?php echo $dt->harga ?></td>
+                        
+                            <td>Status :</td>
+                            <td><?php 
+                                    if ($dt->status == "0"){
+                                        echo "<span class='badge badge-danger'>Tidak Tersedia</span>";
+                                    }else{
+                                        echo "<span class='badge badge-success'>Tersedia</span>";
+                                    }
+
+                                ?>    
+                            </td> 
+                        </table>
+                    </div>
+                    <div class="col-md-10">
+                       <table class="table">
+                            <td>Deskripsi :</td>
+                            <td><?php echo $dt->deskripsi ?></td>        
+                       </table>
+                    </div>
+                    <div class="col-md-2">
                         <a class="btn btn-sm btn-danger ml-4" href="<?php echo base_url('admin/data_rumah') ?>">Kembali</a>
                         <a class="btn btn-sm btn-primary" href="<?php echo base_url('admin/data_rumah/update_rumah/'. $dt->id_rumah) ?>">Edit</a>
-                    </div>
+                    </div>     
                 </div>
             </div>
         </div>
