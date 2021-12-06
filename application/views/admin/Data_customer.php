@@ -25,7 +25,6 @@
                 <th>Alamat</th>
                 <th>No Telepon</th>
                 <th>Gambar</th>
-                <th>Kata Sandi</th>
                 <th>Aksi</th>
             </tr>
 
@@ -41,7 +40,6 @@
                     <td>
                         <img width="100px" src="<?php echo base_url().'assets/assets_stisla/assets/img/profil/' .$cs->gambar_user ?>">
                     </td>
-                    <td><?php echo $cs->pass_user?></td>
                     <td>
                         <div class="row">
                             <a href="<?php echo base_url('admin/data_customer/delete_customer/') .$cs->id_user ?>" 
