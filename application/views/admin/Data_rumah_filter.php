@@ -48,11 +48,11 @@
                                 <td><?php echo $rm->luas_bangunan ?></td>
                                 <td><?php 
                                 if ($rm->status == "0"){
-                                    echo "<span class='badge badge-danger'> Diisi
-                                    </span>";
+                                    echo "<span class='badge badge-danger'>Terisi</span>";
+                                }elseif ($rm->status == "1"){
+                                    echo "<span class='badge badge-success'>Tersedia</span>";
                                 }else{
-                                    echo "<span class='badge badge-primary'> Tersedia
-                                    </span>";
+                                    echo "<span class='badge badge-warning'>Dibooking</span>";
                                 }
                                 ?></td>
                                 <td><?php echo $rm->lokasi ?></td>
