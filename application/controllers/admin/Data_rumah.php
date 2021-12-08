@@ -70,6 +70,18 @@ class Data_rumah extends CI_Controller{
                     $gambar=$this->upload->data('file_name');
                 }
             }
+            $map                            = $_FILES['map']['name'];
+            if($map=''){}else{
+                $config ['upload_path']     = './assets/upload';
+                $config ['allowed_types']   = 'jpg|jpeg|png|tiff';
+
+                $this->load->library('upload', $config);
+                if(!$this->upload->do_upload('map')){
+                    echo "Gambar Gagal Diupload !";
+                }else{
+                    $gambar=$this->upload->data('file_name');
+                }
+            }
             
             $data = array (
                 'nama_rumah'                => $nama_rumah,
@@ -88,6 +100,7 @@ class Data_rumah extends CI_Controller{
                 'kode_pos'                  => $kode_pos,
                 'harga'                     => $harga,
                 'gambar'                    => $gambar,
+                'map'                       => $map,
             );
 
             $this->rental_model->insert_data($data,'rumah');
@@ -150,6 +163,21 @@ class Data_rumah extends CI_Controller{
                 if($this->upload->do_upload('gambar')){
                     $gambar = $this->upload->data('file_name');
                     $this->db->set('gambar', $gambar);
+                }else{
+                    echo $this->upload->display_errors();
+                }
+            }
+            $map                            = $_FILES['map']['name'];
+            if($map)
+                {
+                $config ['upload_path']     = './assets/upload';
+                $config ['allowed_types']   = 'jpg|jpeg|png|tiff';
+
+                $this->load->library('upload', $config);
+
+                if($this->upload->do_upload('map')){
+                    $map = $this->upload->data('file_name');
+                    $this->db->set('map', $map);
                 }else{
                     echo $this->upload->display_errors();
                 }

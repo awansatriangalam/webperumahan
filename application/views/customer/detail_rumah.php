@@ -235,7 +235,7 @@
                                     <!-- .col-md-12 end -->
 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
-                                        <div id="googleMap" style="width:50%;height:100px;"></div>
+                                            <img src="<?php echo base_url('assets/upload/'.$dt->map)  ?>" style="width: 100%; ">
                                     </div>
                                     <!-- .col-md-12 end -->
                                 </div>

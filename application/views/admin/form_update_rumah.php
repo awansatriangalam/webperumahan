@@ -67,29 +67,31 @@
                                 <?php echo form_error('garasi','<div class="text-small text-danger">
                                 ','</div>') ?>
                             </div>
-                        </div>
-                        <div class="col-md-6">
                             <div class="form-group">
                                 <label> Deskripsi</label>
                                 <input type="text" name="deskripsi" class="form-control" value="<?php echo $rm->deskripsi ?>">
                                 <?php echo form_error('deskripsi','<div class="text-small text-danger">
                                 ','</div>') ?>
                             </div>
-                            <div class="form-group">
-                                <label> Status</label>
-                                <select name="status" class="form-control">
-                                    <option <?php if($rm->status == "1"){echo "selected='selected'";}
-                                    echo $rm->status; ?> value="1">Tersedia</option>
-                                    <option <?php if($rm->status == "0"){echo "selected='selected'";}
-                                    echo $rm->status; ?> value="0">Telah Diisi</option>
-                                </select>
-                                <?php echo form_error('status','<div class="text-small text-danger">
-                                ','</div>') ?>
-                            </div>
+                        </div>
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label> Lokasi</label>
                                 <input type="text" name="lokasi" class="form-control" value="<?php echo $rm->lokasi ?>">
                                 <?php echo form_error('lokasi','<div class="text-small text-danger">
+                                ','</div>') ?>
+                            </div>
+                            <div class="form-group">
+                                <label> Status</label>
+                                <select name="status" class="form-control">
+                                    <option <?php if($rm->status == "0"){echo "selected='selected'";}
+                                    echo $rm->status; ?> value="0">Terisi</option>
+                                    <option <?php if($rm->status == "1"){echo "selected='selected'";}
+                                    echo $rm->status; ?> value="1">Tersedia</option>
+                                    <option <?php if($rm->status == "2"){echo "selected='selected'";}
+                                    echo $rm->status; ?> value="2">Dibooking</option>
+                                </select>
+                                <?php echo form_error('status','<div class="text-small text-danger">
                                 ','</div>') ?>
                             </div>
                             <div class="form-group">
@@ -119,6 +121,10 @@
                             <div class="form-group">
                                 <label> Gambar</label>
                                 <input type="file" name="gambar" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label> Gambar Lokasi</label>
+                                <input type="file" name="map" class="form-control">
                             </div>
 
                             <button type="submit" class="btn btn-primary mt-4">Simpan</button>
