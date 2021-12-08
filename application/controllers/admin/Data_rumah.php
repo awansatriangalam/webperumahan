@@ -79,7 +79,7 @@ class Data_rumah extends CI_Controller{
                 if(!$this->upload->do_upload('map')){
                     echo "Gambar Gagal Diupload !";
                 }else{
-                    $gambar=$this->upload->data('file_name');
+                    $map=$this->upload->data('file_name');
                 }
             }
             
