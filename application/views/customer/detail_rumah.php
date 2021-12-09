@@ -260,7 +260,7 @@
                                                     <span class="property--status"><?php 
                                                     if($rm->status == "0"){
                                                         echo "Terisi";
-                                                    }elseif($rm->status = "1"){
+                                                    }elseif($rm->status == "1"){
                                                         echo "Tersedia";
                                                     }else{
                                                         echo "Sedang diBooking";
