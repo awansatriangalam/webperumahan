@@ -63,6 +63,11 @@
 				'id_pesan'		=> $id
 			);
 
+			$data1 = $this->rental_model->get_where($where,'transaksi')->row();
+			$where2 = array ('id_rumah' => $data1->id_rumah);
+			$data2 = array ('status' => '0');
+
+			$this->rental_model->update_data('rumah', $data2,$where2);
 			$this->rental_model->update_data('transaksi', $data,$where);
 			redirect('admin/transaksi');
 		}
