@@ -56,6 +56,8 @@
                                     <?php
                                     if (empty($tr->bukti_bayar)) { ?>
                                         <button class="btn btn-sm btn-danger"><i class="fas fa-times-circle"></i></button>
+                                    <?php } elseif ($tr->status_pesan == "Selesai") {?>
+                                        <button class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-check-circle"></i></button>
                                     <?php } else{ ?>
                                         <a class="btn btn-sm btn-success"href="<?php echo base_url('admin/transaksi/pembayaran/' .$tr->id_pesan) ?>"><i class="fas fa-check-circle"></i></a>
                                     <?php } ?>
@@ -71,6 +73,24 @@
                 </tbody>
             </table>
         </div>
-        
     </section>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">   
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Informasi Cek Pembayaran</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"> &times; </span>
+                    </button>
+                </div>
+                <div class="modal-body mt-4">
+                    <center><h6><span style="color:red">Transaksi Telah diSelesaikan !</span></h6></center>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Keluar</button>
+            </div>
+        </div>
+    </div>
 </div>
+
+    
