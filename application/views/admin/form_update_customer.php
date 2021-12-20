@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" name="email" class="form-control" value="<?php echo $cs->email ?>">
+                    <input type="text" name="email" class="form-control" value="<?php echo $cs->email ?>" readonly>
                     <?php echo form_error('email','<span class="text-small text-danger">','</span>') ?>
                 </div>
                 <div class="form-group">

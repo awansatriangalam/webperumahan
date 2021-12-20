@@ -9,7 +9,7 @@
             <div class="col-md-6 mb-3">
                 <?php echo form_open('admin/data_customer/search') ?>
                 <input type="text" name="keyword" class="form-control"
-                placeholder="Cari">
+                placeholder="Cari" required="">
             </div>
             <div class="navbar-form navbar-right">
                 <button type="submit" class="btn btn-success">Cari</button>
