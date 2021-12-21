@@ -29,6 +29,7 @@ class Data_rumah extends CI_Controller{
     {
         $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
         $data['detail'] = $this->rental_model->ambil_id_rumah($id);
+        $data['tipe'] = $this->rental_model->ambil_id_type($id);
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar',$data);
         $this->load->view('admin/detail_rumah',$data);

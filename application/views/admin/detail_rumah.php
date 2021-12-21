@@ -30,19 +30,9 @@
                                 <td><?php echo $dt->nama_rumah ?></td>
                             
                                 <td>Tipe Rumah</td>
-                                <td>
-                                <?php
-                                    if ($dt->kode_type == "36"){
-                                        echo "<span  style='color:green;font-weight:bold'> Middle</span>";
-                                    }elseif ($dt->kode_type == "45"){
-                                        echo "<span  style='color:green;font-weight:bold'> Middle Low</span>";
-                                    }elseif ($dt->kode_type == "60") {
-                                        echo "<span  style='color:green;font-weight:bold'> Middle Up</span>";
-                                    }else{
-                                        echo "<span  style='color:red;font-weight:bold'> Tipe Belum Terdaftar</span>";
-                                    }
-
-                                ?></td>  
+                                <?php foreach($tipe as $tp): ?>
+                                    <td><?php echo $tp->nama_type ?></td>
+                                <?php endforeach;?>  
 
                                 <td>Luas Bangunan</td>
                                 <td><?php echo $dt->luas_bangunan ?></td>
