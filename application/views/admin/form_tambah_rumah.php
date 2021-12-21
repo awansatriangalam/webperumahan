@@ -19,7 +19,7 @@
                             <div class="form-grup">
                                 <label> Type Rumah</label>
                                 <select name="kode_type" class="form-control">
-                                    <option value=" ">--Pilih Type Rumah--</option>
+                                    <option>--Pilih Type Rumah--</option>
                                     <?php foreach($tipe as $tp) : ?>
                                         <option value="<?php echo $tp->kode_type ?>">
                                     <?php echo $tp->kode_type ?></option>
