@@ -44,11 +44,8 @@
                                         echo "<span  style='color:green;font-weight:bold'> High</span>";
                                     }else{
                                         echo "<span  style='color:red;font-weight:bold'> Tipe Belum Terdaftar</span>";
-                                    }
-
-                                ?></td>  
-
-                                <td>Luas Bangunan</td>
+                                    }?>
+                               <td>Luas Bangunan</td>
                                 <td><?php echo $dt->luas_bangunan ?></td>
                             </tr>
                             <tr>
