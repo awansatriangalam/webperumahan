@@ -111,7 +111,8 @@
                                         <option value="">Pilih Tipe</option>
                                         <option value="36">Middle</option>
                                         <option value="45">Middle Low</option> 
-                                        <option value="60">Middle Up</option>                
+                                        <option value="60">Middle Up</option>
+                                        <option value="10">High</option>                
                                     </select>
                                 </form>
                             </div>
