@@ -24,6 +24,19 @@
 			$this->load->view('templates_admin/footer');
 		}
 
+        public function search()
+        {
+
+            $keyword = $this->input->post('keyword');
+            $data1['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+            $data['data_customer'] = $this->rental_model->get_keyword_customer($keyword);
+            $this->load->view('templates_admin/header');
+            $this->load->view('templates_admin/sidebar',$data1);
+            $this->load->view('admin/data_customer_filter',$data);
+            $this->load->view('templates_admin/footer');
+        }
+
+
         public function tambah_customer()
         {
             $data['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
@@ -137,17 +150,6 @@
                 redirect('admin/data_customer');
         }
 
-         public function search(){
-
-            $keyword = $this->input->post('keyword');
-            $data1['user']  = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array(); 
-            $data['data_customer']  = $this->db->get_where('user', ['role_id' => '2'])->row_array(); 
-            $data['data_customer'] = $this->rental_model->get_keyword_customer($keyword); 
-                $this->load->view('templates_admin/header');
-                $this->load->view('templates_admin/sidebar',$data1);
-                $this->load->view('admin/data_customer_filter',$data);
-                $this->load->view('templates_admin/footer');
-        }
 
 	}
 	

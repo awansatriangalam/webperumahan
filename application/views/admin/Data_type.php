@@ -14,7 +14,7 @@
             <div class=" col-md-5" >
                 <?php echo form_open('admin/data_type/search') ?>
                 <input type="text" name="keyword" class="form-control"
-                placeholder="Cari">
+                placeholder="Cari" required>
             </div>
             <div class="navbar-form navbar-right">
                 <button type="submit" class="btn btn-success">Cari</button>

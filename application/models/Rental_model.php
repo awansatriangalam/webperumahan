@@ -118,10 +118,9 @@ class Rental_model extends CI_model
     {
         $this->db->select('*');
         $this->db->from('user');
+        $this->db->where('role_id','2');
         $this->db->like('nama_user',$keyword);
-        $this->db->or_like('email',$keyword);
         $this->db->or_like('alamat_user',$keyword);
-        $this->db->or_like('no_tlp',$keyword);
         return $this->db->get()->result();
     }
 
