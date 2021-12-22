@@ -33,6 +33,7 @@
                                                     <option value="36">Middle</option>
                                                     <option value="45">Middle Low</option>
                                                     <option value="60">Middle Up</option>
+                                                    <option value="12">High</option>
                                                 </select>
                                             </div>
                                         </div>

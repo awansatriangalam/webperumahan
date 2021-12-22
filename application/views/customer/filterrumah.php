@@ -31,6 +31,7 @@
                                                     <option value="36">Middle</option>
                                                     <option value="45">Middle Low</option>
                                                     <option value="60">Middle Up</option>
+                                                    <option value="12">High</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -129,7 +130,7 @@
                                 <form method="GET" action="<?php echo base_url('customer/rumah/kat_status')?>"> 
                                     <select name="status"  onchange="this.form.submit();">
                                         <option value="">Status</option>
-                                        <option value="0">Diisi</option>
+                                        <option value="0">Terisi</option>
                                         <option value="1">Tersedia</option>                
                                         <option value="2">Dibooking</option>                
                                     </select>

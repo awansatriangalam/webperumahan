@@ -61,7 +61,7 @@
                         <!-- Module Signup  -->
                         <div class="module module-login pull-left">
                             <?php if ($this->session->userdata('email')) { ?>
-                                <a class="pull-left" href="<?php echo base_url('customer/profil/')?> "><span class="btn-popup"><i class="fa fa-user"></i> <?php echo $this->session->userdata('nama_user') ?></span></a>
+                                <a class="pull-left" href="<?php echo base_url('customer/profil/')?> "><span class="btn-popup"><i class="fa fa-user"></i> Profil Pengguna</span></a>
                             <?php } else { ?>
                                 <a class="pull-left" href="<?php echo base_url()?> "><span class="btn-popup"></span></a>
                             <?php } ?>
