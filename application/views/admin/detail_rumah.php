@@ -38,9 +38,7 @@
                                         echo "<span  style='color:green;font-weight:bold'> Middle Low</span>";
                                     }elseif ($dt->kode_type == "60") {
                                         echo "<span  style='color:green;font-weight:bold'> Middle Up</span>";
-                                    }elseif ($dt->kode_type == "70") {
-                                        echo "<span  style='color:green;font-weight:bold'> Middle-Middle Up</span>";
-                                    }elseif ($dt->kode_type == "10") {
+                                    }elseif ($dt->kode_type == "12") {
                                         echo "<span  style='color:green;font-weight:bold'> High</span>";
                                     }else{
                                         echo "<span  style='color:red;font-weight:bold'> Tipe Belum Terdaftar</span>";
